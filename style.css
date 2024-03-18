@@ -828,22 +828,3 @@ main{
 
 
 
-@media (0 < width < 768px) {
-    .menu__wrapper {
-        display: flex;
-        position: fixed;
-        flex-direction: row;
-        justify-content: space-between;
-        width: 96vw;
-        z-index: 2;
-        right: 0;
-        gap: 1.5rem; 
-        background-color: #212121;
-        height: 250px;
-        padding: 0px 1rem;
-        border-bottom: 1px solid var(--github-dark-border);
-        align-items: center;
-    }
-
-
-}
