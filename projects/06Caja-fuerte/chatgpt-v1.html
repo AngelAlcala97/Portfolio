@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caja Fuerte</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            text-align: center;
+            margin-top: 50px;
+        }
+        input {
+            width: 50px;
+            font-size: 24px;
+            text-align: center;
+        }
+        button {
+            font-size: 20px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Desactivando la Caja Fuerte</h1>
+        <p>Intentos restantes: <span id="intentos">5</span></p>
+        <input type="text" id="numero1" maxlength="1"> 
+        <input type="text" id="numero2" maxlength="1"> 
+        <input type="text" id="numero3" maxlength="1"> 
+        <br>
+        <button onclick="verificarCombinacion()">Introducir Combinación</button>
+        <div id="mensaje"></div>
+    </div>
+
+    <script>
+        let combinacion = generarCombinacion();
+        let intentosRestantes = 5;
+
+        function generarCombinacion() {
+            return [Math.floor(Math.random() * 10), Math.floor(Math.random() * 10), Math.floor(Math.random() * 10)];
+        }
+
+        function verificarCombinacion() {
+            let numero1 = parseInt(document.getElementById("numero1").value);
+            let numero2 = parseInt(document.getElementById("numero2").value);
+            let numero3 = parseInt(document.getElementById("numero3").value);
+
+            if (isNaN(numero1) || isNaN(numero2) || isNaN(numero3)) {
+                document.getElementById("mensaje").innerHTML = "Por favor ingresa números válidos.";
+                return;
+            }
+
+            let mensaje = "";
+
+            if (numero1 < combinacion[0]) {
+                mensaje += "El primer número es mayor. ";
+            } else if (numero1 > combinacion[0]) {
+                mensaje += "El primer número es menor. ";
+            }
+
+            if (numero2 < combinacion[1]) {
+                mensaje += "El segundo número es mayor. ";
+            } else if (numero2 > combinacion[1]) {
+                mensaje += "El segundo número es menor. ";
+            }
+
+            if (numero3 < combinacion[2]) {
+                mensaje += "El tercer número es mayor. ";
+            } else if (numero3 > combinacion[2]) {
+                mensaje += "El tercer número es menor. ";
+            }
+
+            if (mensaje === "") {
+                document.getElementById("mensaje").innerHTML = "<img src='img/cajaabierta.png' alt='Éxito'><p>Felicidades, has abierto la caja fuerte.</p><button onclick='reiniciarJuego()'>Volver a Intentarlo</button>";
+            } else {
+                intentosRestantes--;
+                document.getElementById("intentos").innerHTML = intentosRestantes;
+                if (intentosRestantes === 0) {
+                    document.getElementById("mensaje").innerHTML = "<img src='img/arresto.png' alt='Éxito'><p>Has sido detenido.</p><button onclick='reiniciarJuego()'>Volver a Intentarlo</button>";
+                } else {
+                    document.getElementById("mensaje").innerHTML = mensaje;
+                }
+            }
+        }
+
+        function reiniciarJuego() {
+            combinacion = generarCombinacion();
+            intentosRestantes = 5;
+            document.getElementById("intentos").innerHTML = intentosRestantes;
+            document.getElementById("numero1").value = "";
+            document.getElementById("numero2").value = "";
+            document.getElementById("numero3").value = "";
+            document.getElementById("mensaje").innerHTML = "";
+        }
+    </script>
+</body>
+</html>

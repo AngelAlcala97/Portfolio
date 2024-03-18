@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Hojas de cálculo de Google </title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="img/favico.png">
+    <link rel="shortcut icon" type="image/x-icon" href="img/favico.png">
+</head>
+
+<body>
+    <header>
+        <img id="logo" src="img/logo.png">
+        <img src="img/alumno.png">
+        <input type="text" id="source1" placeholder="Inserte alumno"><button onclick="add()"><img src="img/add.png">Añadir</button>
+    </header>
+    <nav>
+        <div class="toolbar">
+            <div class="hidden-search" id="search"><img src="img/close.png" id="closer" alt="" onclick="closeSearch()"><img src="img/buscar_y_reemplazar.png" title="Buscar y reemplazar" id="sandr" onclick="showReplace()" ><input type="text" placeholder="Buscar elemento" id="buscador" style="width: 50%;"><input type="button" onclick="searchFor()" value="Buscar"><div id="resultsFor"></div></div>
+            <div id="replace" class="hidden-replace"><input type="text"  placeholder="Buscar elemento" id="buscadorR" style="width: 50%;"><input type="button" onclick="replaceFor()" value="Reemplazar"></div>
+            <div id="text-color" class="hidden-text-color"><input onchange="textColor()" type="color"  id="textColor"></div>
+            <div id="background-color" class="hidden-background-color"><input onchange="backgroundColor()" type="color"  id="backgroundColor"></div>
+            <div id="stadistics" class="hidden-stadistics"><h4 style="width: 100%;border-bottom:2px solid lightgrey;text-align:center">Estadísticas</h4>
+                <section>
+                    <div id="stadistic1">Cantidad de alumnos: </div>
+                    <div id="stadistic2">Promedio de caracteres: </div>
+                    <div id="stadistic3">Nombre más corto: </div>
+                    <div id="stadistic4">Nombre más largo: </div>
+                </section>
+                <input type="button" value="Actualizar" onclick="refreshStadistic()">
+            </div>
+            <div class="hidden-info" id="info"><h4 style="width: 100%;border-bottom:2px solid lightgrey;text-align:center">Estadísticas</h4><div id="info-for" style="height: 90% ;"></div></div>
+            <div class="filter-list" id="filters"><h4 style="width: 100%;border-bottom:2px solid lightgrey;text-align:center">Filtros de búsqueda</h4>
+                <section>
+                <div>
+                    <input onchange="testFilters(this)" type="checkbox" name="filtro1" id="filtro1">
+                    <label for="filtro1">Alfabeticamente (Dsc.)</label>
+                </div>
+                <div>
+                    <input onchange="testFilters(this)" type="checkbox" name="filtro2" id="filtro2">
+                    <label for="filtro2">Alfabeticamente (Asc.)</label>
+                </div>
+                <div>
+                    <input onchange="testFilters(this)" type="checkbox" name="filtro3" id="filtro3">
+                    <label  for="filtro3">Nº de Caracteres (Dsc.)</label>
+                </div>
+                <div>
+                    <input onchange="testFilters(this)" type="checkbox" name="filtro4" id="filtro4">
+                    <label for="filtro4">Nº de Caracteres (Asc.)</label>
+                </div>
+                <div>
+                    <input onchange="testFilters(this)" type="checkbox" name="filtro5" id="filtro5">
+                    <label for="filtro5">Palíndromos</label>
+                </div>
+                </section>
+                <button onclick="applyFilters()"><img src="img/filter_alt.png">Filtrar</button>
+            </div>
+            <div class="tool"><img title="Buscar referencias" onclick="showSearch()" src="img/lupa.png"></div>
+            <div class="tool"><img title="Deshacer" src="img/undo.png"></div>
+            <div class="tool"><img title="Rehacer" src="img/redo.png"></div>
+            <div class="tool"><img title="Imprimir documento" onclick="imprimirPantalla()" src="img/print.png"></div>
+            <div class="tool">100%</div>
+            <div class="tool"><img src="img/percent.png"></div>
+            <div class="tool"><img src="img/euro.png"></div>
+            <div class="tool"><img onclick="modifyDecimals(-1)" title="Reducir Decimales" src="img/decimal_decrease.png"></div>
+            <div class="tool"><img onclick="modifyDecimals(1)" title="Aumentar decimales" src="img/decimal_increase.png"></div>
+            <div class="tool">123</div>
+            <div style="margin-left: 0.2vw;margin-right: 0.2vw" class="tool">
+                <select onchange="font()" id="fuente" name="fuente">
+                    <option style="font-family: 'Roboto';" value="Roboto" selected >Roboto</option>
+                    <option style="font-family: 'Lato';" value="Lato" >Lato</option>
+                    <option style="font-family: 'Montserrat';" value="Montserrat">Montserrat</option>
+                    <option style="font-family: 'OpenSans';" value="OpenSans">OpenSans</option>
+                    <option style="font-family: 'SixtyFour';" value="SixtyFour">SixtyFour</option>
+                  </select>
+            </div>
+            <div class="tool"><img title="-1 Tamaño de fuente" onclick="changeSize('-1')" src="img/remove.png"></div>
+            <div class="tool"><input title="Tamaño de la fuente" type="text" onchange="fontSize()" id="size-selector" value="10"></div>
+            <div class="tool"><img title="+1 Tamaño de fuente" onclick="changeSize('+1')" src="img/add.png"></div>
+            <div class="tool"><img title="Negrita" onclick="bold()" src="img/bold.png"></div>
+            <div class="tool"><img title="Italica" onclick="italic()" src="img/italic.png"></div>
+            <div class="tool"><img title="Tachar" onclick="strike()" src="img/strikethrough.png"></div>
+            <div class="tool"><img id="textColorInput" title="Color del texto" onclick="showTextColor()" src="img/color_text.png"></div>
+            <div class="tool"><img title="Color del fondo" onclick="showBackgroundColor()" src="img/color_fill.png"></div>
+            <div class="tool"><img  src="img/border_all.png"></div>
+            <div class="tool"><img src="img/cell_merge.png"></div>
+            <div class="tool"><img title="Justificación del texto" onclick="textAlignment()" src="img/align_center.png"></div>
+            <div class="tool"><img src="img/vertical_align_bottom.png"></div>
+            <div class="tool"><img src="img/format_text_wrap.png"></div>
+            <div class="tool"><img title="Invertir tabla" onclick="invert()" src="img/text_rotation_none.png"></div>
+            <div class="tool"><img src="img/link.png"></div>
+            <div class="tool"><img src="img/add_comment.png"></div>
+            <div class="tool"><img src="img/insert_chart.png" title="Informacion" onclick="showInfo()"></div>
+            <div class="tool"><img onclick="showFilters()" title="Aplicar filtros de búsqueda" src="img/filter_alt.png"></div>
+            <div class="tool"><img src="img/table_view.png" onclick="showStadistics()" title="Estadísticas"></div>
+            <div class="tool"><img src="img/functions.png"></div>
+        </div>
+            
+            
+    </nav>
+        <div id="matrix">
+            <div>
+                <section><input type="text" value="ID" disabled></section>
+                <section><input type="text" value="Nombre" disabled></section>
+                <section><input type="text" value="Apellidos" disabled></section>
+                <section><input type="text" value="Edad" disabled></section>
+                <section><input type="text" value="Curso" disabled></section>
+                <section><input type="text" value="DELETE" disabled></section>
+            </div>
+            <!-- <div>
+                <section><input type="text"></section>
+                <section><input type="text"></section>
+                <section><input type="text"></section>
+                <section><input type="text"></section>
+                <section><input type="text"></section>
+                <section><input type="text"></section>
+            </div> -->
+            
+        </div>
+    <footer></footer>    
+</body>
+<script src="script.js"></script>
+</html>

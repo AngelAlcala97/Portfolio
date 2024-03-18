@@ -1,0 +1,382 @@
+@font-face {
+    font-family: 'Zelda';
+    src: url('fonts/The\ Wild\ Breath\ of\ Zelda.otf') format('truetype');
+  }
+
+html,body{
+    background-attachment: fixed;
+    background-size: cover;
+    background: linear-gradient(-90deg, #455946, #5c7346, #bfa454, #d9a404);
+    background-size: 400% 400%;
+    animation: gradient 3s ease alternate infinite;
+    height: 100vh;
+    font-family: Zelda;
+    }
+    h1{
+        font-size: 40px;
+        color: #1d1d1d;
+        filter: drop-shadow(4px 4px 1px whitesmoke);
+    }
+    
+    @keyframes gradient {
+        0% {
+            background-position: 0% 50%;
+        }
+       
+        100% {
+            background-position: 100% 50%;
+        }
+    }
+    
+
+.contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 95vh;
+    box-sizing:border-box;
+    gap: 100px;
+    
+}
+.caja{
+    width: 400px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid #FCD601; */
+    /* gap: 15px; */
+    box-sizing:border-box;
+
+
+}
+.cajacentral{
+    width: 400px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid #FCD601; */
+    /* gap: 15px; */
+    box-sizing:border-box;
+    border-top-right-radius: 70px;
+    border-top-left-radius: 70px;
+    box-shadow: 35px 35px 10px rgb(57, 56, 56);
+    filter: drop-shadow(0px 0px 5px whitesmoke);
+
+
+}
+.frontal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    border: 15px groove whitesmoke;
+    /* border-left: 15px solid #1d1d1d;
+    border-right: 15px solid #1d1d1d; */
+
+    gap: 15px ;
+    padding: 20px;
+    box-sizing:border-box;
+    background-attachment: fixed;
+    background-size: cover;
+    background: #EEBE46;
+    background-size: 400% 400%;
+    animation: gradient 3s ease alternate-reverse infinite;
+    height: 50vh;
+    /* box-shadow: 15px 15px 2px #1d1d1d; */
+    margin-bottom: -2px;
+
+
+
+}
+.frontal2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    gap: 15px ;
+    padding: 20px;
+    box-sizing:border-box;
+
+
+
+
+}
+.frontal3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 60px;
+    border: 15px solid #1d1d1d;
+    gap: 15px ;
+    box-sizing:border-box;
+    background: #1d1d1d;
+    /* box-shadow: 15px 15px 2px #1d1d1d; */
+    border-bottom: 0px;
+    border-top: 0px;
+    margin-bottom: -2px;
+
+
+
+
+}
+.funci{
+    width: 400px;
+    height: 200px;
+    border: 15px solid #1d1d1d;
+    background:#5c7346;
+    box-sizing:border-box;
+    /* box-shadow: 15px 15px 2px #1d1d1d; */
+    border-top: 0px;
+
+}
+
+.info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 50px;
+    padding: 50px;
+    gap: 15px ;
+    box-sizing:border-box;
+    
+
+}
+.numeros{
+    width: 80px;
+    height: 110px;
+    border: 5px outset whitesmoke;
+    box-sizing:border-box;
+    background: url(img/sprite3.png);
+    background-position: 50% 100%;
+    transition-timing-function: ease;
+    transition-duration: 0.7s;
+    
+
+}
+.apuestas{
+    width: 40px;
+    height: 40px;
+    border: 5px inset #EEBE46;
+    box-sizing:border-box;
+
+    
+
+}
+.credits{
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+    color: whitesmoke;
+    width: 120px;
+    height: 40px;
+    border: 5px inset #EEBE46;
+    box-sizing:border-box;
+    background: #1d1d1d;
+    transition-timing-function: ease;
+    transition-duration: 1s;
+
+}
+.bet{
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+    color: whitesmoke;
+    width: 40px;
+    height: 40px;
+    border: 5px inset #EEBE46;
+    box-sizing:border-box;
+    background: #1d1d1d;
+
+
+    
+
+}
+.winner{
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 40px;
+    border: 5px inset #EEBE46;
+    box-sizing:border-box;
+    background: #1d1d1d;
+
+
+    
+
+}
+.botones{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background-color: #EEBE46;
+    box-shadow: 4px 4px 2px #1d1d1d;
+    transition-timing-function: ease;
+    transition-duration: 0.4s;
+}
+.botones:hover{
+    transform:scale(0.9) rotateZ(45deg) ;
+    box-shadow: 6px 6px 4px #1d1d1d;
+
+  }
+
+.arco{
+    width: 400px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border: 15px solid #1d1d1d;
+    border-top-right-radius: 100%;
+    border-top-left-radius: 100%;
+    box-sizing:border-box;
+    background: #EEBE46;
+    /* box-shadow: 15px 15px 2px #1d1d1d; */
+    margin-bottom: -2px;
+    border-bottom: 0px;
+}
+.arco img{
+    width: 230px;
+}
+button{
+    font-weight: bold;
+    font-family: Zelda;
+}
+.avances{
+    display: flex ;
+justify-content: center; 
+align-items: center;
+gap: 15px;
+}
+.avanceshijo{
+    display: flex ;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    
+   
+}
+.avancesselector{
+    display: flex ;
+    justify-content: center; 
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    border: 0px;    
+}
+
+@keyframes premio {
+    0% {opacity: 0;}
+   
+    100% {opacity: 1; }
+}
+#puntuaciones{
+    width: 300px;
+    height: 330px;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    align-items: center;
+    box-sizing:border-box;
+    overflow-y: scroll;
+}
+
+#puntuaciones::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+#puntuaciones::-webkit-scrollbar:vertical {
+    width:10px;
+}
+
+#puntuaciones::-webkit-scrollbar-button:increment,#puntuaciones::-webkit-scrollbar-button {
+    display: none;
+} 
+
+#puntuaciones::-webkit-scrollbar:horizontal {
+    height: 10px;
+}
+
+#puntuaciones::-webkit-scrollbar-thumb {
+    background-color: #d9a404;
+    border-radius: 20px;
+    border: 2px solid #f1f2f3;
+}
+
+#puntuaciones::-webkit-scrollbar-track {
+    border-radius: 10px;  
+}
+
+
+
+
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+
+  .flechasarriba{
+    filter: drop-shadow(6px 6px 3px #1d1d1d);
+    transition-timing-function: ease;
+    transition-duration:0.3s;
+
+  }
+  .flechasarriba:hover{
+    transform: scale(0.9) translateY(-5px) skew(10deg, 0deg);
+  }
+
+  .flechasabajo{
+    filter: drop-shadow(6px 6px 3px #1d1d1d);
+    transition-timing-function: ease;
+    transition-duration: 0.3s;
+
+  }
+  .flechasabajo:hover{
+    transform: scale(0.9) translateY(5px)  skew(-10deg, 0deg) ;
+  }
+
+  audio{
+    display: none;
+  }

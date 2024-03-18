@@ -1,0 +1,22 @@
+Realizar un conjunto de páginas web que representan un catálogo. Para ello deberás realizar una página que haga de índice y cuatro páginas más que representarán los elementos del catálogo.
+
+La página de índice contendrá una pequeña explicación y enlaces a cada una de las otras cuatro páginas y sus secciones. Estos enlaces se mostrarán de una manera ordenada para facilitar la navegación.
+
+Cada una de las otras cuatro páginas dispondrá de enlaces al índice y a las páginas anteriores y siguientes. En el caso de la primera y última página no habrá enlaces a la página anterior (en la primera página) y siguiente (en la última página). Además cada una de esas páginas tendrá 3 secciones con un artículo cada una (es decir, cada sección tiene un artículo, son 3, no son 9), cada artículo estará compuesto por:
+
+Título
+Descripción
+Foto
+
+Y anclas en cada una de las secciones (a cada artículo, no a las partes del artículo), de forma que se pueda navegar hacia esas secciónes, no sólo desde la página de índice, sino también desde la propia página gracias a la inclusión de enlaces que sirvan para tal fin al inicio de la misma, como si fuese un índice de la página.
+
+Debe existir un enlace para volver al índice en cada sección, y un enlace para volver a la página de inicio.
+
+Los textos de título y descripción de los artículos deben estar generados por IA
+Las imágenes de los productos deben estar generadas por IA
+
+Se entregará, opcionalmente, además del ejercicio realizado por el alumno/a, una versión generada por IA
+
+Se recompensa con 0,05 por entregar una versión adicional generada con IA
+
+Se deben guardar los pompts para poder hacer puesta en común

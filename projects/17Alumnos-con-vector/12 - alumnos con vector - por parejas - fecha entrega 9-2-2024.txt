@@ -1,0 +1,94 @@
+Primera parte: Operaciones C.R.U.D. y de búsqueda y reemplazo:
+
+	Hacer una página web que tenga una caja de texto para escribir el nombre de un alumno y un botón para guardar el nombre de ese alumno.
+
+	Cuando pulsemos el botón se guardará el nombre del alumno en un vector y bajo el botón aparecerán todos los nombres de los alumnos que vayamos introduciendo.
+
+	Usar estilos para mejorar la apariencia de la tabla de forma que se ilumine la fila seleccionada y aparezca el cursor pointer
+
+	Pista:
+
+	1. Leer el nombre del alumno
+	2. Incluir el nombre del alumno en el vector
+	3. Pintar la tabla de los alumnos con los datos del vector. Cómo pintar la tabla:
+		3.1. Crear una variable 'texto' donde iremos guardando el html de la tabla que vamos a crear
+		3.2. Añadir a 'texto' la etiqueta de apertura de la tabla y la fila de los encabezados
+		3.3. Recorrer el vector de los alumnos con un bucle y para cada elemento almacenado en el vector añadir una fila de datos a 'texto'. En la fila de datos se tomará el nombre del alumno del elemento del vector que se esté recorriendo
+		3.4. Añadir a 'texto' la etiqueta de cierre de la tabla
+		3.5. Escribir 'texto' como HTML interior del div donde debe ir la tabla
+
+	Esta versión aporta la 'C' y la 'R' del C.R.U.D.
+
+	V2: Añadir un botón a cada fila de la tabla para quitar el alumno sobre el que pulsemos
+
+	Esta versión aporta la 'D' del C.R.U.D.
+
+	V3: Poner un número de lista a cada alumno en la tabla y mostrar en la última fila el número de alumnos que hay
+
+	V4: Permitir que al pulsar en un alumno de la tabla su nombre pase a la caja de texto y aparezcan un botón de 'modificar' y otro de 'cancelar' sustituyendo al botón de 'guardar'. Al pulsar el botón de modificar se sustituirá el nombre del alumno en el vector por el que se haya escrito en la caja de texto y se volverá a pintar la tabla. Si se pulsa cancelar se borrará la caja de texto. En ambos casos se quitarán los botones de 'modificar' y 'cancelar' y se volverá a dejar el botón de 'guardar'.
+
+	Esta versión aporta la 'U' del C.R.U.D.
+
+	V5: Añadir una caja de texto para escribir un nombre y un botón de 'buscar', que, al pulsarlo, nos escriba en un contenedor cuántas veces aparece ese nombre en la lista de nombres.
+
+	Esta versión aporta la búsqueda en un conjunto de datos
+
+	V5: Añadir una caja de texto para escribir otro nombre y un botón de 'reemplazar todos', que, al pulsarlo, nos reemplace en la lista de nombres todas las apariciones del nombre a buscar por el nombre que hemos escrito en la caja de texto de 'reemplazar'.
+
+	Esta versión aporta el reemplazo en un conjunto de datos
+
+	V6: Añadir un botón de 'buscar y reemplazar' que nos muestre en un contenedor cada aparición del nombre buscado, indicando el número de lista donde aparece. También mostrará los botones 'reemplazar' y 'saltar' para hacer el reemplazo o bien dejar el nombre como está en el vector. Una vez terminado el proceso se vaciará ese contenedor informativo.
+
+	Esta versión aporta la búsqueda y reemplazo en un conjunto de datos
+
+Segunda parte: Operaciones con los datos:
+
+	V7. Incluir las siguientes filas informativas al final de la tabla:
+		Una que muestre el promedio del número de letras de los nombres.
+		Una que muestre el el número de letras del nombre más corto.
+		Una que muestre el el número de letras del nombre más largo.
+
+	V8. Añadir un botón para escribir los nombres del revés en la tabla. Después cambiará el texto del botón para indicar que si se vuelve a pulsar se escribirán los nombres del derecho.
+
+	V9. Información: Se añadirá un botón informativo a cada fila de la tabla. Al pulsarlo, en un contenedor aparte, aparecerá la siguiente información:
+		Nombre
+		Longitud del nombre
+		Si la longitud del nombre está por encima, por debajo o en el promedio
+		Si es el nombre más corto, más largo o nada
+		Número de vocales del nombre
+
+Tienda de mejoras:
+
+Por 0,02 positivos: Añadir un botón de "Duplicar" a los botones de la V4, que cree una copia del nombre elegido en el vector justo a continuación de donde se encontrase
+Por 0,03 positivos: Ordenar los nombres del vector sin usar el método sort, es decir, usando bucles y un segundo vector temporal
+Por 0,03 positivos: Añadir un botón que cambie el color de fondo de las celdas de los nombres que son palíndromos
+
+Versión vitaminada:
+
+Crea tus propias mejoras sobre la página, se valorarán según su dificultad.
+
+Versión IA por 0,01 positivos:
+
+Crea una versión IA funcional que cumpla los requisitos pedidos el ejercicio.
+
+Versión IA por 0,03 positivos (no acumulable a la anterior):
+
+Crea una versión IA funcional que cumpla los requisitos pedidos el ejercicio y todas las mejoras.
+
+El ejercicio se realizará por parejas. Los grupos son:
+
+Gonzalo y Alex cid
+Ángel y Pedro
+Hugo y Víctor
+Darío e Isidro
+Gerardo y Alberto
+David G. y Amparo
+Aida e Iván
+Alejandro y Alberto M.
+Nacho e Iker
+Juanma y Martín
+Andrés y Joselu
+Ismael y David M.
+Álvaro y Cristian
+Ramón, Unai, Nicolás
+

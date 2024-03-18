@@ -1,0 +1,19 @@
+El viaje del héroe: El inicio, programación estructurada
+
+Realizar una página web con un botón que, al pulsarlo, muestre un personaje en pantalla. El personaje estará hecho de la siguiente manera:
+
+La base será un contenedor dividido en dos partes. En la parte superior irá la imagen del personaje y en la inferior un panel de controles para el movimiento que constará de cuatro botones para mover al personaje en las cuatro direcciones de los dos ejes de coordenadas.
+
+El contenedor del personaje tendrá posicionamiento absoluto y aparecerá en unas coordenadas al azar dentro de el tamaño disponible de la pantalla, sin que se corte el personaje por traspasar sus límites.
+
+Cuando pulsemos cada uno de los botones de movimiento, según la dirección elegida incrementaremos o decrementaremos los valores de las propiedades left y top del contenedor en 5px. Para ello deberemos de disponer de dos variables que guarden esos valores. No hay penalización porque el personaje se salga de pantalla al moverse.
+
+Versión mejorada por 0,06 positivos:
+
+Añade un botón para que el personaje diga una frase al azar entre 5 disponibles (se puede hacer con un mínimo de 3), debe mostrarse en un bocadillo sobre el personaje. No debes usar vectores o matrices para la lista de frases.
+
+Versión IA (0,01 positivos cada una):
+
+Crea una versión IA funcional que cumpla los requisitos pedidos para cada versión y obtendrás 0,01 positivos por cada una.
+
+Reflexión: Con lo que hemos aprendido hasta el momento... ¿Crees que sería cómodo hacer que cada vez que pulsaras el botón apareciera un nuevo personaje independiente?

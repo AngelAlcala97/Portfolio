@@ -1,0 +1,56 @@
+Realizar una página web que permita hacer animaciones personalizadas.
+
+Las animaciones tendrán los siguientes parámetros personalizables:
+
+	Un tiempo de espera incial antes de que la animación inicie
+	Un tiempo de duración de la transición
+	Un tiempo de espera final en el que la figura se queda con la transición aplicada
+
+Estos tres parámetros se recogerán con tres range sliders con valores mínimo y máximo de 1 y 5 segundos. Los valores elegidos mediante el range slider deberán mostarse al lado del mismo. Al lado de ellos habrá un botón para aplicar la configuración, o la configuración se podrá aplicar en tiempo real al mover los sliders. Todos tendrán un valor por defecto.
+Todas las animaciones se producirán en un ciclo infinito respetando los tiempos indicados. Las animaciones podrán cancelarse para detenerlas (cuando la animación se cancele no se para en el momento, sino que llegará a su estado inicial y ahí se detendrá). La animación, por ejemplo un desplazamiento, se producirá y, después del tiempo de espera final se volverá aplicar de forma inversa (respetando los tiempos) para devolver al elemento a su estado inicial, que en este caso es la posición de la que partió.
+
+Bajo estos controles aparecerán varias secciones para aplicar diferentes tipos de transiciones, cada una con controles propios y un botón para iniciar/detener. Los controles serán:
+
+	Desplazamiento: Desplazamiento X, Desplazamiento Y
+	Cambio de tamaño: Nuevo tamaño X, Nuevo tamaño Y
+	Rotación: Ángulo de rotación
+	Grosor del borde: Grosor
+		
+Finalmente aparecerá un contenedor sobre el que se aplicará la animación elegida. Puede aplicarse más de una animación a la vez y no tienen por qué detenerse en el mismo orden en el que se iniciaron.
+
+El ejercicio debe hacerse con javascript ya que este se usa para modificar los valores de las propiedades CSS que se animan, como por ejemplo left o la trasformación rotate. Cualquier uso de CSS para hacer transisiciones o animaciones (es decir, usar las reglas transition o animation en cualquiera de sus formas) o evitar que se construya con javascript el proceso de animación conllevará el suspenso del ejercicio.
+
+Tienda de mejoras:
+
+Por 0,01 positivos: Añadir controles para que la animación de rotación pueda hacerse con un pivote definido por el usuario.
+Por 0,01 positivos: Añadir la trasformación para torcer (skew).
+Por 0,03 positivos: Añadir una trasición en los colores. Se deben definir los valores RGB de inicio y de fin usando un input de tipo color para inicio y otro para fin.
+
+Versión vitaminada:
+
+Crea tus propias mejoras sobre la página, se valorarán según su dificultad.
+
+Versión IA por 0,01 positivos:
+
+Crea una versión IA funcional que cumpla los requisitos pedidos el ejercicio.
+
+Versión IA por 0,03 positivos (no acumulable a la anterior):
+
+Crea una versión IA funcional que cumpla los requisitos pedidos el ejercicio y todas las mejoras.
+
+El ejercicio se realizará por parejas. Los grupos son:
+
+Nacho y Hugo
+Amparo y David M.
+Alberto G. Andrés
+Álvaro y Íker
+Gonzalo y Víctor
+Cristian e Isidro
+Alejandro G. y Aida
+Ismael e Iván
+David G. y Ángel
+Pedro y Alberto M.
+Nicolás y Alex C.
+Joselu y Juanma
+Martin y Gerardo
+Ramón, Unai y Darío

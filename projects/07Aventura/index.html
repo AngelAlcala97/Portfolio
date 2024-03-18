@@ -1,0 +1,1469 @@
+<!DOCTYPE html>
+<html>
+<head >
+    <meta charset="UTF-8" />
+    <title>Ruinas de Babel</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+	<link rel="icon" href="img/logo.png" type="image/x-icon">
+    <script src="script.js"></script>
+
+</head>
+<body alink="white" vlink="white">
+
+    <!--LOGO-->
+    <div id="logo" class="flex">
+        <a style="text-decoration: none;" href="#" ><img onclick="volver()" id="icono" src="img/logo.png"><br><h4>EL MISTERIO DEL REINO OLVIDADO DE AWENTUIRA</h4></a>
+        <audio id="audio" controls>
+        <source type="audio/mp3" src="audio/The Legend of Zelda (NES) - Intro (Main Theme).mp3">
+        </audio>
+    </div>
+
+
+    <!--INICIO JUEGO-->
+
+    <div class="flex" id="fondo">
+        <header id="banner">
+            <div style="position: relative; left: 0; top: 0;">
+                <img height="540" width="960" style="opacity: 0.5;" src="img/0-loginscreen.png" class='imagenfondo'/>
+                    <a class="botonstart"><input style="font-size: 30px; font-weight: bold;font-family: fantasy;border-radius: 30px;padding-left: 20px;padding-right: 20px;padding-top: 10px;background-color: #C0A466;cursor: url('img/cursor.png'), auto; border: 4px solid #aeb19c;" type="button" value="INICIAR" onclick="llegadaciudad()"></a>
+            </div>
+        </header>
+    </div>
+
+
+    <!--INTRODUCCION - LLEGADA CIUDAD-->
+
+
+    <div class="container" id="llegadaciudad">
+        <header id="banner">
+            <div style="position: relative; left: 0; top: 0;">
+                <img style="opacity: 0.5;" src="img/1-llegadaciudad.png" class='imagenfondo'/>
+                <span class="textofondo" >
+                    <p>Eres un valiente aventurero que llega a las afueras de una antigua ciudad </p>
+                    <p>semiabandonada. La vida persiste a pesar del paso del tiempo y la decadencia.</p> 
+                    <p>Tu misión: descubrir los secretos que yacen ocultos en el castillo olvidado. </p>
+                    </span>
+            </div>
+
+        </header>
+        <div style="flex-direction: column; display: flex; justify-content: center;">
+        <input class="botones"  type="button" value="Puerta de la ciudad" onclick="puertaciudadpg1()">
+        </div>
+    </div>
+
+
+    <!--PAGINA 1 - PUERTA DE LA CIUDAD-->
+
+    <div class="container" id="puertaciudad">
+        <header id="banner">
+            <div style="position: relative; left: 0; top: 0;">
+                <img style="opacity: 0.5;" src="img/2-puertaciudad.png" class='imagenfondo'/>
+                <span class="textofondo" >
+                    <p>Llegas a las puertas de la ciudad en ruinas, donde unas pocas almas valientes </p>
+                    <p>han logrado mantener una vida modesta entre las sombras de lo que alguna vez</p>
+                    <p>fue una bulliciosa comunidad.</p>
+                    </span>
+            </div>
+        </header>
+        <div style="flex-direction: column; display: flex; justify-content: center;">
+            <input class="botones"  type="button" value="Plaza de la ciudad" onclick="plazaciudadpg3()">
+        </div>
+    </div>
+
+
+    <!--PAGINA 3 - PLAZA DE LA CIUDAD-->
+    <div class="container" id="plazaciudad">
+        <header id="banner">
+            <div style="position: relative; left: 0; top: 0;">
+                <img style="opacity: 0.5;" src="img/3-plazaciudad.png" class='imagenfondo'/>
+                <span class="textofondo" >
+                    <p>En el corazón de la ciudad, encuentras una plaza rodeada de ruinas</p>
+                    <p>de antiguos edificios. Algunos pocos habitantes han establecido pequeños </p>
+                    <p>puestos comerciales y jardines,intentando mantener un atisbo de normalidad.</p>
+                    <p>¿Quieres interactuar con los habitantes o seguir hacia el castillo?</p>
+
+                    </span>
+            </div>
+        </header>
+        <div style="flex-direction: column; display: flex; justify-content: center;">
+            <input class="botones"  type="button" value="Interactuar" onclick="interactuarhabitantesplazapg7()">
+            <input class="botones"  type="button" value="Seguir al castillo" onclick="avanzarcastillopg4()">
+        </div>
+    </div>
+
+    <!--PAGINA 4 - CASTILLO-->
+    <div class="container" id="castillo">
+        <header id="banner">
+            <div style="position: relative; left: 0; top: 0;">
+                <img style="opacity: 0.5;" src="img/5-entradacastillo.png" class='imagenfondo'/>
+                <span class="textofondo" >
+                    <p>Llegas a las imponentes puertas del castillo,</p>
+                    <p>donde dos guardianes locales custodian la entrada.</p>
+                    <p>¿Deseas hablar con los guardianes o buscar una entrada secreta?</p>
+
+                    </span>
+            </div>
+        </header>
+        <div style="flex-direction: column; display: flex; justify-content: center;">
+            <input class="botones"  type="button" value="Hablar con los guardias" onclick="hablarguardiaspg8()">
+            <input class="botones"  type="button" value="Buscar entrada secreta" onclick="buscarentradasecretapg9()">
+        </div>
+    </div>
+
+    <!--PAGINA 7 - INTERACTUAR HABITANTES PLAZA DE LA CIUDAD-->
+    <div class="container" id="interactuarhabitantesplazaciudad">
+        <header id="banner">
+            <div style="position: relative; left: 0; top: 0;">
+                <img style="opacity: 0.5;" src="img/3-plazaciudad.png" class='imagenhabitante'/>
+                <img src="img/habitante.png" class='imagenfondo'/>
+                <h6>
+                    <strong style="color: rgb(255, 200, 0);">Clay el sapo:</strong><br>
+                    Te veo algo perdido. ¿Hay algo que querrias saber?
+                    </h6>
+            </div>
+        </header>
+        <div style="flex-direction: column; display: flex; justify-content: center;">
+            <input class="botones"  type="button" value="Preguntar historia" onclick="historiacastillopg10()">
+            <input class="botones"  type="button" value="Volver plaza" onclick="plazaciudadpg3()">
+        </div>
+    </div>
+
+    <!--PAGINA 8 -HABLAR GUARDIAS CASTILLO-->
+    <div class="container" id="hablarguardias">
+        <header id="banner">
+            <div style="position: relative; left: 0; top: 0;">
+                <img style="opacity: 0.5;" src="img/5-entradacastillo.png" class='imagenhabitante'/>
+                <img src="img/guardias.png" class='imagenfondo'/>
+                <h6>
+                    <strong style="color: rgb(255, 200, 0);">Norberto:</strong> Perdí la llave de la puerta trasera en el bosque..<br>
+                    <strong style="color: rgb(255, 200, 0);">Eriberto:</strong> Shh.. ¿Que quieres campesino?
+                    </h6>
+            </div>
+        </header>
+        <div style="flex-direction: column; display: flex; justify-content: center;">
+            <input class="botones"  type="button" value="Buscar la llave" onclick="llavepuertatraserapg12()">
+            <input class="botones"  type="button" value="Buscar otra entrada" onclick="buscarentradasecretapg9()">
+        </div>
+    </div>
+
+    <!--PAGINA 9 - ENTRADA SECRETA-->
+    <div class="container" id="buscaraentradasecreta">
+        <header id="banner">
+            <div style="position: relative; left: 0; top: 0;">
+                <img style="opacity: 0.5;" src="img/entradasecreta.png" class='imagenfondo'/>
+                <span class="textofondo" >
+                    <p>Decides buscar una entrada secreta. Después de inspeccionar detenidamente,</p>
+                    <p>encuentras una puerta alejada en el bosque que parece prometedora.</p>
+                    <p>¿Deseas entrar por la puerta o reconsiderar tu elección?</p>
+
+                    </span>
+            </div>
+        </header>
+        <div style="flex-direction: column; display: flex; justify-content: center;">
+            <input class="botones"  type="button" value="Entrar por la puerta" onclick="entradapuertasecretapg14()">
+            <input class="botones"  type="button" value="Reconsiderar eleccion" onclick="avanzarcastillopg4()">
+        </div>
+    </div>
+
+    <!--PAGINA 10 - HISTORIA DEL CASTILLO-->
+    <div class="container" id="historiacastillo">
+        <header id="banner">
+            <div style="position: relative; left: 0; top: 0;">
+                <img style="opacity: 0.5;" src="img/3-plazaciudad.png" class='imagenhabitante'/>
+                <img src="img/habitante.png" class='imagenfondo'/>
+                <h6>
+                    <strong style="color: rgb(255, 200, 0);">Clay el sapo:</strong><br>
+                    Esta ciudad otrora resplandeciente, de repente <br>
+                    empezo a sufrir cuando el rey murió, desde entonces,<br>
+                    nadie viene por aqui. Murió en sus aposentos,<br>
+                    tras eso, lo enterraron en la cripta
+
+                    </h6>
+            </div>
+        </header>
+        <div style="flex-direction: column; display: flex; justify-content: center;">
+            <input class="botones"  type="button" value="Explorar aposentos reales" onclick="aposentosrealespg16()">
+            <input class="botones"  type="button" value="Adentrarte en la cripta" onclick="criptapg17()">
+        </div>
+    </div>
+
+    <!--PAGINA 12 - PUERTA TRASERA -->
+    <div class="container" id="llavepuertatrasera">
+        <header id="banner">
+            <div style="position: relative; left: 0; top: 0;">
+                <img style="opacity: 0.5;" src="img/32-entradacloacascastillo.png" class='imagenfondo'/>
+                <span class="textofondo" >
+                    <p>Con la llave en mano, te diriges hacia la puerta trasera. </p>
+                    <p>Al cruzarla, te encuentras en un oscuro pasillo.</p>
+                    <p>¿Deseas explorar el pasillo o regresar a la entrada principal?</p>
+
+                    </span>
+            </div>
+        </header>
+        <div style="flex-direction: column; display: flex; justify-content: center;">
+            <input class="botones"  type="button" value="Explorar el pasillo" onclick="pasadizomisteriosopg18()">
+            <input class="botones"  type="button" value="Regresar a la entrada" onclick="avanzarcastillopg4()">
+        </div>
+    </div>
+
+    <!--PAGINA 14 - ENTRADA PUERTA SECRETA -->
+    <div class="container" id="entradapuertasecreta">
+        <header id="banner">
+            <div style="position: relative; left: 0; top: 0;">
+                <video id="videoentradapuertasecreta" autoplay>
+                    <source src="video/entradapuertasecreta.mp4" type="video/mp4" />
+                </video>
+                <span class="textofondo" >
+                    <p>Con la llave en mano, te diriges hacia la puerta trasera. </p>
+                    <p>Al cruzarla, te encuentras en un oscuro pasillo.</p>
+                    <p>¿Deseas explorar el pasillo o regresar a la entrada principal?</p>
+
+                    </span>
+            </div>
+        </header>
+        <div style="flex-direction: column; display: flex; justify-content: center;">
+            <input class="botones"  type="button" value="Explorar el pasillo" onclick="pasadizomisteriosopg18()">
+            <input class="botones"  type="button" value="Regresar a la entrada" onclick="avanzarcastillopg4()">
+        </div>
+    </div>
+
+<!--PAGINA 16 - APOSENTOS REALES -->
+<div class="container" id="aposentosreales">
+    <header id="banner">
+        <div style="position: relative; left: 0; top: 0;">
+            <img style="opacity: 0.5;" src="img/aposentosrey.png" class='imagenfondo'/>
+            <span class="textofondo" >
+                <p>Te diriges a los aposentos reales, donde encuentras antiguos pergaminos</p>
+                <p> y artefactos. Uno de los pergaminos parece contener información crucial.</p>
+                <p> ¿Deseas examinar el pergamino o ir a la biblioteca en busca de más pistas? </p>
+                </span>
+        </div>
+    </header>
+    <div style="flex-direction: column; display: flex; justify-content: center;">
+        <input class="botones"  type="button" value="Examinar pergamino" onclick="examenpergaminopg20()">
+        <input class="botones"  type="button" value="Ir a la biblioteca" onclick="busquedabibliotecapg22()">
+    </div>
+</div>
+
+<!--PAGINA 17 - CRIPTA -->
+<div class="container" id="cripta">
+    <header id="banner">
+        <div style="position: relative; left: 0; top: 0;">
+            <img style="opacity: 0.5;" src="img/cripta.png" class='imagenfondo'/>
+            <span class="textofondo" >
+                <p>Te adentras en la cripta, donde encuentras tumbas de antiguos monarcas.</p>
+                <p> Al explorar, descubres un pasadizo secreto.</p>
+                <p>¿Deseas entrar al pasadizo o regresar a los aposentos reales?</p>
+                </span>
+        </div>
+    </header>
+    <div style="flex-direction: column; display: flex; justify-content: center;">
+        <input class="botones"  type="button" value="Entrar al pasadizo" onclick="pasadizosecretopg24()">
+        <input class="botones"  type="button" value="Regresar a los aposentos reales" onclick="aposentosrealespg16()">
+    </div>
+</div>
+
+<!--PAGINA 18 - PASADIZO MISTERIOSO -->
+<div class="container" id="pasadizomisterioso">
+    <header id="banner">
+        <div style="position: relative; left: 0; top: 0;">
+            <img style="opacity: 0.5;" src="img/pasadizomisterioso.png" class='imagenfondo'/>
+            <span class="textofondo" >
+                <p>Sigues el pasadizo oscuro y llegas a una cámara oculta.</p>
+                <p>En ella, encuentras un objeto antiguo que emana poder.</p>
+                <p>¿Deseas tomar el objeto o seguir explorando?</p>
+                </span>
+        </div>
+    </header>
+    <div style="flex-direction: column; display: flex; justify-content: center;">
+        <input class="botones"  type="button" value="Tomar el objeto" onclick="tomaobjetoantiguopg26()">
+        <input class="botones"  type="button" value="Seguir explorando" onclick="seguirexplorando1pg28()">
+    </div>
+</div>
+
+<!--PAGINA 20 - EXAMEN DEL PERGAMINO -->
+<div class="container" id="examenpergamino">
+    <header id="banner">
+        <div style="position: relative; left: 0; top: 0;">
+            <img style="opacity: 0.5;" src="img/pergaminoenigmatico.png" class='imagenfondo'/>
+            <span class="textofondo" >
+                <p>Al examinar el pergamino, descifras un enigma</p>
+                <p>que apunta hacia la gran escalera del castillo. </p>
+                <p>¿Deseas dirigirte a la gran escalera o explorar la capilla?</p>
+                </span>
+        </div>
+    </header>
+    <div style="flex-direction: column; display: flex; justify-content: center;">
+        <input class="botones"  type="button" value="Ir a la Gran Escalera" onclick="granescalerapg30()">
+        <input class="botones"  type="button" value="Explorar capilla" onclick="capillacastillopg32()">
+    </div>
+</div>
+
+<!--PAGINA 22 - BUSQUEDA EN LA BIBLIOTECA -->
+<div class="container" id="busquedabiblioteca">
+    <header id="banner">
+        <div style="position: relative; left: 0; top: 0;">
+            <img style="opacity: 0.5;" src="img/10-libreriacastillo.png" class='imagenfondo'/>
+            <span class="textofondo" >
+                <p>En la biblioteca, encuentras un mapa antiguo que muestra pasadizos secretos.</p>
+                <p>¿Deseas explorar los pasadizos o dirigirte a la cocina en busca de más pistas?</p>
+                </span>
+        </div>
+    </header>
+    <div style="flex-direction: column; display: flex; justify-content: center;">
+        <input class="botones"  type="button" value="Explorar pasadizos" onclick="pasadizossecretospg34()">
+        <input class="botones"  type="button" value="Ir a la cocina" onclick="cocinapg36()">
+    </div>
+</div>
+
+<!--PAGINA 24 - PASADIZO SECRETO -->
+<div class="container" id="pasadizosecreto">
+    <header id="banner">
+        <div style="position: relative; left: 0; top: 0;">
+            <img style="opacity: 0.5;" src="img/relicario.png" class='imagenfondo'/>
+            <span class="textofondo" >
+                <p>Sigues el pasadizo secreto y llegas a una sala misteriosa. </p>
+                <p>En ella, encuentras un relicario que parece importante.</p>
+                <p>¿Deseas abrir el relicario o regresar a la cripta?</p>
+                </span>
+        </div>
+    </header>
+    <div style="flex-direction: column; display: flex; justify-content: center;">
+        <input class="botones"  type="button" value="Abrir relicario" onclick="aperturarelicariopg38()">
+        <input class="botones"  type="button" value="Regresar a la cripta" onclick="criptapg17()">
+    </div>
+</div>
+
+<!--PAGINA 26 - TOMA DEL OBJETO ANTIGUO -->
+<div class="container" id="tomaobjetoantiguo">
+    <header id="banner">
+        <div style="position: relative; left: 0; top: 0;">
+            <img style="opacity: 0.5;" src="img/tomaobjetoantiguo.png" class='imagenfondo'/>
+            <span class="textofondo" >
+                <p>Tomar el objeto antiguo emana una oleada de energía. </p>
+                <p>No sabes qué hace, pero sientes que es importante.</p>
+                <p>¿Deseas ir a la gran escalera o explorar los jardines del castillo?</p>
+                </span>
+        </div>
+    </header>
+    <div style="flex-direction: column; display: flex; justify-content: center;">
+        <input class="botones"  type="button" value="Ir a la Gran Escalera" onclick="granescalerapg30()">
+        <input class="botones"  type="button" value="Explorar los jardines" onclick="jardinespg40()">
+    </div>
+</div>
+
+<!--PAGINA 28 - EXPLORACION CONTINUA -->
+<div class="container" id="seguirexplorando1">
+    <header id="banner">
+        <div style="position: relative; left: 0; top: 0;">
+            <img style="opacity: 0.5;" src="img/runas.png" class='imagenfondo'/>
+            <span class="textofondo" >
+                <p>Sigues explorando y llegas a una habitación iluminada por extrañas runas.</p>
+                <p>¿Deseas investigar las runas o regresar al pasadizo misterioso?</p>
+                </span>
+        </div>
+    </header>
+    <div style="flex-direction: column; display: flex; justify-content: center;">
+        <input class="botones"  type="button" value="Investigar las runas" onclick="investigacionrunaspg42()">
+        <input class="botones"  type="button" value="Regresar al pasadizo" onclick="pasadizomisteriosopg18()">
+    </div>
+</div>
+
+<!--PAGINA 30 - GRAN ESCALERA  -->
+<div class="container" id="granescalera">
+    <header id="banner">
+        <div style="position: relative; left: 0; top: 0;">
+            <img style="opacity: 0.5;" src="img/6-hallcastillo.png" class='imagenfondo'/>
+            <span class="textofondo" >
+                <p>Subes por la gran escalera y llegas a una plataforma elevada.</p>
+                <p>Desde aquí, puedes ver una serie de pasadizos secretos.</p>
+                <p>¿Deseas explorar los pasadizos o bajar al gran comedor?</p>
+                </span>
+        </div>
+    </header>
+    <div style="flex-direction: column; display: flex; justify-content: center;">
+        <input class="botones"  type="button" value="Explorar pasadizos" onclick="exploracionpasadizospg44()">
+        <input class="botones"  type="button" value="Gran comedor" onclick="grancomedorpg46()">
+    </div>
+</div>
+
+ <!--PAGINA 32 - CAPILLA DEL CASTILLO-->
+ <div class="container" id="capillacastillo">
+    <header id="banner">
+        <div style="position: relative; left: 0; top: 0;">
+            <img style="opacity: 0.5;" src="img/11-capillacastillo.png" class='imagenhabitante'/>
+            <img src="img/sacerdote.png" class='imagenfondo'/>
+            <h6>
+                <strong style="color: rgb(255, 200, 0);">Sacerdote:</strong><br>
+                Llevo observandote desde tu llegada viajero..<br>
+                Me confías tu misión o seguirás explorando solo?
+            </h6>
+        </div>
+    </header>
+    <div style="flex-direction: column; display: flex; justify-content: center;">
+        <input class="botones"  type="button" value="Confiar misión" onclick="confidenciassacerdotepg48()">
+        <input class="botones"  type="button" value="Seguir explorando" onclick="exploracionindependientepg50()">
+    </div>
+</div>
+
+<!--PAGINA 34 - PASADIZOS SECRETOS  -->
+<div class="container" id="pasadizossecretos">
+    <header id="banner">
+        <div style="position: relative; left: 0; top: 0;">
+            <img style="opacity: 0.5;" src="img/7-transitosalascastillo.png" class='imagenfondo'/>
+            <span class="textofondo" >
+                <p>Te aventuras en los pasadizos secretos del castillo.</p>
+                <p>Descubres una red de túneles que parecen llevar a diferentes partes del castillo.</p>
+                <p>¿Deseas explorar más o regresar a la biblioteca?</p>
+                </span>
+        </div>
+    </header>
+    <div style="flex-direction: column; display: flex; justify-content: center;">
+        <input class="botones"  type="button" value="Explorar más" onclick="exploracionpasadizossecretospg52()">
+        <input class="botones"  type="button" value="Regresar a la biblioteca" onclick="busquedabibliotecapg22()">
+    </div>
+</div>
+
+<!--PAGINA 36 - COCINA  -->
+<div class="container" id="cocina">
+    <header id="banner">
+        <div style="position: relative; left: 0; top: 0;">
+            <img style="opacity: 0.5;" src="img/8-cocinacastillo.png" class='imagenfondo'/>
+            <span class="textofondo" >
+                <p>En la cocina, encuentras un antiguo recetario</p>
+                <p>que contiene un hechizo de protección</p>
+                <p>¿Deseas aprender el hechizo o dirigirte al gran comedor?</p>
+                </span>
+        </div>
+    </header>
+    <div style="flex-direction: column; display: flex; justify-content: center;">
+        <input class="botones"  type="button" value="Aprender hechizo" onclick="aprendizajehechizoproteccionpg54()">
+        <input class="botones"  type="button" value="Ir al gran comedor" onclick="hechizoproteccionaccionpg56()">
+    </div>
+</div>
+
+<!--PAGINA 38 - APERTURA DEL RELICARIO  -->
+<div class="container" id="aperturarelicario">
+    <header id="banner">
+        <div style="position: relative; left: 0; top: 0;">
+            <img style="opacity: 0.5;" src="img/amuletomagico.png" class='imagenfondo'/>
+            <span class="textofondo" >
+                <p>Al abrir el relicario, encuentras un amuleto brillante que parece</p>
+                <p>tener un poder mágico ¿Deseas ponértelo o regresar a la sala </p>
+                </span>
+        </div>
+    </header>
+    <div style="flex-direction: column; display: flex; justify-content: center;">
+        <input class="botones"  type="button" value="Ponértelo" onclick="poderamuletopg58()">
+        <input class="botones"  type="button" value="Regresar a la sala" onclick="pasadizosecretopg24()">
+    </div>
+</div>
+
+<!--PAGINA 40 - JARDINES -->
+<div class="container" id="jardines">
+    <header id="banner">
+        <div style="position: relative; left: 0; top: 0;">
+            <img style="opacity: 0.5;" src="img/27-salidajardincastillo.png" class='imagenfondo'/>
+            <span class="textofondo" >
+                <p>Los jardines están llenos de vegetación exuberante y flores olvidadas.</p>
+                <p>Encuentras un sendero que parece llevar a una zona restringida.</p>
+                <p>¿Deseas seguir el sendero o regresar a la gran escalera?</p>
+                </span>
+        </div>
+    </header>
+    <div style="flex-direction: column; display: flex; justify-content: center;">
+        <input class="botones"  type="button" value="Seguir el sendero" onclick="senderorestringidopg60()">
+        <input class="botones"  type="button" value="Gran escalera" onclick="granescalerapg30()">
+    </div>
+</div>
+
+<!--PAGINA 42 - INVESTIGACION DE LAS RUNAS -->
+<div class="container" id="investigacionrunas">
+    <header id="banner">
+        <div style="position: relative; left: 0; top: 0;">
+            <img style="opacity: 0.5;" src="img/runas copia.png" class='imagenfondo'/>
+            <span class="textofondo" >
+                <p>Al investigar las runas, sientes una energía mágica.</p>
+                <p>Puedes intentar activarlas o regresar al pasadizo misterioso.</p>
+                </span>
+        </div>
+    </header>
+    <div style="flex-direction: column; display: flex; justify-content: center;">
+        <input class="botones"  type="button" value="Intentar activarlas" onclick="activacionrunaspg62()">
+        <input class="botones"  type="button" value="Regresar al pasadizo" onclick="seguirexplorando1pg28()">
+    </div>
+</div>
+
+<!--PAGINA 44 - EXPLORACION DE LOS PASADIZOS  -->
+<div class="container" id="exploracionpasadizos">
+    <header id="banner">
+        <div style="position: relative; left: 0; top: 0;">
+            <img style="opacity: 0.5;" src="img/29-pasadizocastillo.png" class='imagenfondo'/>
+            <span class="textofondo" >
+                <p>Los pasadizos te llevan a una sala secreta con un altar antiguo.</p>
+                <p>¿Deseas inspeccionar el altar o regresar a la plataforma elevada?</p>
+                </span>
+        </div>
+    </header>
+    <div style="flex-direction: column; display: flex; justify-content: center;">
+        <input class="botones"  type="button" value="Inspeccionar altar" onclick="altarantiguopg64()">
+        <input class="botones"  type="button" value="Regresar a la gran escalera" onclick="granescalerapg30()">
+    </div>
+</div>
+
+<!--PAGINA 46 - GRAN COMEDOR  -->
+<div class="container" id="grancomedor">
+    <header id="banner">
+        <div style="position: relative; left: 0; top: 0;">
+            <img style="opacity: 0.5;" src="img/9-comedorcastillo.png" class='imagenfondo'/>
+            <span class="textofondo" >
+                <p>En el gran comedor, encuentras una mesa antigua y polvorienta.</p>
+                <p>Puedes buscar entre los objetos dejados atrás o regresar a la gran escalera?</p>
+                </span>
+        </div>
+    </header>
+    <div style="flex-direction: column; display: flex; justify-content: center;">
+        <input class="botones"  type="button" value="Buscar objetos" onclick="busquedagrancomedorpg66()">
+        <input class="botones"  type="button" value="Regresar a la gran escalera" onclick="granescalerapg30()">
+    </div>
+</div>
+
+<!--PAGINA 48 - CONFIDENCIAS CON EL SACERDOTE-->
+<div class="container" id="confidenciassacerdote">
+    <header id="banner">
+        <div style="position: relative; left: 0; top: 0;">
+            <img style="opacity: 0.5;" src="img/11-capillacastillo.png" class='imagenhabitante'/>
+            <img src="img/sacerdote.png" class='imagenfondo'/>
+            <h6>
+                <strong style="color: rgb(255, 200, 0);">Sacerdote:</strong><br>
+                (...) Entiendo. Te mostraré un pasaje secreto que <br>
+                lleva a la biblioteca oculta del castillo.
+            </h6>
+        </div>
+    </header>
+    <div style="flex-direction: column; display: flex; justify-content: center;">
+        <input class="botones"  type="button" value="Seguir pasaje" onclick="bibliotecaocultapg68()">
+        <input class="botones"  type="button" value="Tomar otro rumbo" onclick="exploracionindependientepg50()">
+    </div>
+</div>
+
+<!--PAGINA 50 - EXPLORACION INDEPENDIENTE -->
+<div class="container" id="exploracionindependiente">
+    <header id="banner">
+        <div style="position: relative; left: 0; top: 0;">
+            <img style="opacity: 0.5;" src="img/32-entradacloacascastillo.png" class='imagenfondo'/>
+            <span class="textofondo" >
+                <p>Decides continuar explorando por tu cuenta.</p>
+                <p>Encuentras un oscuro corredor que parece llevar a las cloacas.</p>
+                <p>¿Deseas explorar las cloacas (ve a la Página 70) o tomar otro rumbo (ve a la Página 72)?</p>
+                </span>
+        </div>
+    </header>
+    <div style="flex-direction: column; display: flex; justify-content: center;">
+        <input class="botones"  type="button" value="Explorar cloacas" onclick="exploracioncloacaspg70()">
+        <input class="botones"  type="button" value="Buscar otra ruta" onclick="desviodestinooscuropg72()">
+    </div>
+</div>
+
+<!--PAGINA 52 - EXPLORACION DE LOS PASADIZOS SECRETOS -->
+<div class="container" id="exploracionpasadizossecretos">
+    <header id="banner">
+        <div style="position: relative; left: 0; top: 0;">
+            <img style="opacity: 0.5;" src="img/tesoros.png" class='imagenfondo'/>
+            <span class="textofondo" >
+                <p>Sigues explorando los pasadizos secretos y llegas</p>
+                <p>a una habitación oculta llena de tesoros olvidados.</p>
+                <p>¿Deseas saquear la habitación o regresar a la biblioteca?</p>
+                </span>
+        </div>
+    </header>
+    <div style="flex-direction: column; display: flex; justify-content: center;">
+        <input class="botones"  type="button" value="Saquear habitación" onclick="saqueohabitacionocultapg74()">
+        <input class="botones"  type="button" value="Regresar a la biblioteca" onclick="pasadizossecretospg34()">
+    </div>
+</div>
+
+<!--PAGINA 54 - APRENDIZAJE DEL HECHIZO DE PROTECCION -->
+<div class="container" id="aprendizajehechizoproteccion">
+    <header id="banner">
+        <div style="position: relative; left: 0; top: 0;">
+            <img style="opacity: 0.5;" src="img/hechizoproteccion.png" class='imagenfondo'/>
+            <span class="textofondo" >
+                <p>(...) Te envuelve un haz de luz que te ciega</p>
+                <p>Notas que algo ha cambiado</p>
+                <p>Aprendes el hechizo de protección.</p>
+                <p>¿Deseas practicarlo o dirigirte al gran comedor?</p>
+                </span>
+        </div>
+    </header>
+    <div style="flex-direction: column; display: flex; justify-content: center;">
+        <input class="botones"  type="button" value="Practicar hechizo" onclick="practicahechizoproteccionpg76()">
+        <input class="botones"  type="button" value="Gran comedor" onclick="hechizoproteccionaccionpg56()">
+    </div>
+</div>
+
+  <!--PAGINA 56 - HECHIZO DE PROTECCION EN ACCIÓN-->
+  <div class="container" id="hechizoproteccionaccion">
+    <header id="banner">
+        <div style="position: relative; left: 0; top: 0;">
+            <video id="videohechizo" autoplay>
+                <source src="video/hechizoproteccion.mp4" type="video/mp4" />
+            </video>
+            <span class="textofondo" >
+                <p>En el gran comedor, te enfrentas a una criatura misteriosa.</p>
+                <p>Utilizas el hechizo de protección para repeler el ataque y la criatura desaparece.</p>
+                <p>¿Deseas continuar explorando o regresar a la gran escalera?</p>
+
+                </span>
+        </div>
+    </header>
+    <div style="flex-direction: column; display: flex; justify-content: center;">
+        <input class="botones"  type="button" value="Continuar explorando" onclick="profundizacioncastillopg78()">
+        <input class="botones"  type="button" value="Gran Escalera" onclick="granescalerapg30()">
+    </div>
+</div>
+
+<!--PAGINA 58 - EL PODER DEL AMULETO -->
+<div class="container" id="poderamuleto">
+    <header id="banner">
+        <div style="position: relative; left: 0; top: 0;">
+            <img style="opacity: 0.5;" src="img/poderamuleto.png" class='imagenfondo'/>
+            <span class="textofondo" >
+                <p>Al ponerte el amuleto, sientes una conexión con el antiguo poder del castillo.</p>
+                <p>Esto te otorga conocimientos sobre la historia del reino.</p>
+                <p>¿Deseas explorar más o regresar a la sala misteriosa?</p>
+                </span>
+        </div>
+    </header>
+    <div style="flex-direction: column; display: flex; justify-content: center;">
+        <input class="botones"  type="button" value="Explorar más" onclick="unionpodercastillopg80()">
+        <input class="botones"  type="button" value="Regresar" onclick="pasadizosecretopg24()">
+    </div>
+</div>
+
+<!--PAGINA 60 - SENDERO RESTRINGIDO -->
+<div class="container" id="senderorestringido">
+    <header id="banner">
+        <div style="position: relative; left: 0; top: 0;">
+            <img style="opacity: 0.5;" src="img/28-jardincastillo.png" class='imagenfondo'/>
+            <span class="textofondo" >
+                <p>Sigues el sendero y llegas a un jardín secreto lleno de flores mágicas.</p>
+                <p>Encuentras un cofre que contiene un artefacto poderoso.</p>
+                <p>¿Deseas tomar el artefacto o regresar a la gran escalera?</p>
+                </span>
+        </div>
+    </header>
+    <div style="flex-direction: column; display: flex; justify-content: center;">
+        <input class="botones"  type="button" value="Tomar artefacto" onclick="artefactojardinespg82()">
+        <input class="botones"  type="button" value="Gran Escalera" onclick="granescalerapg30()">
+    </div>
+</div>
+
+<!--PAGINA 62 - ACTIVACION DE LAS RUNAS -->
+<div class="container" id="activacionrunas">
+    <header id="banner">
+        <div style="position: relative; left: 0; top: 0;">
+            <img style="opacity: 0.5;" src="img/activacionrunas.png" class='imagenfondo'/>
+            <span class="textofondo" >
+                <p>Al activar las runas, desencadenas un evento</p>
+                <p> mágico que revela un pasadizo oculto.</p>
+                <p>¿Deseas explorar el nuevo pasadizo o regresar al pasadizo misterioso?</p>
+                </span>
+        </div>
+    </header>
+    <div style="flex-direction: column; display: flex; justify-content: center;">
+        <input class="botones"  type="button" value="Explorar nuevo pasadizo" onclick="pasadizodesconocidopg84()">
+        <input class="botones"  type="button" value="Regresar" onclick="pasadizomisteriosopg18()">
+    </div>
+</div>
+
+<!--PAGINA 64 - ALTAR ANTIGUO -->
+<div class="container" id="altarantiguo">
+    <header id="banner">
+        <div style="position: relative; left: 0; top: 0;">
+            <img style="opacity: 0.5;" src="img/altar.png" class='imagenfondo'/>
+            <span class="textofondo" >
+                <p>Al inspeccionar el altar, descubres una reliquia</p>
+                <p> sagrada que emana un aura protectora.</p>
+                <p>¿Deseas tomar la reliquia o regresar a la plataforma elevada?</p>
+                </span>
+        </div>
+    </header>
+    <div style="flex-direction: column; display: flex; justify-content: center;">
+        <input class="botones"  type="button" value="Tomar la reliquia" onclick="poderreliquiapg86()">
+        <input class="botones"  type="button" value="Regresar" onclick="granescalerapg30()">
+    </div>
+</div>
+
+<!--PAGINA 66 - BUSQUEDA GRAN COMEDOR -->
+<div class="container" id="busquedagrancomedor">
+    <header id="banner">
+        <div style="position: relative; left: 0; top: 0;">
+            <img style="opacity: 0.5;" src="img/9-objetoscomedorcastillo.png" class='imagenfondo'/>
+            <span class="textofondo" >
+                <p>Buscas entre los objetos en el gran comedor y encuentras </p>
+                <p>encuentras un pergamino que menciona una sala secreta en la gran torre. </p>
+                <p>¿Deseas explorar la gran torre o regresar a la gran escalera?</p>
+                </span>
+        </div>
+    </header>
+    <div style="flex-direction: column; display: flex; justify-content: center;">
+        <input class="botones"  type="button" value="Explorar Gran Torre" onclick="espadaguerreroolvidadopg88()">
+        <input class="botones"  type="button" value="Regresar" onclick="granescalerapg30()">
+    </div>
+</div>
+
+<!--PAGINA 68 - BIBLIOTECA OCULTA -->
+<div class="container" id="bibliotecaoculta">
+    <header id="banner">
+        <div style="position: relative; left: 0; top: 0;">
+            <img style="opacity: 0.5;" src="img/10-libreriaocultacastillo.png" class='imagenfondo'/>
+            <span class="textofondo" >
+                <p>Te adentras en la biblioteca oculta, llena de tomos antiguos y polvorientos.</p>
+                <p>Encuentras un libro que habla sobre un pasadizo secreto hacia los jardines. </p>
+                <p>¿Deseas explorar el pasadizo o regresar a la capilla?</p>
+                </span>
+        </div>
+    </header>
+    <div style="flex-direction: column; display: flex; justify-content: center;">
+        <input class="botones"  type="button" value="Explorar pasadizo" onclick="libroocultopg90()">
+        <input class="botones"  type="button" value="Regresar a la capilla" onclick="capillacastillopg32()">
+    </div>
+</div>
+
+<!--PAGINA 70 - EXPLORACION CLOACAS-->
+<div class="container" id="exploracioncloacas">
+    <header id="banner">
+        <div style="position: relative; left: 0; top: 0;">
+            <img style="opacity: 0.5;" src="img/35-salacloacascastillo.png" class='imagenfondo'/>
+            <span class="textofondo" >
+                <p>Te aventuras en las cloacas, donde encuentras un enigma grabado en una piedra</p>
+                <p>Resolverlo podría revelar un secreto crucial.</p>
+                <p>¿Deseas intentar resolver el enigma o regresar a la capilla?</p>
+                </span>
+        </div>
+    </header>
+    <div style="flex-direction: column; display: flex; justify-content: center;">
+        <input class="botones"  type="button" value="Resolver enigma" onclick="desviodestinooscuropg92()">
+        <input class="botones"  type="button" value="Regresar a la capilla" onclick="capillacastillopg32()">
+    </div>
+</div>
+
+<!--PAGINA 72 - DESVIO DEL DESTINO OSCURO -->
+<div class="container" id="desviodestinooscuro">
+    <header id="banner">
+        <div style="position: relative; left: 0; top: 0;">
+            <img style="opacity: 0.5;" src="img/37-finalcloacascastillo.png" class='imagenfondo'/>
+            <span class="textofondo" >
+                <p>Decides tomar un rumbo diferente y encuentras una antigua</p>
+                <p>profecía que sugiere una forma de cambiar el destino de la ciudad.</p>
+                <p>¿Deseas seguir la profecía (ve a la Página 94) o regresar a la biblioteca?</p>
+                </span>
+        </div>
+    </header>
+    <div style="flex-direction: column; display: flex; justify-content: center;">
+        <input class="botones"  type="button" value="Seguir profecia" onclick="secretocloacaspg94()">
+        <input class="botones"  type="button" value="Regresar a la biblioteca" onclick="pasadizossecretospg34()">
+    </div>
+</div>
+
+<!--PAGINA 74 - SAQUEO DE LA HABITACION OCULTA-->
+<div class="container" id="saqueohabitacionoculta">
+    <header id="banner">
+        <div style="position: relative; left: 0; top: 0;">
+            <img style="opacity: 0.5;" src="img/tesoros2.png" class='imagenfondo'/>
+            <span class="textofondo" >
+                <p>Al saquear la habitación, encuentra un valioso tesoro</p>
+                <p>que podría ser de gran utilidad en el futuro.</p>
+                <p>¿Deseas tomar el tesoro o regresar a la biblioteca?</p>
+                </span>
+        </div>
+    </header>
+    <div style="flex-direction: column; display: flex; justify-content: center;">
+        <input class="botones"  type="button" value="Tomar el tesoro" onclick="artefactomisteriosopg96()">
+        <input class="botones"  type="button" value="Regresar a la biblioteca" onclick="pasadizossecretospg34()">
+    </div>
+</div>
+
+<!--PAGINA 76 - PRACTICA HECHIZO PROTECCION-->
+<div class="container" id="practicahechizoproteccion">
+    <header id="banner">
+        <div style="position: relative; left: 0; top: 0;">
+            <img style="opacity: 0.5;" src="img/hechizoproteccionpractica.png" class='imagenfondo'/>
+            <span class="textofondo" >
+                <p>Practicas el hechizo de protección y perfeccionas tu habilidad.</p>
+                <p>Te sientes más seguro para enfrentar los desafíos que aún te esperan en el castillo.</p>
+                <p>¿Deseas explorar más o regresar?</p>
+                </span>
+        </div>
+    </header>
+    <div style="flex-direction: column; display: flex; justify-content: center;">
+        <input class="botones"  type="button" value="Explorar más" onclick="tesorossaqueadospg98()">
+        <input class="botones"  type="button" value="Regresar" onclick="pasadizossecretospg34()">
+    </div>
+</div>
+
+<!--PAGINA 78 - PROFUNDIZACION CASTILLO-->
+<div class="container" id="profundizacioncastillo">
+    <header id="banner">
+        <div style="position: relative; left: 0; top: 0;">
+            <img style="opacity: 0.5;" src="img/enigma.png" class='imagenfondo'/>
+            <span class="textofondo" >
+                <p>Sigues explorando las profundidades del castillo y te encuentras</p>
+                <p>con un enigma que podría revelar el mayor secreto de la fortaleza.</p>
+                <p>¿Deseas resolver el enigma o regresar a la gran escalera?</p>
+                </span>
+        </div>
+    </header>
+    <div style="flex-direction: column; display: flex; justify-content: center;">
+        <input class="botones"  type="button" value="Resolver enigma" onclick="poderdespertadopg100()">
+        <input class="botones"  type="button" value="Gran escalera" onclick="granescalerapg30()">
+    </div>
+</div>
+
+<!--PAGINA 80 - UNION PODER CASTILLO-->
+<div class="container" id="unionpodercastillo">
+    <header id="banner">
+        <div style="position: relative; left: 0; top: 0;">
+            <img style="opacity: 0.5;" src="img/unionpodercastillo.png" class='imagenfondo'/>
+            <span class="textofondo" >
+                <p>Al explorar más, descubres una sala donde puedes fusionarte</p>
+                <p>con el poder del castillo para convertirte en su protector eterno.</p>
+                <p>¿Deseas aceptar esta responsabilidad o regresar a la sala misteriosa?</p>
+                </span>
+        </div>
+    </header>
+    <div style="flex-direction: column; display: flex; justify-content: center;">
+        <input class="botones"  type="button" value="Aceptar responsabilidad" onclick="resolucionenigmapg102()">
+        <input class="botones"  type="button" value="Regresar" onclick="pasadizosecretopg24()">
+    </div>
+</div>
+
+<!--PAGINA 82 - ARTEFACTO JARDINES-->
+<div class="container" id="artefactojardines">
+    <header id="banner">
+        <div style="position: relative; left: 0; top: 0;">
+            <img style="opacity: 0.5;" src="img/artefactojardin.png" class='imagenfondo'/>
+            <span class="textofondo" >
+                <p>Al tomar el artefacto, sientes una conexión con la naturaleza.</p>
+                <p>Podría ser clave para restaurar la ciudad.</p>
+                <p>. ¿Deseas regresar a la plaza central o continuar explorando los jardines?</p>
+                </span>
+        </div>
+    </header>
+    <div style="flex-direction: column; display: flex; justify-content: center;">
+        <input class="botones"  type="button" value="Regresar a la plaza" onclick="plazaciudadpg3()">
+        <input class="botones"  type="button" value="Continuar explorando" onclick="senderorestringidopg60()">
+    </div>
+</div>
+
+<!--PAGINA 84 - PASADIZO DESCONOCIDO-->
+<div class="container" id="pasadizodesconocido">
+    <header id="banner">
+        <div style="position: relative; left: 0; top: 0;">
+            <img style="opacity: 0.5;" src="img/pasadizodesconocido.png" class='imagenfondo'/>
+            <span class="textofondo" >
+                <p>Sigues el nuevo pasadizo y llegas a una cámara llena de escrituras antiguas.</p>
+                <p>Encuentras un pergamino que podría contener la clave para el destino de la ciudad.</p>
+                <p>¿Deseas estudiar el pergamino o regresar al pasadizo misterioso?</p>
+                </span>
+        </div>
+    </header>
+    <div style="flex-direction: column; display: flex; justify-content: center;">
+        <input class="botones"  type="button" value="Estudiar pergamino" onclick="revelaciondestinopg106()">
+        <input class="botones"  type="button" value="Regresar" onclick="pasadizomisteriosopg18()">
+    </div>
+</div>
+
+<!--PAGINA 86 - PODER RELIQUIA -->
+<div class="container" id="poderreliquia">
+    <header id="banner">
+        <div style="position: relative; left: 0; top: 0;">
+            <img style="opacity: 0.5;" src="img/poderreliquia.png" class='imagenfondo'/>
+            <span class="textofondo" >
+                <p>Al tomar la reliquia, sientes una fuerte sensación de protección.</p>
+                <p>Podría ser esencial para enfrentar futuros desafíos.</p>
+                <p>¿Deseas regresar a la plataforma elevada o explorar más?</p>
+                </span>
+        </div>
+    </header>
+    <div style="flex-direction: column; display: flex; justify-content: center;">
+        <input class="botones"  type="button" value="Regresar" onclick="granescalerapg30()">
+        <input class="botones"  type="button" value="Explorar mas" onclick="exploracioninfinitapg108()">
+    </div>
+</div>
+
+<!--PAGINA 88 - ESPADA GUERRERO OLVIDADO -->
+<div class="container" id="espadaguerreroolvidado">
+    <header id="banner">
+        <div style="position: relative; left: 0; top: 0;">
+            <img style="opacity: 0.5;" src="img/espadaguerreroolvidado.png" class='imagenfondo'/>
+            <span class="textofondo" >
+                <p>Accedes a la gran torre y algo te guia a una sala semioculta </p>
+                <p>Encuentras una espada y decides cogerla. </p>
+                <p>Al tomar la espada, sientes una energía ancestral fluyendo a través de ti.</p>
+                <p>Podría ser tu clave para la victoria final.</p>
+                <p>¿Deseas regresar a la gran escalera o explorar más?</p>
+                </span>
+        </div>
+    </header>
+    <div style="flex-direction: column; display: flex; justify-content: center;">
+        <input class="botones"  type="button" value="Regresar" onclick="granescalerapg30()">
+        <input class="botones"  type="button" value="Explorar mas" onclick="espadaaccionpg110()">
+    </div>
+</div>
+
+<!--PAGINA 90 - LIBRO OCULTO -->
+<div class="container" id="librooculto">
+    <header id="banner">
+        <div style="position: relative; left: 0; top: 0;">
+            <img style="opacity: 0.5;" src="img/librooculto.png" class='imagenfondo'/>
+            <span class="textofondo" >
+                <p>Al seguir el consejo del libro, descubres un</p>
+                <p>pasadizo secreto hacia la gran torre del castillo.</p>
+                <p>¿Deseas explorar la gran torre o regresar a la biblioteca?</p>
+                </span>
+        </div>
+    </header>
+    <div style="flex-direction: column; display: flex; justify-content: center;">
+        <input class="botones"  type="button" value="Gran torre" onclick="ascensograntorrepg112()">
+        <input class="botones"  type="button" value="Biblioteca" onclick="pasadizossecretospg34()">
+    </div>
+</div>
+
+<!--PAGINA 92 - DESVIO DEL DESTINO OSCURO -->
+<div class="container" id="desviodestinoscuro">
+    <header id="banner">
+        <div style="position: relative; left: 0; top: 0;">
+            <img style="opacity: 0.5;" src="img/desviodestinooculto.png" class='imagenfondo'/>
+            <span class="textofondo" >
+                <p>Decides tomar otro rumbo y te encuentras con una antigua</p>
+                <p>profecía que podría cambiar el curso de los eventos.</p>
+                <p>¿Deseas intentar cambiar el destino o abandonar la ciudad en ruinas?</p>
+                </span>
+        </div>
+    </header>
+    <div style="flex-direction: column; display: flex; justify-content: center;">
+        <input class="botones"  type="button" value="Cambiar el destino" onclick="cambiardestinopg114()">
+        <input class="botones"  type="button" value="Abandonar la ciudad" onclick="fin3pgfin3()">
+    </div>
+</div>
+
+<!--PAGINA 94 - SECRETO DE LAS CLOACAS -->
+<div class="container" id="secretocloacas">
+    <header id="banner">
+        <div style="position: relative; left: 0; top: 0;">
+            <img style="opacity: 0.5;" src="img/32-entradacloacascastillo.png" class='imagenfondo'/>
+            <span class="textofondo" >
+                <p>Sigues explorando las cloacas y encuentras un pasadizo</p>
+                <p>secreto que lleva a los aposentos reales.</p>
+                <p>¿Deseas explorar los aposentos o regresar a la biblioteca?</p>
+                </span>
+        </div>
+    </header>
+    <div style="flex-direction: column; display: flex; justify-content: center;">
+        <input class="botones"  type="button" value="Explorar aposentos" onclick="aposentosrealesdescubiertospg116()">
+        <input class="botones"  type="button" value="Regresar" onclick="pasadizossecretospg34()">
+    </div>
+</div>
+
+<!--PAGINA 96 - EL ARTEFACTO MISTERIOSO -->
+<div class="container" id="artefactomisterioso">
+    <header id="banner">
+        <div style="position: relative; left: 0; top: 0;">
+            <img style="opacity: 0.5;" src="img/artefactomisterioso.png" class='imagenfondo'/>
+            <span class="textofondo" >
+                <p>Al tomar el artefacto, sientes una energía desconocida.</p>
+                <p>Podría ser la clave para descubrir el secreto más oscuro del castillo.</p>
+                <p>¿Deseas regresar a la biblioteca o explorar más?</p>
+                </span>
+        </div>
+    </header>
+    <div style="flex-direction: column; display: flex; justify-content: center;">
+        <input class="botones"  type="button" value="Regresar" onclick="pasadizossecretospg34()">
+        <input class="botones"  type="button" value="Explorar más" onclick="secretooscuropg118()">
+    </div>
+</div>
+
+<!--PAGINA 98 - TESOROS SAQUEADOS -->
+<div class="container" id="tesorossaqueados">
+    <header id="banner">
+        <div style="position: relative; left: 0; top: 0;">
+            <img style="opacity: 0.5;" src="img/tesorossaqueados.png" class='imagenfondo'/>
+            <span class="textofondo" >
+                <p>Con los tesoros saqueados, te sientes más preparado</p>
+                <p>para enfrentar los desafíos que se avecinan.</p>
+                <p>¿Deseas regresar a la biblioteca o explorar más?</p>
+                </span>
+        </div>
+    </header>
+    <div style="flex-direction: column; display: flex; justify-content: center;">
+        <input class="botones"  type="button" value="Regresar" onclick="pasadizossecretospg34()">
+        <input class="botones"  type="button" value="Explorar más" onclick="preparadodesafiopg120()">
+    </div>
+</div>
+
+<!--PAGINA 100 - EL PODER DESPERTADO -->
+<div class="container" id="poderdespertado">
+    <header id="banner">
+        <div style="position: relative; left: 0; top: 0;">
+            <img style="opacity: 0.5;" src="img/elpoderdespertado.png" class='imagenfondo'/>
+            <span class="textofondo" >
+                <p>Tras explorar más, descubres una cámara llena de artefactos mágicos.</p>
+                <p>Al tocar uno, despiertas un poder latente dentro de ti.</p>
+                <p>¿Deseas explorar más o regresar a la biblioteca?</p>
+                </span>
+        </div>
+    </header>
+    <div style="flex-direction: column; display: flex; justify-content: center;">
+        <input class="botones"  type="button" value="Explorar más" onclick="dominiopoderpg122()">
+        <input class="botones"  type="button" value="Regresar" onclick="pasadizossecretospg34()">
+    </div>
+</div>
+
+<!--PAGINA 102 - RESOLUCION DEL ENIGMA -->
+<div class="container" id="resolucionenigma">
+    <header id="banner">
+        <div style="position: relative; left: 0; top: 0;">
+            <img style="opacity: 0.5;" src="img/unionpodercastillo.png" class='imagenfondo'/>
+            <span class="textofondo" >
+                <p>Al resolver el enigma, revelas el secreto final del castillo.</p>
+                <p>Ahora tienes el conocimiento necesario para tomar una decisión crucial.</p>
+                <p>¿Deseas explorar más o regresar a la gran escalera?</p>
+                </span>
+        </div>
+    </header>
+    <div style="flex-direction: column; display: flex; justify-content: center;">
+        <input class="botones"  type="button" value="Explorar más" onclick="revelacionfinalpg124()">
+        <input class="botones"  type="button" value="Gran escalera" onclick="granescalerapg30()">
+    </div>
+</div>
+
+<!--PAGINA 106 - REVELACION DESTINO -->
+<div class="container" id="revelaciondestino">
+    <header id="banner">
+        <div style="position: relative; left: 0; top: 0;">
+            <img style="opacity: 0.5;" src="img/pasadizodesconocido.png" class='imagenfondo'/>
+            <span class="textofondo" >
+                <p>Al estudiar el pergamino, comprendes el</p>
+                <p>destino que aguarda a la ciudad.</p>
+                <p>Tienes la opción de enfrentarlo o abandonar la ciudad en ruinas.</p>
+                </span>
+        </div>
+    </header>
+    <div style="flex-direction: column; display: flex; justify-content: center;">
+        <input class="botones"  type="button" value="Enfrentarlo" onclick="enfrentandodestinopg126()">
+        <input class="botones"  type="button" value="Abandonar la ciudad" onclick="fin3pgfin3()">
+    </div>
+</div>
+
+  <!--PAGINA 108 - EXPLORACION INFINITA-->
+  <div class="container" id="exploracioninfinita">
+    <header id="banner">
+        <div style="position: relative; left: 0; top: 0;">
+            <video id="videoexploracion" autoplay>
+                <source src="video/exploracioninfinita.mp4" type="video/mp4" />
+            </video>
+            <span class="textofondo" >
+                <p>Te adentras tanto en las profundidades que acabas</p>
+                <p>perdiendote entre el laberinto de tuneles, asumes que</p>
+                <p>no hay escapatoria y mueres.</p>
+
+                </span>
+        </div>
+    </header>
+    <div style="flex-direction: column; display: flex; justify-content: center;">
+        <input class="botones"  type="button" value="REINICIAR" onclick="volver()">
+    </div>
+</div>
+
+<!--PAGINA 110 - LA ESPADA EN ACCIÓN -->
+<div class="container" id="espadaaccion">
+    <header id="banner">
+        <div style="position: relative; left: 0; top: 0;">
+            <img style="opacity: 0.5;" src="img/espadaaccion.png" class='imagenfondo'/>
+            <span class="textofondo" >
+                <p>Al explorar más, te enfrentas a una amenaza que</p>
+                <p>solo la espada del guerrero olvidado puede derrotar.</p>
+                <p>Se trata del espiritu corrupto del antiguo capitán.</p>
+                <p>¿Deseas regresar a la gran escalera o continuar explorando?</p>
+                </span>
+        </div>
+    </header>
+    <div style="flex-direction: column; display: flex; justify-content: center;">
+        <input class="botones"  type="button" value="Regresar" onclick="granescalerapg30()">
+        <input class="botones"  type="button" value="Continuar explorando" onclick="continuacionaventurapg128()">
+    </div>
+</div>
+
+<!--PAGINA 112 - ASCENSO A LA GRAN TORRE -->
+<div class="container" id="ascensograntorre">
+    <header id="banner">
+        <div style="position: relative; left: 0; top: 0;">
+            <img style="opacity: 0.5;" src="img/18-halltorrecastillo.png" class='imagenfondo'/>
+            <span class="textofondo" >
+                <p>Subes a la gran torre y encuentras un altar antiguo</p>
+                <p>que parece ser la clave para restaurar el poder del castillo.</p>
+                <p>¿Deseas activar el altar o regresar a la biblioteca?</p>
+                </span>
+        </div>
+    </header>
+    <div style="flex-direction: column; display: flex; justify-content: center;">
+        <input class="botones"  type="button" value="Activar altar" onclick="activacionaltarfinpg130()">
+        <input class="botones"  type="button" value="Regresar" onclick="pasadizossecretospg34()">
+    </div>
+</div>
+
+ <!--PAGINA 114 - CAMBIAR DESTINO -->
+ <div class="container" id="cambiardestino">
+    <header id="banner">
+        <div style="position: relative; left: 0; top: 0;">
+            <video id="videocambiardestino" autoplay>
+                <source src="video/cambiardestino.mp4" type="video/mp4" />
+            </video>
+            <span class="textofondo" >
+                <p>Al intentar cambiar el destino, te enfrentas</p>
+                <p>a una serie de desafíos que podrían alterar el curso de la historia.</p>
+                <p>. ¿Deseas perseverar o abandonar la ciudad en ruinas?</p>
+
+                </span>
+        </div>
+    </header>
+    <div style="flex-direction: column; display: flex; justify-content: center;">
+        <input class="botones"  type="button" value="Perserverar" onclick="perseverandocambiodestinopg132()">
+        <input class="botones"  type="button" value=">Abandonar la ciudad" onclick="fin3pgfin3()">
+
+    </div>
+</div>
+
+ <!--FIN3 -->
+ <div class="container" id="fin3">
+    <header id="banner">
+        <div style="position: relative; left: 0; top: 0;">
+            <video id="videofin3" autoplay>
+                <source src="video/fin3.mp4" type="video/mp4" />
+            </video>
+            <span class="textofondo" >
+                <p>Incapaz de hacer nada, abandonas la ciudad</p>
+                <p>y a todos sus habitantes a su suerte.</p>
+                <p>Tu no tienes por qué ser el héroe.</p>
+
+                </span>
+        </div>
+    </header>
+    <div style="flex-direction: column; display: flex; justify-content: center;">
+        <input class="botones"  type="button" value="REINICIAR" onclick="volver()">
+    </div>
+</div>
+
+<!--PAGINA 116 - APOSENTOS REALES DESCUBIERTOS -->
+<div class="container" id="aposentosrealesdescubiertos">
+    <header id="banner">
+        <div style="position: relative; left: 0; top: 0;">
+            <img style="opacity: 0.5;" src="img/26-aposentosrealescastillo.png" class='imagenfondo'/>
+            <span class="textofondo" >
+                <p>Exploras los aposentos reales y encuentras</p>
+                <p>un diario antiguo que narra los eventos finales del reino.</p>
+                <p>¿Deseas aprender más o regresar a la biblioteca?</p>
+                </span>
+        </div>
+    </header>
+    <div style="flex-direction: column; display: flex; justify-content: center;">
+        <input class="botones"  type="button" value="Aprender más" onclick="conociendopasadopg134()">
+        <input class="botones"  type="button" value="Regresar" onclick="pasadizossecretospg34()">
+    </div>
+</div>
+
+<!--PAGINA 118 - SECRETO OSCURO -->
+<div class="container" id="secretooscuro">
+    <header id="banner">
+        <div style="position: relative; left: 0; top: 0;">
+            <img style="opacity: 0.5;" src="img/secretooscuro.png" class='imagenfondo'/>
+            <span class="textofondo" >
+                <p>Al explorar más, descubres la verdad</p>
+                <p>oscura detrás de la caída del castillo.</p>
+                <p>¿Deseas enfrentar esta verdad o regresar a la biblioteca?</p>
+                </span>
+        </div>
+    </header>
+    <div style="flex-direction: column; display: flex; justify-content: center;">
+        <input class="botones"  type="button" value="Enfrentar verdad" onclick="enfrentandoverdadoscurapg136()">
+        <input class="botones"  type="button" value="Regresar" onclick="pasadizossecretospg34()">
+    </div>
+</div>
+
+<!--PAGINA 120 - PREPARADO DESAFIO-->
+<div class="container" id="preparadodesafio">
+    <header id="banner">
+        <div style="position: relative; left: 0; top: 0;">
+            <img style="opacity: 0.5;" src="img/tesorossaqueados.png" class='imagenfondo'/>
+            <span class="textofondo" >
+                <p>Con los tesoros saqueados, te sientes más</p>
+                <p>que preparado para enfrentar el desafío final.</p>
+                <p>¿Deseas regresar a la biblioteca o enfrentar el desafío?</p>
+                </span>
+        </div>
+    </header>
+    <div style="flex-direction: column; display: flex; justify-content: center;">
+        <input class="botones"  type="button" value="Regresar" onclick="pasadizossecretospg34()">
+        <input class="botones"  type="button" value="Enfrentar desafio" onclick="desafiofinalpg138()">
+    </div>
+</div>
+
+<!--PAGINA 122 - DOMINIO DEL PODER -->
+<div class="container" id="dominiopoder">
+    <header id="banner">
+        <div style="position: relative; left: 0; top: 0;">
+            <img style="opacity: 0.5;" src="img/38-cementeriocastillo.png" class='imagenfondo'/>
+            <span class="textofondo" >
+                <p>Al explorar más, descubres un lugar donde puedes</p>
+                <p>dominar el poder del castillo y usarlo para tus propios fines.</p>
+                <p>¿Deseas aceptar este poder o regresar a la biblioteca?</p>
+                </span>
+        </div>
+    </header>
+    <div style="flex-direction: column; display: flex; justify-content: center;">
+        <input class="botones"  type="button" value="Enfrentar desafio" onclick="aceptandopoderpg140()">
+        <input class="botones"  type="button" value="Regresar" onclick="pasadizossecretospg34()">
+    </div>
+</div>
+
+<!--PAGINA 124 - REVELACION FINAL -->
+<div class="container" id="revelacionfinal">
+    <header id="banner">
+        <div style="position: relative; left: 0; top: 0;">
+            <img style="opacity: 0.5;" src="img/unionpodercastillo.png" class='imagenfondo'/>
+            <span class="textofondo" >
+                <p>Al descubrir el secreto final, te das</p>
+                <p>cuenta de que tu misión está lejos de terminar.</p>
+                <p>¿Deseas explorar más o regresar a la gran escalera?</p>
+                </span>
+        </div>
+    </header>
+    <div style="flex-direction: column; display: flex; justify-content: center;">
+        <input class="botones"  type="button" value="Explorar más" onclick="masallahistoriapg142()">
+        <input class="botones"  type="button" value="Regresar" onclick="granescalerapg30()">
+    </div>
+</div>
+
+<!--PAGINA 126 - ENFRENTANDO EL DESTINO -->
+<div class="container" id="enfrentandodestino">
+    <header id="banner">
+        <div style="position: relative; left: 0; top: 0;">
+            <video id="videoenfrentandodestino" autoplay>
+                <source src="video/enfrentandodestino.mp4" type="video/mp4" />
+            </video>
+            <span class="textofondo" >
+                <p>Al enfrentar el destino, te conviertes en una leyenda</p>
+                <p>que será recordada en toda la historia de la ciudad.</p>
+                <p>Has completado tu misión.</p>
+
+                </span>
+        </div>
+    </header>
+    <div style="flex-direction: column; display: flex; justify-content: center;">
+        <input class="botones"  type="button" value="REINICIAR" onclick="volver()">
+    </div>
+</div>
+
+<!--PAGINA 128 - CONTINUACION AVENTURA -->
+<div class="container" id="continuacionaventura">
+    <header id="banner">
+        <div style="position: relative; left: 0; top: 0;">
+            <video id="videocontinuacion" autoplay>
+                <source src="video/continuacion.mp4" type="video/mp4" />
+            </video>
+            <span class="textofondo" >
+                <p>Tu aventura está lejos de terminar.</p>
+                <p>Con la espada del guerrero olvidado en mano</p>
+                <p>te diriges hacia el siguiente desafío.</p>
+
+                </span>
+        </div>
+    </header>
+    <div style="flex-direction: column; display: flex; justify-content: center;">
+        <input class="botones"  type="button" value="REINICIAR" onclick="volver()">
+    </div>
+</div>
+
+<!--PAGINA 130 - ACTIVACION ALTAR -->
+<div class="container" id="activacionaltarfin">
+    <header id="banner">
+        <div style="position: relative; left: 0; top: 0;">
+            <video id="videoactivacionaltar" autoplay>
+                <source src="video/activacionaltar.mp4" type="video/mp4" />
+            </video>
+            <span class="textofondo" >
+                <p>Al activar el altar, sientes una explosión</p>
+                <p>de energía que se expande por todo el castillo.</p>
+                <p>Has restaurado su poder. ¡Has completado tu misión!</p>
+
+                </span>
+        </div>
+    </header>
+    <div style="flex-direction: column; display: flex; justify-content: center;">
+        <input class="botones"  type="button" value="REINICIAR" onclick="volver()">
+    </div>
+</div>
+
+<!--PAGINA 132 - PERSEVERANDO CAMBIO DESTINO -->
+<div class="container" id="perseverandocambiodestino">
+    <header id="banner">
+        <div style="position: relative; left: 0; top: 0;">
+            <video id="videoperseveracion" autoplay>
+                <source src="video/perseveracion.mp4" type="video/mp4" />
+            </video>
+            <span class="textofondo" >
+                <p>Superas los desafíos y cambias el curso de la historia.</p>
+                <p>La ciudad comienza a recuperar su antigua gloria.</p>
+                <p>¡Has triunfado!</p>
+
+                </span>
+        </div>
+    </header>
+    <div style="flex-direction: column; display: flex; justify-content: center;">
+        <input class="botones"  type="button" value="REINICIAR" onclick="volver()">
+    </div>
+</div>
+
+<!--PAGINA 134 - CONOCIENDO PASADO -->
+<div class="container" id="conociendopasado">
+    <header id="banner">
+        <div style="position: relative; left: 0; top: 0;">
+            <video id="videoconociendopasado" autoplay>
+                <source src="video/conociendopasado.mp4" type="video/mp4" />
+            </video>
+            <span class="textofondo" >
+                <p>Al aprender más sobre el pasado,</p>
+                <p>comprendes la importancia de preservar la historia.</p>
+                <p>Te conviertes en el guardián de la ciudad y su legado.</p>
+
+                </span>
+        </div>
+    </header>
+    <div style="flex-direction: column; display: flex; justify-content: center;">
+        <input class="botones"  type="button" value="REINICIAR" onclick="volver()">
+    </div>
+</div>
+
+<!--PAGINA 136 - ENFRENTANDO VERDAD OSCURA -->
+<div class="container" id="enfrentandoverdadoscura">
+    <header id="banner">
+        <div style="position: relative; left: 0; top: 0;">
+            <video id="videoverdadoscura" autoplay>
+                <source src="video/verdadoscura.mp4" type="video/mp4" />
+            </video>
+            <span class="textofondo" >
+                <p>Al enfrentar la verdad oscura, te conviertes</p>
+                <p>en el guardián que protegerá la ciudad de futuros peligros.</p>
+                <p>Has completado tu misión.</p>
+
+                </span>
+        </div>
+    </header>
+    <div style="flex-direction: column; display: flex; justify-content: center;">
+        <input class="botones"  type="button" value="REINICIAR" onclick="volver()">
+    </div>
+</div>
+
+<!--PAGINA 138 - DESAFIO FINAL -->
+<div class="container" id="desafiofinal">
+    <header id="banner">
+        <div style="position: relative; left: 0; top: 0;">
+            <video id="videodesafiofinal" autoplay>
+                <source src="video/desafiofinal.mp4" type="video/mp4" />
+            </video>
+            <span class="textofondo" >
+                <p>Al enfrentar el desafío final, te conviertes en una leyenda</p>
+                <p>que será recordada en toda la historia de la ciudad.</p>
+                <p>Has completado tu misión.</p>
+
+                </span>
+        </div>
+    </header>
+    <div style="flex-direction: column; display: flex; justify-content: center;">
+        <input class="botones"  type="button" value="REINICIAR" onclick="volver()">
+    </div>
+</div>
+
+<!--PAGINA 140 - ACEPTANDO PODER -->
+<div class="container" id="aceptandopoder">
+    <header id="banner">
+        <div style="position: relative; left: 0; top: 0;">
+            <video id="videoaceptandopoder" autoplay>
+                <source src="video/guardianeterno.mp4" type="video/mp4" />
+            </video>
+            <span class="textofondo" >
+                <p>Al aceptar el poder del castillo, te conviertes en su</p>
+                <p>guardián eterno. Tu legado perdura a través de los siglos.</p>
+                <p>Has completado tu misión.</p>
+
+                </span>
+        </div>
+    </header>
+    <div style="flex-direction: column; display: flex; justify-content: center;">
+        <input class="botones"  type="button" value="REINICIAR" onclick="volver()">
+    </div>
+</div>
+
+<!--PAGINA 142 - MAS ALLA DE LA HISTORIA -->
+<div class="container" id="masallahistoria">
+    <header id="banner">
+        <div style="position: relative; left: 0; top: 0;">
+            <video id="videomasalla" autoplay>
+                <source src="video/masalla.mp4" type="video/mp4" />
+            </video>
+            <span class="textofondo" >
+                <p>Al explorar más, descubres secretos que</p>
+                <p>van más allá de la comprensión humana.</p>
+                <p>Tu aventura se extiende hacia horizontes inimaginables.</p>
+
+                </span>
+        </div>
+    </header>
+    <div style="flex-direction: column; display: flex; justify-content: center;">
+        <input class="botones"  type="button" value="REINICIAR" onclick="volver()">
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--PRUEBA DE LA CIUDAD-->
+
+    <!--div class="container" id="prueba">
+        <header id="banner">
+            <div style="position: relative; left: 0; top: 0;">
+                <video id="videopuertacastillo" autoplay>
+                    <source src="video/puertacastillo.mp4" type="video/mp4" />
+                </video>
+                <span class="textofondo" >
+                    <p>Llegas a las puertas de la ciudad en ruinas, donde unas pocas almas valientes </p>
+                    <p>han logrado mantener una vida modesta entre las sombras de lo que alguna vez</p>
+                    <p>fue una bulliciosa comunidad.</p>
+                    </span>
+            </div>
+        </header>
+        <div style="flex-direction: column; display: flex; justify-content: center;">
+            <input class="botones"  type="button" value="Plaza de la ciudad" onclick="avanzar1()">
+        </div>
+    </div-->
+
+
+
+    
+
+
+</body>
+</html>

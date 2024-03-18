@@ -1,0 +1,31 @@
+Realizar un programa para recordar secuencias de colores.
+
+La pantalla del programa dispondrá de los siguientes elementos:
+
+Una zona donde saldrán 5 contenedores con colores aleatorios (a elegir entre 5 colores y pueden repetirse) y un botón para ocultarlos.
+Un zona donde aparecerán los contenedores que elija el usuario en el orden que los elija.
+Una zona donde se mostrarán 5 contenedores cada uno con un color. Serán los contenedores que puede pulsar el usuario.
+
+Funcionamiento:
+
+El programa mostrará una secuencia de 5 contenedores con colores aleatorios, que pueden repetirse.
+El usuario pulsará el botón de "Ocultar los contenedores" y se ocultará la secuencia mostrada. En la parte inferior se mostrarán los cinco contenedores con los cinco colores disponibles.
+Después el usuario irá pulsando cada uno de los contenedores de la zona inferior según crea que es la secuencia de colores. Cuando los vaya pulsando se irán añadiendo a la zona de los contenedores elegidos por el usuario, hasta completar los cinco contenedores. Entonces se ocultará la zona de los contenedores que puede pulsar el usuario. Y se mostrará un mensaje con una imagen. También se mostrará la secuencia original.
+Si ha acertado la secuencia se mostrará la imagen que represente el acierto y si ha fallado la secuencia se mostrará la imagen que represente el fallo.
+Bajo las imágenes aparecerá un botón para intentarlo de nuevo que reiniciará el juego sin recargar la página.
+
+Tienda de mejoras:
+
+Por 0,05 positivos: Cada vez que se reinicie el juego se añadirá un cuadro más a la secuencia. No se pueden usar vectores.
+Por 0,01 positivos: Llevar la cuenta de los aciertos y los fallos y mostrarlo como un porcentaje con 2 decimales.
+Por 0,01 positivos: Hacerlo con imágenes.
+Por 0,01 positivos: Modo inverso, es decir, poner la secuencia al revés para que la reconozca.
+Por 0,01 positivos: Que, además, marque los contenedores correctos con un tik verde y los equivocados con un aspa roja.
+
+Versión vitaminada:
+
+Crea tus propias mejoras sobre el juego, se valorarán según su dificultad.
+
+Versión IA por 0,05 positivos:
+
+Crea una versión IA funcional que cumpla los requisitos pedidos el ejercicio y las mejoras.

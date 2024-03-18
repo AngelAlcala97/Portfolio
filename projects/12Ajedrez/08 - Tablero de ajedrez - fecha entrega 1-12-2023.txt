@@ -1,0 +1,27 @@
+Realizar un programa que pinte un tablero de ajedrez en la pantalla usando contenedores.
+
+El tamaño de los contenedores será personalizable por el usuario desde una caja de texto.
+
+La página dispondrá de un botón para pintar el tablero con el tamaño de contenedor (que será cada uno de los cuadritos del tablero) elegido en la caja de texto.
+
+Cada vez que se pulse el botón para pintar el tablero se borrará el anterior y se pintará uno nuevo con los parámetros introducidos sin recargar la página.
+
+Tienda de mejoras:
+
+Por 0,005 positivos: Poder elegir los colores de las casillas introduciéndolos en dos cajas de texto.
+Por 0,01 positivos: Resolverlo usando el módulo en lugar de banderas o bien con banderas en lugar de módulo.
+Por 0,01 positivos: Mostrar la fila y columna de cada una de las casillas.
+Por 0,02 positivos: Permitir elegir el número de casillas de ancho y de alto.
+Por 0,03 positivos: Colocar las piezas de ajedrez en el tablero cuando sea de 8x8.
+
+Versión vitaminada:
+
+Crea tus propias mejoras sobre el juego, se valorarán según su dificultad.
+
+Versión IA por 0,01 positivos:
+
+Crea una versión IA funcional que cumpla los requisitos pedidos el ejercicio y las mejoras.
+
+Versión IA por 0,03 positivos (no acumulable a la anterior):
+
+Crea una versión IA funcional que cumpla los requisitos pedidos el ejercicio y todas las mejoras.

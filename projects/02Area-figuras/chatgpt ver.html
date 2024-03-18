@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Áreas</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.remixicon.com/releases/v1.2.2/remixicon.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- Boton hacia arriba -->
+    <span class="ir-arriba"><img src="img/arrow-up-line.png"></img></span>
+
+    <header>
+        <h1>Calculadora de Áreas</h1>
+    </header>
+
+    <nav id="index">
+        <h2>Índice</h2>
+        <ul>
+            <li><a href="#rectangulo">Rectángulo</a></li>
+            <li><a href="#triangulo">Triángulo</a></li>
+            <li><a href="#rombo">Rombo</a></li>
+            <li><a href="#cuadrado">Cuadrado</a></li>
+            <li><a href="#paralelogramo">Paralelogramo</a></li>
+            <li><a href="#trapecio">Trapecio</a></li>
+            <li><a href="#romboide">Romboide</a></li>
+            <li><a href="#poligono">Polígono Regular</a></li>
+            <li><a href="#circulo">Círculo</a></li>
+        </ul>
+    </nav>
+
+    <section id="rectangulo">
+        <h2>Rectángulo</h2>
+        <img src="img/rectangulo.jpg" alt="Rectángulo">
+        <div class="input-container">
+            <label for="b-rectangulo">Base:</label>
+            <input type="number" id="b-rectangulo">
+        </div>
+        <div class="input-container">
+            <label for="a-rectangulo">Altura:</label>
+            <input type="number" id="a-rectangulo">
+        </div>
+      <!--<button onclick="calcularRectangulo()">Calcular Área</button>-->
+        <a> <input type="button" value="Calcular area" onclick="arearectangulo()"> </a>
+        <div id="arearectangulo"></div>
+        <p><a href="#index">Volver al Índice</a></p>
+    </section>
+
+    <section id="triangulo">
+        <h2>Triángulo</h2>
+        <img src="img/triangulo.jpg" alt="Rectángulo">
+        <div class="input-container">
+            <label for="b-triangulo">Base:</label>
+            <input type="number" id="b-triangulo">
+        </div>
+        <div class="input-container">
+            <label for="a-triangulo">Altura:</label>
+            <input type="number" id="a-triangulo">
+        </div>
+      <!--<button onclick="calcularRectangulo()">Calcular Área</button>-->
+        <a> <input type="button" value="Calcular area" onclick="areatriangulo()"> </a>
+        <div id="areatriangulo"></div>
+        <p><a href="#index">Volver al Índice</a></p>
+    </section>
+
+    <section id="rombo">
+        <h2>Rombo</h2>
+        <img src="img/rombo.jpg" alt="Rectángulo">
+        <div class="input-container">
+            <label for="d-mayor-rombo">Diagonal mayor:</label>
+            <input type="number" id="d-mayor-rombo">
+        </div>
+        <div class="input-container">
+            <label for="d-menor-rombo">Diagonal menor:</label>
+            <input type="number" id="d-menor-rombo">
+        </div>
+      <!--<button onclick="calcularRectangulo()">Calcular Área</button>-->
+        <a> <input type="button" value="Calcular area" onclick="arearombo()"> </a>
+        <div id="arearombo"></div>
+        <p><a href="#index">Volver al Índice</a></p>
+    </section>
+
+    <section id="cuadrado">
+        <h2>Cuadrado</h2>
+        <img src="img/cuadrado.jpg" alt="Rectángulo">
+        <div class="input-container">
+            <label for="baseRectangulo">Base:</label>
+            <input type="number" id="baseRectangulo">
+        </div>
+        <div class="input-container">
+            <label for="alturaRectangulo">Altura:</label>
+            <input type="number" id="alturaRectangulo">
+        </div>
+      <!--<button onclick="calcularRectangulo()">Calcular Área</button>-->
+        <a> <input type="button" value="Calcular area" onclick="areacuadrado()"> </a>
+        <div id="areacuadrado"></div>
+        <p><a href="#index">Volver al Índice</a></p>
+    </section>
+
+    <section id="paralelogramo">
+        <h2>Paralelogramo</h2>
+        <img src="img/paralelogramo.png" alt="Rectángulo">
+        <div class="input-container">
+            <label for="baseRectangulo">Base:</label>
+            <input type="number" id="baseRectangulo">
+        </div>
+        <div class="input-container">
+            <label for="alturaRectangulo">Altura:</label>
+            <input type="number" id="alturaRectangulo">
+        </div>
+      <!--<button onclick="calcularRectangulo()">Calcular Área</button>-->
+        <a> <input type="button" value="Calcular area" onclick="areaparalelogramo()"> </a>
+        <div id="areaparalelogramo"></div>
+        <p><a href="#index">Volver al Índice</a></p>
+    </section>
+
+    <section id="trapecio">
+        <h2>Trapecio</h2>
+        <img src="img/trapecio.jpg" alt="Rectángulo">
+        <div class="input-container">
+            <label for="baseRectangulo">Base:</label>
+            <input type="number" id="baseRectangulo">
+        </div>
+        <div class="input-container">
+            <label for="alturaRectangulo">Altura:</label>
+            <input type="number" id="alturaRectangulo">
+        </div>
+      <!--<button onclick="calcularRectangulo()">Calcular Área</button>-->
+        <a> <input type="button" value="Calcular area" onclick="areatrapecio()"> </a>
+        <div id="areatrapecio"></div>
+        <p><a href="#index">Volver al Índice</a></p>
+    </section>
+
+    <section id="romboide">
+        <h2>Romboide</h2>
+        <img src="img/romboide.jpg" alt="Rectángulo">
+        <div class="input-container">
+            <label for="baseRectangulo">Base:</label>
+            <input type="number" id="baseRectangulo">
+        </div>
+        <div class="input-container">
+            <label for="alturaRectangulo">Altura:</label>
+            <input type="number" id="alturaRectangulo">
+        </div>
+      <!--<button onclick="calcularRectangulo()">Calcular Área</button>-->
+        <a> <input type="button" value="Calcular area" onclick="arearomboide()"> </a>
+        <div id="arearomboide"></div>
+        <p><a href="#index">Volver al Índice</a></p>
+    </section>
+
+    <section id="poligono">
+        <h2>Poligono</h2>
+        <img src="img/poligono.png" alt="Rectángulo">
+        <div class="input-container">
+            <label for="baseRectangulo">Base:</label>
+            <input type="number" id="baseRectangulo">
+        </div>
+        <div class="input-container">
+            <label for="alturaRectangulo">Altura:</label>
+            <input type="number" id="alturaRectangulo">
+        </div>
+      <!--<button onclick="calcularRectangulo()">Calcular Área</button>-->
+        <a> <input type="button" value="Calcular area" onclick="areapoligono()"> </a>
+        <div id="areapoligono"></div>
+        <p><a href="#index">Volver al Índice</a></p>
+    </section>
+
+    <section id="circulo">
+        <h2>Circulo</h2>
+        <img src="img/circulo.jpg" alt="Rectángulo">
+        <div class="input-container">
+            <label for="baseRectangulo">Base:</label>
+            <input type="number" id="baseRectangulo">
+        </div>
+        <div class="input-container">
+            <label for="alturaRectangulo">Altura:</label>
+            <input type="number" id="alturaRectangulo">
+        </div>
+      <!--<button onclick="calcularRectangulo()">Calcular Área</button>-->
+        <a> <input type="button" value="Calcular area" onclick="areacirculo()"> </a>
+        <div id="areacirculo"></div>
+        <p><a href="#index">Volver al Índice</a></p>
+    </section>
+
+    <!-- Agrega secciones similares para las otras figuras -->
+
+    <!-- Boton hacia arriba -->
+
+
+    <footer>&copy; 2023 Calculadora de Áreas</footer>
+    <script src="script.js"></script>
+   
+</body>
+</html>

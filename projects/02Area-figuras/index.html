@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous" ></script>
+    
+    <style>
+body,html{
+    font-family:monospace;
+    background-color: #f4f4f4;
+    width: 100%;
+    overflow-x: hidden;
+
+}
+
+section{
+    
+border-radius: 30px;
+padding: 50px;
+margin: 30px;
+}
+div{
+    width: 100%;
+    display: inline-flex;
+
+}
+ </style>
+</head>
+<script type="text/javascript">
+    function arearectangulo(){ //FUNCION PARA AREA RECTANGULO
+    var arectangulo=document.getElementById('a-rectangulo').value;
+    var brectangulo=document.getElementById('b-rectangulo').value;
+    
+    document.getElementById('arearectangulo').innerHTML= ('Area: '+arectangulo*brectangulo); 
+    document.getElementById('arearectangulo').style= ('background-color: red;color:white;background-size: contain; background-repeat: no-repeat;align-items: center;font-family:sans-serif;font-size:30px;place-content:center; width:100%;margin-top:20px;border: 5px solid;border-color: black;border-radius: 30px;');
+    }
+
+    function areatriangulo(){ //FUNCION PARA AREA TRIANGULO
+    var atriangulo=document.getElementById('a-triangulo').value;
+    var btriangulo=document.getElementById('b-triangulo').value;
+    
+    document.getElementById('areatriangulo').innerHTML= ('Area: '+(atriangulo*btriangulo)/2); 
+    document.getElementById('areatriangulo').style= ('background-color:red;color:white;background-size: contain; background-repeat: no-repeat;align-items: center;font-family:sans-serif;font-size:30px;place-content:center; width:100%;margin-top:20px;border: 5px solid;border-color: black;border-radius: 30px;');
+    }
+
+    function arearombo(){ //FUNCION PARA AREA ROMBO
+    var dmayorrombo=document.getElementById('d-mayor-rombo').value;
+    var dmenorrombo=document.getElementById('d-menor-rombo').value;
+    
+    document.getElementById('arearombo').innerHTML= ('Area: '+(dmayorrombo*dmenorrombo)/2); 
+    document.getElementById('arearombo').style= ('background-color:red;color:white;background-size: contain; background-repeat: no-repeat;align-items: center;font-family:sans-serif;font-size:30px;place-content:center; width:100%;margin-top:20px;border: 5px solid;border-color: black;border-radius: 30px;');
+    }
+
+    function areacuadrado(){ //FUNCION PARA AREA CUADRADO
+    var lcuadrado=document.getElementById('l-cuadrado').value;
+    
+    document.getElementById('areacuadrado').innerHTML= ('Area: '+lcuadrado*lcuadrado); 
+    document.getElementById('areacuadrado').style= ('background-color:red;color:white;background-size: contain; background-repeat: no-repeat;align-items: center;font-family:sans-serif;font-size:30px;place-content:center; width:100%;margin-top:20px;border: 5px solid;border-color: black;border-radius: 30px;');
+    }
+
+    function areaparalelogramo(){ //FUNCION PARA AREA PARALELOGRAMO
+    var aparalelogramo=document.getElementById('a-paralelogramo').value;
+    var bparalelogramo=document.getElementById('b-paralelogramo').value;
+    document.getElementById('areaparalelogramo').innerHTML= ('Area: '+aparalelogramo*bparalelogramo); 
+    document.getElementById('areaparalelogramo').style= ('background-color:red;color:white;background-size: contain; background-repeat: no-repeat;align-items: center;font-family:sans-serif;font-size:30px;place-content:center; width:100%;margin-top:20px;border: 5px solid;border-color: black;border-radius: 30px;');
+    }
+
+    function areatrapecio(){ //FUNCION PARA AREA TRAPECIO
+    var bmayorparalelogramo=parseInt (document.getElementById('bmayor-trapecio').value);
+    var bmenorparalelogramo=parseInt (document.getElementById('bmenor-trapecio').value);
+    var alturaparalelogramo=document.getElementById('a-trapecio').value;
+
+    document.getElementById('areatrapecio').innerHTML= ('Area: '+((bmayorparalelogramo+bmenorparalelogramo)/2)*alturaparalelogramo); 
+    document.getElementById('areatrapecio').style= ('background-color:red;color:white;background-size: contain; background-repeat: no-repeat;align-items: center;font-family:sans-serif;font-size:30px;place-content:center; width:100%;margin-top:20px;border: 5px solid;border-color: black;border-radius: 30px;');
+    }
+
+    function arearomboide(){ //FUNCION PARA AREA ROMBOIDE
+    var dmayorromboide=document.getElementById('d-mayor-romboide').value;
+    var dmenorromboide=document.getElementById('d-menor-romboide').value;
+    document.getElementById('arearomboide').innerHTML= ('Area: '+(dmayorromboide*dmenorromboide)/2); 
+    document.getElementById('arearomboide').style= ('background-color:red;color:white;background-size: contain; background-repeat: no-repeat;align-items: center;font-family:sans-serif;font-size:30px;place-content:center; width:100%;margin-top:20px;border: 5px solid;border-color: black;border-radius: 30px;');
+    }
+
+    function areapoligono(){ //FUNCION PARA AREA POLIGONO REGULAR
+    var perimetro=document.getElementById('perimetro').value;
+    var apotema=document.getElementById('apotema').value;
+    document.getElementById('areapoligono').innerHTML= ('Area: '+(perimetro*apotema)/2); 
+    document.getElementById('areapoligono').style= ('background-color:red;color:white;background-size: contain; background-repeat: no-repeat;align-items: center;font-family:sans-serif;font-size:30px;place-content:center; width:100%;margin-top:20px;border: 5px solid;border-color: black;border-radius: 30px;');
+    }
+
+    function areacirculo(){ //FUNCION PARA AREA CIRCULO
+    var radio=document.getElementById('radio-circulo').value;
+
+  
+    document.getElementById('areacirculo').innerHTML= ('Area: '+ Math.PI*radio*radio); 
+    document.getElementById('areacirculo').style= ('background-color:red;color:white;background-size: contain; background-repeat: no-repeat;align-items: center;font-family:sans-serif;font-size:30px;place-content:center; width:100%;margin-top:20px;border: 5px solid;border-color: black;border-radius: 30px;');
+    }
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+<body style="background-image: url('img/fondo2.png'); background-attachment: fixed;">
+
+    <section align="center" style="background-color: #fff; border: 5px solid;border-color: black;  margin-left: 50px;margin-right: 50px;">
+        <img src="img/areas.gif"><br>
+        <a href="#rectangulo"> <input style="background-color: #de4618;color: white;border-radius: 30px; font-weight: bold;" type="button" value="RECTÁNGULO"></a>  <a href="#triangulo"> <input style="background-color: #de4618;color: white;border-radius: 30px; font-weight: bold;" type="button" value="TRIÁNGULO"></a> <a href="#rombo"> <input style="background-color: #de4618;color: white;border-radius: 30px; font-weight: bold;" type="button" value="ROMBO"></a>  <a href="#cuadrado"> <input style="background-color: #de4618;color: white;border-radius: 30px; font-weight: bold;" type="button" value="CUADRADO"></a>  <a href="#paralelogramo"> <input style="background-color: #de4618;color: white;border-radius: 30px; font-weight: bold;" type="button" value="PARALELOGRAMO"></a>  <a href="#trapecio"> <input style="background-color: #de4618;color: white;border-radius: 30px; font-weight: bold;" type="button" value="TRAPECIO"></a>  <a href="#romboide"> <input style="background-color: #de4618;color: white;border-radius: 30px; font-weight: bold;" type="button" value="ROMBOIDE"></a>  <a href="#poligono"> <input style="background-color: #de4618;color: white;border-radius: 30px; font-weight: bold;" type="button" value="POLIGONO REGULAR"></a>  <a href="#circulo"> <input style="background-color: #de4618;color: white;border-radius: 30px; font-weight: bold;" type="button" value="CÍRCULO"></a>
+    </section>
+    
+
+<div class="flex">
+
+    <div id="rectangulo" align="center">
+        <section style="background-color: #fff; border: 5px solid;border-color: #c5cd26;">
+         <img src="img/rectangulo.jpg"><br><br>
+         <h3 style="color: #cf4c50;font-weight: bold">AREA RECTÁNGULO</h3 style="color: #cf4c50;font-weight: bold"> 
+            Base:<br> <input type="text" id="b-rectangulo"><br>
+            Altura:<br> <input type="text" id="a-rectangulo">
+            <br><br><input type="button" onclick="arearectangulo()" value="Calcular area">
+            <div id="arearectangulo"></div>
+        </section>
+    </div>
+
+    <div id="triangulo" align="center">
+        <section style="background-color: #fff; border: 5px solid;border-color: #c5cd26;">
+            <img src="img/triangulo.jpg"><br><br>
+            <h3 style="color: #cf4c50;font-weight: bold">AREA TRIÁNGULO</h3 style="color: #cf4c50;font-weight: bold"> 
+            Base:<br> <input type="text" id="b-triangulo"><br>
+            Altura:<br> <input type="text" id="a-triangulo">
+            <br><br><input type="button" onclick="areatriangulo()" value="Calcular area">
+            <div id="areatriangulo"></div>
+
+        </section>
+    </div>
+
+    <div id="rombo" align="center">
+        <section style="background-color: #fff; border: 5px solid;border-color: #c5cd26;">
+            <img src="img/rombo.jpg"><br><br>
+            <h3 style="color: #cf4c50;font-weight: bold">AREA ROMBO</h3 style="color: #cf4c50;font-weight: bold"> 
+            Diagonal mayor:<br> <input type="text" id="d-mayor-rombo"><br>
+            Diagonal menor: <br><input type="text" id="d-menor-rombo">
+            <br><br><input type="button" onclick="arearombo()" value="Calcular area">
+            <div id="arearombo"></div>
+    
+        </section>
+    </div>
+
+</div>
+
+<div class="flex">
+
+    <div id="cuadrado" align="center">
+        <section style="background-color: #fff; border: 5px solid;border-color: #c5cd26;">
+            <img src="img/cuadrado.jpg"><br><br>
+           <h3 style="color: #cf4c50;font-weight: bold">AREA CUADRADO</h3 style="color: #cf4c50;font-weight: bold"> 
+           Lado:<br> <input type="text" id="l-cuadrado">
+           <br><br><input type="button" onclick="areacuadrado()" value="Calcular area">
+           <div id="areacuadrado"></div>
+            
+        </section>
+    </div>
+
+    <div id="paralelogramo" align="center">
+        <section style="background-color: #fff; border: 5px solid;border-color: #c5cd26;">
+            <img src="img/paralelogramo.png"><br><br>
+           <h3 style="color: #cf4c50;font-weight: bold">AREA PARALELOGRAMO</h3 style="color: #cf4c50;font-weight: bold">
+            Base:<br> <input type="text" id="b-paralelogramo"><br>
+            Altura:<br> <input type="text" id="a-paralelogramo">
+            <br><br><input type="button" onclick="areaparalelogramo()" value="Calcular area">
+            <div id="areaparalelogramo"></div>
+       
+        </section>
+    </div>
+
+    <div id="trapecio" align="center">
+        <section style="background-color: #fff; border: 5px solid;border-color: #c5cd26;">
+            <img src="img/trapecio.jpg"><br><br>
+           <h3 style="color: #cf4c50;font-weight: bold">AREA TRAPECIO</h3 style="color: #cf4c50;font-weight: bold"> 
+            Base mayor: <br> <input type="text" id="bmayor-trapecio"><br>
+            Base menor:<br> <input type="text" id="bmenor-trapecio"><br>
+            Altura:<br> <input type="text" id="a-trapecio">
+            <br><br><input type="button" onclick="areatrapecio()" value="Calcular area">
+            <div id="areatrapecio"></div>
+       
+        </section>
+    </div>
+
+</div align="center">
+
+<div class="flex">
+
+
+
+    <div id="romboide" align="center">
+        <section style="background-color: #fff; border: 5px solid;border-color: #c5cd26;">
+            <img src="img/romboide.jpg"><br><br>
+           <h3 style="color: #cf4c50;font-weight: bold">AREA ROMBOIDE</h3 style="color: #cf4c50;font-weight: bold"> 
+           Diagonal mayor:<br> <input type="text" id="d-mayor-romboide"><br>
+           Diagonal menor: <br><input type="text" id="d-menor-romboide">
+           <br><br><input type="button" onclick="arearomboide()" value="Calcular area">
+           <div id="arearomboide"></div>
+        </section>
+    </div>
+
+
+    <div id="poligono" align="center">
+        <section style="background-color: #fff; border: 5px solid;border-color: #c5cd26;">
+            <img src="img/poligono.png"><br><br>
+           <h3 style="color: #cf4c50;font-weight: bold">AREA POLÍGONO REGULAR</h3 style="color: #cf4c50;font-weight: bold"> 
+           Perimetro:<br> <input type="text" id="perimetro"><br>
+           Apotema: <br><input type="text" id="apotema">
+           <br><br><input type="button" onclick="areapoligono()" value="Calcular area">
+           <div id="areapoligono"></div>
+       
+        </section>
+    </div>
+
+    <div id="circulo" align="center">
+        <section style="background-color: #fff; border: 5px solid;border-color: #c5cd26;">
+            <img src="img/circulo.jpg"><br><br>
+           <h3 style="color: #cf4c50;font-weight: bold">AREA CIRCULO</h3 style="color: #cf4c50;font-weight: bold">
+           Radio:<br> <input type="text" id="radio-circulo"><br>
+           <br><br><input type="button" onclick="areacirculo()" value="Calcular area">
+           <div id="areacirculo"></div>
+       
+        </section>
+    </div>
+
+
+</div>
+    
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lanzamiento de Dados</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        button {
+            background-color: #4ddb98;
+            color: #fff;
+            font-size: 16px;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #062d1c;
+        }
+
+        #resultado {
+            margin-top: 20px;
+        }
+
+        #resultado img {
+            max-width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lanzamiento de Dados</h1>
+    <button id="dado6" data-sides="6">Dado de 6 caras</button>
+    <button id="dado10" data-sides="10">Dado de 10 caras</button>
+    <button id="dado20" data-sides="20">Dado de 20 caras</button>
+    <div id="resultado"></div>
+    <script>
+        const imagenesDados = {
+            6: ['img/cara1.png', 'img/cara2.png', 'img/cara3.png', 'img/cara4.png', 'img/cara5.png', 'img/cara6.png'],
+            10: ['img/cara101.png', 'img/cara102.png', 'img/cara103.png', 'img/cara104.png', 'img/cara105.png', 'img/cara106.png', 'img/cara107.png', 'img/cara108.png', 'img/cara109.png', 'img/cara1010.png'],
+            20: ['img/cara201.png', 'img/cara202.png', 'img/cara203.png', 'img/cara204.png', 'img/cara205.png', 'img/cara206.png', 'img/cara207.png', 'img/cara208.png', 'img/cara209.png', 'img/cara2010.png', 'img/cara2011.png', 'img/cara2012.png', 'img/cara2013.png', 'img/cara2014.png', 'img/cara2015.png', 'img/cara2016.png', 'img/cara2017.png', 'img/cara2018.png', 'img/cara2019.png', 'img/cara2020.png']
+        };
+
+        document.getElementById("dado6").addEventListener("click", function() {
+            lanzarDado(6);
+        });
+
+        document.getElementById("dado10").addEventListener("click", function() {
+            lanzarDado(10);
+        });
+
+        document.getElementById("dado20").addEventListener("click", function() {
+            lanzarDado(20);
+        });
+
+        function lanzarDado(caras) {
+            const resultado = Math.floor(Math.random() * caras);
+            const resultadoContainer = document.getElementById("resultado");
+            resultadoContainer.innerHTML = `<img src="${imagenesDados[caras][resultado]}" alt="Resultado del dado">`;
+        }
+    </script>
+</body>
+</html>

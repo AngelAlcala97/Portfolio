@@ -1,0 +1,67 @@
+Hacer una página web para una calculadora de promedio de habilidades en videojuegos
+
+La página estará dividida en dos partes:
+
+Una primera parte dedicada a la introducción de la información, que incluirá:
+
+1. Dos cajas de texto: una para el nombre del juego para el que se va a incluir la puntuación obtenida y otra para la puntuación. 
+2. Un botón para agregar la puntuación.
+
+Una segunda parte dedicada a mostrar los resultados de los cálculos, que incluirá una tabla que:
+
+1. Debe tener tres columnas:
+
+a. La primera columna debe mostrar la imagen representativa del juego elegido. Las imágenes de los juegos estarán previamente guardadas en una carpeta y se elegirán en base al nombre del juego elegido (se recomienda usar switch). Si se introduce el nombre de un juego para el que no se dispone de imagen se usará una imagen genérica. Lás imágenes tendrán un tamaño pequeño para que encajen bien en el alto de la fila de la tabla.
+
+b. La segunda columna contendrá el nombre del juego introducido.
+
+c. La tercera columna contendrá la puntuación obtenida (aunque diferentes juegos pueden ofrecer diferentes puntuaciones, para simplificar este apartado, esas puntuaciones se estimarán como un valor de 0 a 100 que representa la habilidad del jugador en ese juego)
+
+2. Debe tener una última fila de resumen que mostrará en cada una de las columnas:
+
+a. Una imagen representativa de la habilidad del jugador elegida en base a la media de las puntuaciones obtenidas:
+	Si la media está entre 0 y 33 se mostrará una imagen que indique un nivel bajo de habilidad
+	Si la media está entre 34 y 66 se mostrará una imagen que indique un nivel medio de habilidad
+	Si la media está entre 67 y 100 se mostrará una imagen que indique un nivel alto de habilidad
+
+b. Un texto (a elegir por el alumno) que indique ese nivel de habilidad obtenido
+
+c. Un número con dos decimales que es el cálculo de la media de habilidad de todos los juegos incluidos
+
+Funcionamiento esperado del programa:
+
+Cada vez que el usuario introduzca una puntuación se debe actualizar el valor de dos variables: una variable para guardar la suma de las puntuaciones introducidas y otra para guardar el número de puntuaciones introducidas. Una vez actualizadas se volverá a calcular la media de las puntuaciones usando sus valores.
+
+Se borrarán los valores de las cajas de texto.
+
+Se añadirá una fila a la tabla con la puntuación obtenida en el juego introducido y se actualizará la fila de resumen con los nuevos valores.
+
+Pista: Posiblemente tengas dificultades con la creación de la tabla en este ejercicio. Para ello deberás usar dos variables de texto:
+
+La primera de ellas (por ejemplo llamada variableFilas) guardará todas las filas de la tabla y en esta variable debes ir concatenando el texto de cada nueva fila de la tabla.
+La segunda (por ejemplo llamada variableResumen) contendrá la fila de resumen y el contenido de esta variable deberá reescribirse cada vez que se introduce una nueva puntuación.
+
+Para la construcción del HTML de la tabla deberás concatenar: '<table>' + variableFilas + variableResumen + '</table>
+Una vez obtendo el HTML de la tabla sobreescribirás un contenedor en la página destinado a incluir ese texto HTML que has generado.
+
+Versión IA:
+
+Se recompensa con 0,05 por entregar una versión adicional generada con IA tanto código como imágenes (Guardar los prompts para comparar)
+
+Versión propia:
+
+Se recompensa con 0,1 por entregar una versión adicional que mejore de forma apreciable a la versión original
+
+Evolución de versiones:
+
+Cuando el usuario introduce los datos:
+
+Con salltos de línea hago lo siguiente:
+V1: Los muestro en un contenedor añadiendo al mismo
+V2: Tambien saco la media y la muestro al final
+V3: Escribo también las imágenes de los juegos
+V4: Escribo también la imagen de la media
+
+Aquí ya escribo la tabla
+
+V5: Escribo los datos en forma de tabla

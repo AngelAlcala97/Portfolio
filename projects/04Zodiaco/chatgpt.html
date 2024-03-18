@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zodiaco</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            font-size: 1em;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .zodiaco-img {
+            max-width: 200px;
+            margin-top: 20px;
+            border: 1px solid #ccc;
+        }
+
+        .descripcion {
+            font-size: 1.2em;
+            margin-top: 20px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <h1>Consulta tu signo del zodiaco</h1>
+    <label for="signo">Introduce tu signo del zodiaco:</label>
+    <input style="text-transform: lowercase;" type="text" id="signo" name="signo" required>
+    <button onclick="buscarSigno()">Buscar</button>
+
+    <div id="resultado">
+        <!-- Aquí se mostrará el resultado -->
+    </div>
+
+    <script>
+        function buscarSigno() {
+            var signo = document.getElementById('signo').value.toLowerCase(); // Se convierte a minúsculas
+            var resultadoDiv = document.getElementById('resultado');
+            resultadoDiv.innerHTML = '';
+
+            var signos = {
+                aries: {
+                    imagen: 'img/Aries.png',
+                    descripcion: 'Aries es el primer signo del zodiaco y se asocia con la energía, la acción y el coraje.'
+                },
+                tauro: {
+                    imagen: 'img/Tauro.png',
+                    descripcion: 'Tauro es el segundo signo del zodiaco y se asocia con la determinación, la estabilidad y la sensualidad.'
+                },
+                geminis: {
+                    imagen: 'img/Geminis.png',
+                    descripcion: 'Géminis es el tercer signo del zodiaco y se asocia con la versatilidad, la comunicación y la curiosidad.'
+                },
+                cancer: {
+                    imagen: 'img/Cancer.png',
+                    descripcion: 'Cáncer es el cuarto signo del zodiaco y se asocia con la sensibilidad, la protección y la intuición.'
+                },
+                leo: {
+                    imagen: 'img/Leo.png',
+                    descripcion: 'Leo es el quinto signo del zodiaco y se asocia con la creatividad, la pasión y el liderazgo.'
+                },
+                virgo: {
+                    imagen: 'img/Virgo.png',
+                    descripcion: 'Virgo es el sexto signo del zodiaco y se asocia con la precisión, la organización y la practicidad.'
+                },
+                libra: {
+                    imagen: 'img/Libra.png',
+                    descripcion: 'Libra es el séptimo signo del zodiaco y se asocia con la armonía, la justicia y la diplomacia.'
+                },
+                escorpio: {
+                    imagen: 'img/Escorpio.png',
+                    descripcion: 'Escorpio es el octavo signo del zodiaco y se asocia con la intensidad, la determinación y la transformación.'
+                },
+                sagitario: {
+                    imagen: 'img/Sagitario.png',
+                    descripcion: 'Sagitario es el noveno signo del zodiaco y se asocia con la aventura, la expansión y la filosofía.'
+                },
+                capricornio: {
+                    imagen: 'img/Capricornio.png',
+                    descripcion: 'Capricornio es el décimo signo del zodiaco y se asocia con la ambición, la responsabilidad y la disciplina.'
+                },
+                acuario: {
+                    imagen: 'img/Acuario.png',
+                    descripcion: 'Acuario es el undécimo signo del zodiaco y se asocia con la originalidad, la independencia y la humanidad.'
+                },
+                piscis: {
+                    imagen: 'img/Piscis.png',
+                    descripcion: 'Piscis es el duodécimo signo del zodiaco y se asocia con la compasión, la intuición y la espiritualidad.'
+                }
+            };
+
+            if (signos[signo]) {
+                var imagen = document.createElement('img');
+                imagen.src = signos[signo].imagen;
+                imagen.alt = 'Signo de ' + signo;
+                imagen.className = 'zodiaco-img';
+
+                var descripcion = document.createElement('p');
+                descripcion.textContent = signos[signo].descripcion;
+
+                resultadoDiv.appendChild(imagen);
+                resultadoDiv.appendChild(descripcion);
+            } else {
+                resultadoDiv.textContent = 'No se encontró ese signo del zodiaco.';
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+Lanzamiento de Dados
+
+Crea una página web que permita simular el lanzamiento de diferentes dados. La página tendrá tres botones, uno para cada tipo de dado (6, 10 y 20 caras) y al pulsarlos simulará el lanzamiento de un dado con ese número de caras.
+
+Al pulsar el botón elegido se generará un número aleatorio entre 1 y el número de caras del dado elegido. En base a ese número se mostrará la imagen mostrando la cara del dado corrospondiente con esa puntuación en un contenedor creado a tal efecto. El ejercicio debe realizarse en una sola página.
+
+Versión mejorada 1 por 0,3 positivos:
+
+    Muestra un registro de las últimas tiradas realizadas, mostrando los resultados que han salido anteriormente
+    Lleva un registro de la cantidad de lanzamientos del dado de 6 caras y muestra el número total de lanzamientos y el promedio de resultados del dado.
+    Agrega una sección que muestre estadísticas sobre el número de veces que se ha obtenido cada resultado y el promedio de aparición de cada número con respecto al total de apariciones (La suma de todos los promedios debe ser 100).
+
+Versión mejorada 2 por 0,3 positivos:
+
+    Agrega una gráfica de barras que muestre el promedio de los resultados del dado de 6 caras.
+    La gráfica estará creada con contenedores usando estilos para darles un ancho y un alto concretos, un grosor de borde y un color de fondo y de borde. Los contenedores se situarán apilados unos sobre otros.
+    Cada contenedor se corresponderá con una cara del dado y tendrá un ancho proporcional al promedio del número de veces que haya salido ese resultado. Dentro del contenedor aparecerá el valor del dado con el que se corresponde.
+    Cada vez que se tire el dado la gráfica se actualizará mostrando el nuevo resultado.
+
+Versión vitaminada (positivos según el trabajo realizado):
+
+    Crea una versión superior a la mejorada, por ejemplo añadiendo tiradas de múltiples dados y sumando el resultado, mejorando las estadísticas o gráficas que las muestran, añadiendo dados de caras personalizadas con comportamientos diferentes (por ejemplo diferentes imágenes, o añadir un color aletorio a la cara del dado que matice el resultado, por ejemplo sumando o restando a la puntuación) o cualquier otra mejora que se te ocurra.
+
+Versión IA (0,1 positivos cada una)
+
+Crea una versión IA funcional que cumpla los requisitos pedidos para cada versión y obtendrás 0,1 positivos por cada una.

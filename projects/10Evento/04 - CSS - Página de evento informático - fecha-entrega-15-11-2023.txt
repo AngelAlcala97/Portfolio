@@ -1,0 +1,23 @@
+Diseño de una Página de Presentación de un Evento de Programación
+
+
+Crea un archivo HTML que represente una página de presentación de un evento de programación. La página debe contener un encabezado, un área de contenido principal y un pie de página.
+
+Utiliza reglas CSS para diseñar la página de la presentación:
+
+    Establece un fondo de color para el encabezado y el pie de página.
+    Cambia los colores de texto y fondos de los elementos para que se vean atractivos.
+    Crea una barra de navegación en la parte superior de la página con enlaces a secciones importantes, como "Inicio", "Agenda", "Oradores" y "Registrarse".
+    Incluye una foto del evento.
+    Diseña una sección que muestre información sobre los oradores del evento, incluyendo sus nombres, fotos y descripciones.
+    Agrega un formulario de registro con campos para nombre, dirección de correo electrónico y un botón de registro.
+
+Los textos y fotos de la página deben estar generados con IA.
+
+Versión vitaminada (positivos según el trabajo realizado):
+
+    Crea una versión mejorada, aplicando las etiquetas de estilo que conozcas o creando varias páginas con nuevas secciones del evento
+
+Versión IA (0,01 positivos)
+
+    Se entregará, opcionalmente, además del ejercicio realizado por el alumno/a, una versión generada por IA

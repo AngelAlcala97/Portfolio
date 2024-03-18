@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Ajedrez</title>
+    <link rel="icon" type="image/x-icon" href="img/logoicono.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- DATOS DE PINTADA DEL TABLERO -->
+<div class="datosgeneral">
+    <div class="logo">
+    <img onclick="location.reload()" id="logoicono" src="img/logoicono.png">
+    <img onclick="pintaje()" id="logotexto" src="img/logotexto.png">
+    </div>
+    <div id="pintaje" class="datos" style="display: none;">
+        <div class="datos1">
+            <input id="size" type="number" placeholder="Inserte un tamaño">
+                <div class="datos">
+                    <input id="color1" type="color" value="#E4C36A">
+                    <input id="color2" type="color" value="#ffffff">
+                </div>
+                <div class="datos">
+                    <input id="alto" type="number" placeholder="Nº filas">
+                    <input id="ancho" type="number" placeholder="Nº columnas">
+                </div>
+                <button onclick="tablero()">PINTAR</button>
+        </div>
+    </div>
+</div>
+
+<!-- TABLERO DE AJEDREZ -->
+<div class="tablero">     
+    <div id="tablero"></div>
+</div>
+           
+        
+        
+
+
+
+</body>
+<script src="script.js"></script>
+</html>

@@ -1,0 +1,230 @@
+html,
+body {
+    background-color: #111111;
+    transition: opacity 10s 5s;
+}
+
+
+#banner {
+    width: 960px;
+    height: 540px;
+    border: 2px solid;
+    border-color: white;
+    animation: change-color 2.5s;
+    animation-timing-function: ease-in-out;
+    margin-right: 10px;
+    margin-left: 10px;
+
+}
+
+@keyframes change-color {
+    from {
+        opacity: 0;
+    }
+
+    /* Primer fotograma */
+    to {
+        opacity: 1;
+    }
+
+    /* Segundo y último fotograma */
+
+
+}
+
+#fondo {
+    place-content: center;
+    display: flex;
+    margin-top: 5px;
+    margin-bottom: 20px;
+
+}
+
+#logo {
+    place-content: center;
+    display: grid;
+    margin-top: 5px;
+    text-align: center;
+    font-family: fantasy;
+
+
+}
+
+#icono {
+    width: 50px;
+    height: 50px;
+    transition: all .5s ease-in;
+}
+
+#icono:hover {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.2);
+    overflow: hidden;
+    transition: all .5s ease-in-out;
+}
+
+#audio {
+    display: none
+}
+#audio2 {
+    display: none
+}
+.container {
+    display: none;
+    place-content: center;
+    margin-top: 5px;
+}
+
+
+h4 {
+    transition: all .5s ease-in-out;
+
+
+}
+
+h4:hover {
+    text-shadow: 3px 3px 1px black;
+    transform: scale(1.5);
+    transition: all .5s ease-in-out;
+
+}
+
+
+.imagenfondo {
+    position: absolute;
+    height: 540px;
+    width: 960px;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+}
+
+.imagenhabitante {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    z-index: 0;
+}
+
+.textofondo {
+    position: absolute;
+    height: 1000px;
+    width: 700px;
+    top: 180px;
+    left: 150px;
+    z-index: 2;
+}
+
+.botonstart {
+    position: relative;
+    height: 1000px;
+    width: 700px;
+    top: 250px;
+    left: 400px;
+    z-index: 2;
+    animation: change-color-start 1.5s linear infinite;
+    animation-timing-function: ease-in-out;
+
+}
+
+@keyframes change-color-start {
+    from {
+        opacity: 0;
+    }
+
+    /* Primer fotograma */
+    to {
+        opacity: 1;
+    }
+
+    /* Segundo y último fotograma */
+
+}
+
+
+span {
+    color: #fff;
+    display: block;
+    font-family: fantasy;
+    font-size: 20px;
+    text-shadow: 3px 3px 3px #111111;
+    white-space: nowrap;
+    width: 200ch;
+    animation: typing 5s steps(200), blink .1s infinite step-end alternate;
+    overflow: hidden;
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+
+
+}
+
+h6 {
+    position: absolute;
+    min-height: 30px;
+    max-height: 150px;
+    width: 70px;
+    max-width: 500px;
+    top: 180px;
+    left: 150px;
+    z-index: 2;
+    background-color: #c8ac85;
+    border: 5px solid #554A3F;
+    border-radius: 10px;
+    border-top-left-radius: 0px;
+    color: #fff;
+    display: block;
+    font-family: fantasy;
+    font-size: 20px;
+    text-shadow: 3px 3px 3px #111111;
+    white-space: nowrap;
+    width: 100ch;
+    animation: typing 5s steps(100);
+    overflow: hidden;
+    justify-content: center;
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+}
+
+.botones {
+    border: 1px solid #fff;
+    color: #fff;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-family: fantasy;
+    background-color: #554A3F;
+    animation: change-color 2.5s;
+    animation-timing-function: ease-in-out;
+    cursor: url('img/cursor.png'), auto;
+    
+}
+
+@keyframes change-color {
+    from {
+        opacity: 0;
+    }
+
+    /* Primer fotograma */
+    to {
+        opacity: 1;
+    }
+
+    /* Segundo y último fotograma */
+
+}

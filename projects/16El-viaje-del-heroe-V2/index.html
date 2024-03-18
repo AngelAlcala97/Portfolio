@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Digimon</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="img/Digivice_tri.webp">
+
+</head>
+<body>
+    
+
+    <audio id="audio2" controls>
+        <source type="audio/mp3" src="audio/start.mp3">
+    </audio>
+    <audio id="audio3" controls>
+        <source type="audio/mp3" src="audio/oraculo.mp3">
+    </audio>
+    <audio id="audio5" controls>
+        <source type="audio/mp3" src="audio/evolution.mp3">
+    </audio>
+
+    <div id="start" class="start">
+        <audio id="audio" controls>
+            <source type="audio/mp3" src="audio/intro.mp3">
+        </audio>
+        <img src="img/logo.png">
+        <div id="menu">
+        <h1 onclick="start()">START</h1>
+        </div>
+    </div>
+
+
+    
+    
+    <div  style="display: none;"  class="tablero" id="pintaje">
+
+
+        <!-- AGUMON -> GREYMON -->
+        <div  style="display: none;"  class="videodigi" id="vidigimon0">
+            <div class="infodigi">
+                <h1>AGUMON</h1>
+                <img src="img/digimon0.gif">
+            </div>
+            <video width="840" height="390" id="video0">
+                <source src="video/Digievo.mp4" type="video/mp4">
+            </video>
+            <div class="infodigi">
+                <h1>GREYMON</h1>
+                <img src="img/digimon10.gif">
+            </div>
+        </div>
+        
+        <!-- GREYMON -> METALGREYMON -->
+        <div  style="display: none;"  class="videodigi" id="vidigimon10">
+            <div class="infodigi">
+                <h1>GREYMON</h1>
+                <img src="img/digimon10.gif">
+            </div>
+            <video width="840" height="390" id="video10">
+                <source src="video/Digievo.mp4" type="video/mp4">
+            </video>
+            <div class="infodigi">
+                <h1>METALGREYMON</h1>
+                <img src="img/digimon20.gif">
+            </div>
+        </div>
+
+         <!-- PATAMON -> ANGEMON -->
+         <div  style="display: none;"  class="videodigi" id="vidigimon1">
+            <div class="infodigi">
+                <h1>PATAMON</h1>
+                <img src="img/digimon1.gif">
+            </div>
+            <video width="840" height="390" id="video1">
+                <source src="video/Digievo.mp4" type="video/mp4">
+            </video>
+            <div class="infodigi">
+                <h1>ANGEMON</h1>
+                <img src="img/digimon11.gif">
+            </div>
+        </div>
+
+         <!-- ANGEMON -> SERAPHIMON -->
+         <div  style="display: none;"  class="videodigi" id="vidigimon11">
+            <div class="infodigi">
+                <h1>ANGEMON</h1>
+                <img src="img/digimon11.gif">
+            </div>
+            <video width="840" height="390" id="video11">
+                <source src="video/Digievo.mp4" type="video/mp4">
+            </video>
+            <div class="infodigi">
+                <h1>SERAPHIMON</h1>
+                <img src="img/digimon21.gif">
+            </div>
+        </div>
+
+        <!-- GABUMON -> GARURUMON -->
+        <div  style="display: none;"  class="videodigi" id="vidigimon2">
+            <div class="infodigi">
+                <h1>GABUMON</h1>
+                <img src="img/digimon2.gif">
+            </div>
+            <video width="840" height="390" id="video2">
+                <source src="video/Digievo.mp4" type="video/mp4">
+            </video>
+            <div class="infodigi">
+                <h1>GARURUMON</h1>
+                <img src="img/digimon12.gif">
+            </div>
+        </div>
+
+         <!-- GARURUMON -> WEREGARURUMON -->
+         <div  style="display: none;"  class="videodigi" id="vidigimon12">
+            <div class="infodigi">
+                <h1>GARURUMON</h1>
+                <img src="img/digimon12.gif">
+            </div>
+            <video width="840" height="390" id="video12">
+                <source src="video/Digievo.mp4" type="video/mp4">
+            </video>
+            <div class="infodigi">
+                <h1>WEREGARURUMON</h1>
+                <img src="img/digimon22.gif">
+            </div>
+        </div>
+
+          <!-- GOMAMON -> IKKAKUMON -->
+          <div  style="display: none;"  class="videodigi" id="vidigimon3">
+            <div class="infodigi">
+                <h1>GOMAMON</h1>
+                <img src="img/digimon3.gif">
+            </div>
+            <video width="840" height="390" id="video3">
+                <source src="video/Digievo.mp4" type="video/mp4">
+            </video>
+            <div class="infodigi">
+                <h1>IKKAKUMON</h1>
+                <img src="img/digimon13.gif">
+            </div>
+        </div>
+
+         <!-- IKKAKUMON -> ZUDOMON -->
+         <div  style="display: none;"  class="videodigi" id="vidigimon13">
+            <div class="infodigi">
+                <h1>IKKAKUMON</h1>
+                <img src="img/digimon13.gif">
+            </div>
+            <video width="840" height="390" id="video13">
+                <source src="video/Digievo.mp4" type="video/mp4">
+            </video>
+            <div class="infodigi">
+                <h1>ZUDOMON</h1>
+                <img src="img/digimon23.gif">
+            </div>
+        </div>
+
+            <!-- TENTOMON -> KABUTERIMON -->
+            <div  style="display: none;"  class="videodigi" id="vidigimon4">
+                <div class="infodigi">
+                    <h1>TENTOMON</h1>
+                    <img src="img/digimon4.gif">
+                </div>
+                <video width="840" height="390" id="video4">
+                    <source src="video/Digievo.mp4" type="video/mp4">
+                </video>
+                <div class="infodigi">
+                    <h1>KABUTERIMON</h1>
+                    <img src="img/digimon14.gif">
+                </div>
+            </div>
+    
+             <!-- KABUTERIMON -> MEGAKABUTERIMON -->
+             <div  style="display: none;"  class="videodigi" id="vidigimon14">
+                <div class="infodigi">
+                    <h1>KABUTERIMON</h1>
+                    <img src="img/digimon14.gif">
+                </div>
+                <video width="840" height="390" id="video14">
+                    <source src="video/Digievo.mp4" type="video/mp4">
+                </video>
+                <div class="infodigi">
+                    <h1>MEGAKABUTERIMON</h1>
+                    <img src="img/digimon24.gif">
+                </div>
+            </div>
+
+
+             <!-- PALMON -> TOGEMON -->
+             <div  style="display: none;"  class="videodigi" id="vidigimon5">
+                <div class="infodigi">
+                    <h1>PALMON</h1>
+                    <img src="img/digimon5.gif">
+                </div>
+                <video width="840" height="390" id="video5">
+                    <source src="video/Digievo.mp4" type="video/mp4">
+                </video>
+                <div class="infodigi">
+                    <h1>TOGEMON</h1>
+                    <img src="img/digimon15.gif">
+                </div>
+            </div>
+    
+             <!-- TOGEMON -> LILYMON -->
+             <div  style="display: none;"  class="videodigi" id="vidigimon15">
+                <div class="infodigi">
+                    <h1>TOGEMON</h1>
+                    <img src="img/digimon15.gif">
+                </div>
+                <video width="840" height="390" id="video15">
+                    <source src="video/Digievo.mp4" type="video/mp4">
+                </video>
+                <div class="infodigi">
+                    <h1>LILYMON</h1>
+                    <img src="img/digimon25.gif">
+                </div>
+            </div>
+
+
+              <!-- PIYOMON -> BIRDRAMON -->
+              <div  style="display: none;"  class="videodigi" id="vidigimon6">
+                <div class="infodigi">
+                    <h1>PIYOMON</h1>
+                    <img src="img/digimon6.gif">
+                </div>
+                <video width="840" height="390" id="video6">
+                    <source src="video/Digievo.mp4" type="video/mp4">
+                </video>
+                <div class="infodigi">
+                    <h1>BIRDRAMON</h1>
+                    <img src="img/digimon16.gif">
+                </div>
+            </div>
+    
+             <!-- BIRDRAMON -> GARUDAMON -->
+             <div  style="display: none;"  class="videodigi" id="vidigimon16">
+                <div class="infodigi">
+                    <h1>BIRDRAMON</h1>
+                    <img src="img/digimon16.gif">
+                </div>
+                <video width="840" height="390" id="video16">
+                    <source src="video/Digievo.mp4" type="video/mp4">
+                </video>
+                <div class="infodigi">
+                    <h1>GARUDAMON</h1>
+                    <img src="img/digimon26.gif">
+                </div>
+            </div>
+    
+
+
+    </div>
+
+    <div style="display: none" id="end" class="end">
+        <audio id="audio4" controls>
+            <source type="audio/mp3" src="audio/ending.mp3">
+        </audio>
+        <div id="agradecimientos">
+            <h1>AGRADECIMIENTOS</h1>
+            <div id="listagradecimientos">
+                <!-- <h2>Canva</h2>
+                <h3>Por la edicion de diseños</h3> -->
+            </div>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>

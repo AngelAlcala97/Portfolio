@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Inicio</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.png"> 
+
+</head>
+<style>
+    @font-face {
+        font-family:'DESIGNER';
+        src: url('font/DESIGNER.ttf') format('truetype');
+    }
+    body,html{
+        display: flex;
+        margin: 0;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+        overflow: hidden;
+        height: 100vh;
+        width: 100vw;
+        background-color: #212121;
+        background-image: url('img/background1.png');
+        background-size: cover;
+        z-index: -2;
+        animation: moving 60s linear infinite forwards;
+        /* z-index: 0; */
+        }
+        
+        @keyframes moving {
+            0%{
+                background-position-y:0%;
+            }100%{
+                background-position-y:-122.5%;
+            }
+        }
+        @keyframes start {
+            0%{
+                opacity: 0;
+            }100%{
+                opacity: 1;
+
+            }
+        }
+        .imagen1{
+            position: absolute;
+            top: 100vh;
+            animation: moverimagen1 5s linear 5s infinite;
+            z-index: -1;
+        }
+         @keyframes moverimagen1 {
+            0%{
+                transform:translate(0px, 100vh);
+            }
+            100%{
+                transform:translate(0px, -200vh);
+
+            }
+        }
+        .imagen2{
+            position: absolute;
+            animation: moverimagen2 10s linear infinite alternate;
+            z-index: 0;
+            width: 10vw;
+
+        }
+        @keyframes moverimagen2 {
+            0%{
+                transform:translate(-200vw, -200vh);
+            }
+            100%{
+                transform:translate(200vw, 200vh);
+
+            }
+        }
+        .imagen3{
+            position: absolute;
+            animation: moverimagen3 10s linear infinite alternate;
+            z-index: 0;
+            width: 10vw;
+
+        }
+        @keyframes moverimagen3 {
+            0%{
+                transform:translate(200vw, 50vh);
+            }
+            100%{
+                transform:translate(-200vw, 50vh);
+
+            }
+        }
+        .imagen4{
+            position: absolute;
+            top: 20%;
+            left: 30%;
+            /*animation: moverimagen4 10s linear infinite alternate;*/
+            z-index: 999;
+            width: 40vw;
+
+        }
+        @keyframes moverimagen4 {
+            0%{
+                transform:translate(-50vw, 100vh);
+            }
+            100%{
+                transform:translate(200vw, -200vh);
+
+            }
+        }
+        h1{
+            position: relative;
+            z-index: 1;
+            font-family: DESIGNER;
+            font-weight: 900;
+            font-size: clamp(15vw, 15vw, 20vw); 
+            color: lightcoral;
+            /*-webkit-text-stroke: 0.7px whitesmoke;*/
+            text-shadow: 1vh 1vh 2vh whitesmoke;
+            -webkit-box-reflect: below -3vh linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.4));
+        }
+       
+            .animated-button {
+                position: relative;
+                display: flex;
+                align-items: center;
+                gap: 4px;
+                padding: 16px 36px;
+                border: 4px solid;
+                border-color: transparent;
+                font-size: 16px;
+                background-color: inherit;
+                border-radius: 100px;
+                font-weight: 600;
+                font-family: 'Designer';
+                color: lawngreen;
+                box-shadow: 0 0 0 2px lawngreen;
+                cursor: pointer;
+                overflow: hidden;
+                transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+              }
+              
+              .animated-button svg {
+                position: absolute;
+                width: 24px;
+                fill: lawngreen;
+                z-index: 9999999;
+                transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+              }
+              
+              .animated-button .arr-1 {
+                right: 16px;
+              }
+              
+              .animated-button .arr-2 {
+                left: -25%;
+              }
+              
+              .animated-button .circle {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 20px;
+                height: 20px;
+                background-color: lawngreen;
+                border-radius: 50%;
+                opacity: 0;
+                transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+              }
+              
+              .animated-button .text {
+                position: relative;
+                z-index: 9999998;
+                transform: translateX(-12px);
+                transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+              }
+              
+              .animated-button:hover {
+                box-shadow: 0 0 0 12px transparent;
+                color: #212121;
+                border-radius: 12px;
+              }
+              
+              .animated-button:hover .arr-1 {
+                right: -25%;
+              }
+              
+              .animated-button:hover .arr-2 {
+                left: 16px;
+              }
+              
+              .animated-button:hover .text {
+                transform: translateX(12px);
+              }
+              
+              .animated-button:hover svg {
+                fill: #212121;
+              }
+              
+              .animated-button:active {
+                scale: 0.95;
+                box-shadow: 0 0 0 4px lawngreen;
+              }
+              
+              .animated-button:hover .circle {
+                width: 220px;
+                height: 220px;
+                opacity: 1;
+              }
+              a{
+                text-decoration: none;
+              }
+              #audio2{
+                display: none;
+              }
+              
+</style>
+<body onload="audio.play()">
+  <audio id="audio">
+    <source src="audio/gameover.mp3" type="audio/mp3">
+</audio>
+    <h1>GAME OVER</h1>
+    <a href="index.html"><button class="animated-button">
+        <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+          ></path>
+        </svg>
+        <span class="text">REINTENTAR</span>
+        <span class="circle"></span>
+        <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+          ></path>
+        </svg>
+      </button>
+      </a>
+    <img class="imagen4" src="img/bones.webp">
+    
+
+
+</body>
+</html>

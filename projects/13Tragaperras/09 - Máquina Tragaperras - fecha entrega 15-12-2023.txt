@@ -1,0 +1,31 @@
+Realizar una página que simule una máquina tragaperras mostrando tres gráficos aleatorios que representen el resultado obtenido al hacerla funcionar.
+
+La página dispondrá de tres rodillos con imágenes cada uno. La máquina tendrá al menos 5 imágenes diferentes por rodillo.
+
+La página dispondrá también de un botón para hacer girar los rodillos. Al pulsarlo se sustituirán las imágenes de los rodillos por una imagen elegida de forma aleatoria.
+
+Si las imágenes de los tres rodillos coinciden la página mostrará un gráfico indicando que has ganado un premio. En caso contrario mostrará un gráfico indicando que no hay premio.
+
+Importante:
+	1. Los cambios de imagen de los rodillos podrían hacerce con funciones únicas que puedan aplicarse a todos los rodillos usando parámetros.
+	2. Las imágenes serán un único sprite
+
+Tienda de mejoras:
+
+Por 0,03 positivos: Llevar un control del dinero. Partimos de 100€ de capital y cada jugada cuesta 5€, si se gana se obtienen 25€. No se puede apostar si te quedas sin dinero.
+Por 0,02 positivos: Premios personalizados. Establecer diferentes premios en base a diferentes combinaciones. Las combinaciones deben mostrarse en la página para tener una referencia.
+Por 0,05 positivos: Avances. Mostrar, además del gráfico del rodillo la mitad del gráfico que viene a continuación y añadir, para cada rodillo un botón de avance, que permite pasar al siguiente gráfico y quizá obtener así premio. Sólo se puede pulsar uno de los tres botones de avance por jugada. Al pulsarlo los otros se deshabilitarán.
+Por 0,03 positivos: Personalización del número de rodillos. Permitir elegir el número de rodillos entre 2 y 10. Establecer la cuantía de los premios en base al número de rodillos.
+Por 0,02 positivos: Historial de partidas. Cada vez que se juega aparecen bajo la máquina las tres imágenes correspondientes a la partida jugada más un gráfico adicional para indicar si se ganó o perdió. Se van acumulando cada vez que se juega.
+
+Versión vitaminada:
+
+Crea tus propias mejoras sobre el juego, se valorarán según su dificultad.
+
+Versión IA por 0,01 positivos:
+
+Crea una versión IA funcional que cumpla los requisitos pedidos el ejercicio.
+
+Versión IA por 0,03 positivos (no acumulable a la anterior):
+
+Crea una versión IA funcional que cumpla los requisitos pedidos el ejercicio y todas las mejoras.

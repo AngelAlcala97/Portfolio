@@ -1,0 +1,155 @@
+@font-face {
+  font-family: 'Digimon';
+  src: url('fonts/pixel-digivolve-italic.otf') format('truetype');
+}
+
+html,body{
+  margin: 0;
+  background: #212121;
+  color: whitesmoke;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+
+}
+.contenido{
+  width: 675px;
+}
+.try{
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+width: 675px;
+height: 375px;
+box-sizing: border-box;
+border: 1px solid whitesmoke;
+}
+.demo{
+display: flex;
+justify-content: flex-start;
+padding: 10px;
+align-items: center;
+box-sizing: border-box;
+border: 1px solid whitesmoke;
+width: 100%;
+height: 15%;
+gap: 10px;
+}
+.demo h3{
+margin-right: 80px;
+}
+.boxes input{
+  background: transparent;
+  outline: 0;
+  border: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 20px;
+  color: lightcoral;
+  font-weight: bold;
+  min-width: 11px;
+  max-width: 18px;
+
+}
+
+.live{
+display: flex;
+justify-content: center;
+align-items: center;
+box-sizing: border-box;
+border: 1px solid whitesmoke;
+width: 100%;
+height: 85%;
+}
+.examples{
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+box-sizing: border-box;
+border: 1px solid whitesmoke;
+width: 50%;
+height: 100%;
+gap: 10px;
+}
+.examples2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  border: 1px solid whitesmoke;
+  width: 50%;
+  height: 100%;
+  }
+.boxes{
+display: flex;
+justify-content: flex-start;
+flex-direction: column;
+align-items: flex-start;
+box-sizing: border-box;
+background: white;
+color: #212121;
+width: 80%;
+height: 80%;
+border-radius: 4px;
+}
+.boxes textarea{
+box-sizing: border-box;
+border: 1px solid whitesmoke;
+width: 100%;
+height: 100%;
+border-radius: 4px;
+resize: none;
+
+}
+
+iframe{
+height: 100%;
+box-sizing: border-box;
+border: 1px solid whitesmoke;
+width: 100%;
+}
+
+.prueba{
+  width: 200px;
+  height: 200px;
+  border: 12px solid orange;
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  gap: 0;
+}
+.hijo{
+  width: 25%;
+  height: 25%;
+  box-sizing: border-box;
+  border: 1px solid black;
+  display: flex;
+  justify-content:center ;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  transition: all 0.3s;
+}
+button{
+  background: lightgreen;
+  padding: 5px;
+  border-radius: 4px;
+  border: 0;
+  color: #212121; 
+  font-weight: bold;
+}
+
+/* .hijo:nth-child(n){
+  background: lightsalmon;
+} */
+
+/* .hijo:nth-child(odd){
+  background: lightskyblue;
+}
+.hijo:nth-child(even){
+  background: lightgreen;
+}  */
+

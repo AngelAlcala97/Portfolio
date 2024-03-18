@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="recogerDatos()">
+    <div class="todo">
+        <nav>
+            <div class="dropdown">
+                <button onclick="myFunction()" class="dropbtn">Tiempos</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <div class="times">
+                        <p>Tiempo Inicial</p>
+                        <input type="range" min="1" max="5" value="1" id="tiempoInicio" onchange="recogerDatos()">
+                        <p id="valorInicial"></p>
+                    </div>
+                    <hr>
+                    <div class="times">
+                        <p>Tiempo Transición</p>
+                        <input type="range" min="1" max="5" value="1" id="tiempoTransition" onchange="recogerDatos()">
+                        <p id="valorTrans"></p>
+                    </div>
+                    <hr>
+                    <div class="times">
+                        <p>Tiempo Final</p>
+                        <input type="range" min="1" max="5" value="1" id="tiempoFinal" onchange="recogerDatos()">
+                        <p id="valorFinal"></p>
+                    </div>
+                </div>
+            </div>
+            <!-- <img style="width: 3vw; height:3vh" src="img/tornado.gif"> -->
+            <div class="dropdown">
+                <button onclick="myFunction2()" class="dropbtn">Transiciones</button>
+                <div id="myDropdown2" class="dropdown-content2">
+                    <div class="times2">
+                        <p>Desplazamiento (x,y)</p>
+                        <div class="times2hijo">
+                            <p>X:</p><input type="number" min="0" max="91" value="0" id="desplazamientoX">
+                            <p>Y:</p><input type="number" min="0" max="91" value="0" id="desplazamientoY">
+                        </div>
+                        <div class="times2hijo">
+                            <button id="botondesplazamientoon" class="botones" onclick="desplazamiento()">Agregar</button>
+                            <button style="display: none;" id="botondesplazamientooff" class="botones" onclick="findesplazamientomaximo()">Parar</button>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="times2">
+                        <p>Resize</p>
+                        <div class="times2hijo">
+                            <p>Ancho</p><input type="number" min="8" max="90" value="0" id="crecimientoX">
+                            <p>Alto</p><input type="number" min="8" max="90" value="0" id="crecimientoY">
+                        </div>
+                        <div class="times2hijo">
+                            <button id="botoncrecimientoon" class="botones" onclick="crecimiento()">Agregar</button>
+                            <button style="display: none;" id="botoncrecimientooff" class="botones" onclick="fincrecimientomaximo()">Parar</button>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="times2">
+                        <p>Rotación</p>
+                        <div class="times2hijo">
+                            <p>Grados:</p><input type="number" min="1" max="5" id="rotacion">
+                        </div>
+                        <div class="times2hijo">
+                            <button id="botonrotaron" class="botones" onclick="rotacion()">Agregar</button>
+                            <button style="display: none;" id="botonrotaroff" class="botones" onclick="finrotacionmaxima()">Parar</button>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="times2">
+                        <p>Drop shadow</p>
+                        <div class="times2hijo">
+                            <p>Top:</p><input type="number" min="1" max="5" value="1" id="droptop">
+                            <p>Left:</p><input type="number" min="1" max="5" value="1" id="dropleft">
+                            <p>Size:</p><input type="number" min="1" max="3" value="1" id="dropsize">
+                            <p>Color:</p><input type="color" id="dropcolor">
+                        </div>
+                        <div style="padding-bottom: 2.5vh;" class="times2hijo">
+                            <button id="botondropon" class="botones" onclick="drop()">Agregar</button>
+                            <button id="botondropoff" style="display: none;" class="botones" onclick="findropmaxima()">Parar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button onclick="myFunction3()" class="dropbtn">Mejoras</button>
+                <div id="myDropdown3" class="dropdown-content3">
+                    <div class="times3">
+                        <p>Origen de rotación</p>
+                        <div class="times3hijo">
+                            <p>X:</p><input type="number" min="0" max="100" id="origenX">
+                            <p>Y:</p><input type="number" min="0" max="100" id="origenY">
+                        </div>
+                        <div class="times3hijo">
+                            <button id="botonAgregarOrigen" class="botones" onclick="agregarOrigen()">Agregar</button>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="times3">
+                        <p>Skew</p>
+                        <div class="times3hijo">
+                            <p>X:</p><input type="number" min="0" max="100" id="skewX">
+                            <p>Y:</p><input type="number" min="0" max="100" id="skewY">
+                        </div>
+                        <div class="times3hijo">
+                            <button id="botonskewon" class="botones" onclick="skew()">Agregar</button>
+                            <button id="botonskewoff" style="display: none;" class="botones" onclick="finskewmaximo()">Parar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="elemento">
+            <div id="tornado" class="tornado">
+                <img id="tornadofoto" src="img/tornado.gif">
+            </div>
+        </div>
+    </div>
+</body>
+<script src="13-animaciones.js"></script>
+
+</html>

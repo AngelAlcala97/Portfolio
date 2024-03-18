@@ -1,0 +1,7 @@
+Realizar una página web que ilustre uno de los tópicos css que puedes encontrar en W3Schools desde (es decir, en la misma página o en subapartados): https://www.w3schools.com/css/
+
+La página debe incluir una explicación del funcionamiento del tópico y, al menos, un ejemplo en el que se aplique.
+
+El tópico elegido debe ser uno de lo que no hayamos visto en clase ni esté previsto ver.
+
+El alumno incluirá el tópico elegido en una hoja de Excel, donde tendrán prioridad en la elección los que se hayan apuntado antes.

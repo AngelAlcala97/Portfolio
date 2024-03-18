@@ -1,0 +1,393 @@
+:root{
+  --yi:352px;
+  --xi: 32px;
+
+  --yf:0px;
+  --xf: 0px;
+
+  --xm:0px;
+  --ym:0px; 
+}
+
+body{
+  background: #212121;
+  overflow: hidden;
+}
+#audio{
+  display: none;
+}
+main{
+  width: 1280px;
+  height: 640px ;
+  background: url(img/fondodia.png);
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid whitesmoke;
+  animation: oscurecerCielo 50s linear alternate infinite;
+  /* transition: all 0.1s; */
+}
+/* main div{
+  transition: all 0.1s;
+
+} */
+section{
+  position: absolute;
+  /* z-index: 99999; */
+  width: 1280px;
+  height: 640px ;
+  background: url(img/fondonoche.png);
+  background-size: cover;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid whitesmoke;
+
+}
+section #divazo{
+  width: 1280px;
+  height: 640px ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(img/lluvia.gif);
+}
+section #divazo button{
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: bold;
+  font-size: 56px;
+  border-radius: 12px;
+  border: 0;
+  outline: 0;
+  color: whitesmoke;
+  background: transparent;
+  cursor: pointer;
+
+}
+
+.mapa{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 10;
+  animation: pintarTODO 8s linear;
+
+}
+
+.mar{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background: url(img/mar2.png);
+  z-index: 10;
+  animation: pintarTODO 6s linear,mar 60s linear infinite;
+
+  
+}
+@keyframes mar {
+  0% {background-position: 100%; }
+  100% {background-position: 0%; }
+
+}
+
+#estrella{
+  --bg-pseudo:url("img/fondosol.png");
+  /* width: 256px; */
+  width: 1280px;
+  height: 1280px ;
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  animation: pintarTODO 10s linear, girarCielo 100s linear infinite;
+
+}
+@keyframes girarCielo {
+  0% {
+    transform: rotate(0);
+   }
+  100% {
+    transform: rotate(360deg);
+   }
+}
+@keyframes oscurecerCielo {
+  0% {background: url('img/fondodia.png');
+   }
+  100% {background: url('img/5.png');}
+}
+#estrella #sol{
+  width: 192px;
+  height: 192px;
+  position: absolute;
+  top: 32px;
+  left: 992px;
+}
+#estrella #luna{
+  width: 192px;
+  height: 192px;
+  position: absolute;
+  bottom: 32px;
+  right: 992px;
+
+}
+#estrella img{
+  width: 192px;
+}
+#estrella #sol::before{
+  content: '';
+  background: var(--bg-pseudo);
+  position: absolute;
+  width: 192px;
+  height: 192px;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -2;
+  animation-name: sol;
+  animation-duration: 40s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+@keyframes sol {
+  0% {
+    background-size: 135% ;
+    transform: rotate(0);
+   }
+  100% {
+    background-size: 135%;
+    transform: rotate(360deg);
+   }
+}
+.divBicho{
+  animation: pintarTODO 10s linear;
+
+}
+#bicho{
+  width: 64px;
+  position: absolute;
+  top: var(--yi);
+  left: var(--xi);
+  z-index: 11;
+  /* animation: irCoin1 6s steps(60) 0s 1 both; */
+}
+
+
+
+.noFace{
+  width: 96px;
+  animation: pintarTODO 2s linear;
+  transition: all 1s;
+  /* animation: irCoin1 6s steps(60) 0s 1 both; */
+}
+#finjuego{
+  width: 1280px;
+  height: 640px ;
+  background: url(img/fondofin.png);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  z-index: 12;
+}
+#finjuego button{
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: bold;
+  font-size: 56px;
+  border-radius: 12px;
+  border: 0;
+  outline: 0;
+  color: #3A7770;
+  text-shadow: 0px 0px 5px whitesmoke;
+  background: transparent;
+  cursor: pointer;
+}
+#noFace{
+  width: 96px;
+  position: absolute;
+  top: 320px;
+  left: 1200px;
+  z-index: 12;
+  display: none;
+  animation: pintarTODO 5s linear;
+  cursor: pointer;
+}
+@keyframes FIN {
+  0%{
+    left: 1200px;
+  }
+  50%{
+    left: 628px;
+    scale: 1.8;
+    opacity: 1;
+  }
+  
+  100%{
+    left: 628px;
+    scale: 1.8;
+    opacity: 0;
+    display: none;
+  }
+}
+
+.bird{
+  width: 64px;
+  z-index: 11;
+  animation: pintarTODO 2s linear;
+}
+.bird #bird1{
+  position: absolute;
+  width: 64px;
+  top: 192px;
+  left: 1328px;
+  z-index: 10;
+  transform: rotateY(180deg);
+   animation: pajaro 10s linear 5s infinite
+}
+.bird #bird2{
+  position: absolute;
+  width: 64px;
+  top: 160px;
+  left: 1328px;
+  z-index: 10;
+  transform: rotateY(180deg);
+  animation: pajaro 12s linear 5s infinite
+}
+.bird #bird3{
+  position: absolute;
+  width: 64px;
+  top: 128px;
+  left: 1328px;
+  z-index: 10;
+  transform: rotateY(180deg);
+  animation: pajaro 12.5s linear 5s infinite
+}
+.bird #bird4{
+  position: absolute;
+  width: 64px;
+  top: 224px;
+  left: 1328px;
+  z-index: 10;
+  transform: rotateY(180deg);
+  animation: pajaro 15s linear 5s infinite
+}
+
+@keyframes pajaro {
+  0%{
+    left: 1328px;
+  }
+
+  100%{
+    left: -128px;
+  }
+}
+
+@keyframes nublado{
+    from {transform: translateX(-100px)}
+    to {transform: translateX(2080px)};
+}
+.credits{
+  box-sizing: border-box;
+  /* border: 1px solid #212121; */
+  width: 60px;
+  height: 50px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  animation: pintarTODO 10s linear;
+
+}
+.credits img{
+  width: 30px;
+
+}
+.credits h1{
+
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: whitesmoke;
+  text-shadow: 1px 1px 2px #212121;
+  font-size: 34px;
+  text-align: center;
+  height: 100%;
+}
+.supercoin{
+  width: 24px;
+  animation: pintarTODO 10s linear;
+}
+.coin{
+  width: 24px;
+  animation: pintarTODO2 2s linear;
+}
+.coin img{
+  width: 24px;
+  cursor: pointer;
+  z-index: 11;
+  position: absolute;
+}
+.coin::after{
+  content: '';
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 0px;
+  left: 0px;
+  background: gold;
+  border-radius: 100%;
+  z-index: 10;
+  animation-name: pulse;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+@keyframes pulse {
+  0% {
+      opacity: 0;  
+  }
+  50% {
+      scale: 1.4;  
+      opacity: .4;
+  }
+  100%{
+      opacity: .6;
+  }
+}
+@keyframes coinOut {
+  0%{opacity: 1;}
+  100%{opacity: 0;display: none;}
+}
+
+@keyframes pintarTODO {
+  0%{opacity: 0;}
+  90%{opacity: 0;}
+  100%{opacity: 1;}
+}
+
+@keyframes pintarTODO2 {
+  0%{opacity: 0;}
+  100%{opacity: 1;}
+}
+
+
+@keyframes coin {
+  0%{
+    top: var(--yi); 
+    left: var(--xi); 
+  }
+
+  50%{
+    top: var(--ym);
+    left: var(--xm);
+  }
+  
+  100%{
+    top: var(--yf);
+    left: var(--xf);
+  }
+}

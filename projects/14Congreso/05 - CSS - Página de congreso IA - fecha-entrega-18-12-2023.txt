@@ -1,0 +1,32 @@
+Página de Inicio de un Congreso sobre Inteligencia Artificial
+
+Requisitos:
+
+    Crea un archivo HTML que represente la página de inicio de un congreso sobre inteligencia artificial (IA). La página debe contener un encabezado, un área de contenido principal y un pie de página.
+
+    Utiliza reglas CSS para diseñar la página del congreso:
+        Establece un fondo con imágenes diferentes para el encabezado y el pie de página.
+	Presta especial atención a la distribución de los elementos de la página.
+        Utiliza colores adecuados para los textos y fondos.
+	Usa tipografías personalizadas para encabezados y párrafos.
+        Crea una barra de navegación en la parte superior de la página con enlaces a secciones importantes, como "Inicio", "Ponentes", "Agenda", "Talleres", "Patrocinadores", "Registro" y "Galeria".
+        Diseña una sección que muestre los ponentes destacados del congreso sobre IA. Cada ponente debe tener una imagen redonda, nombre, y una breve biografía.
+        Agrega una sección de agenda que muestre los eventos y charlas planificadas para el congreso.
+	Crea una sección de "Talleres" con información sobre talleres disponibles, utilizando estilos distintivos.
+	Agrega una sección de "Patrocinadores" que muestre los logotipos de los patrocinadores.
+	Añade una sección con una galería de fotos relacionadas con el evento.
+	Incluye un formulario de registro con dos secciones agrupadas cada una en un fieldset y un botón de registro.
+	La primera sección está dedicada a la información personal, con campos para:
+            Nombre completo.
+            Dirección de correo electrónico.
+            Elección de tipo de registro (Asistente / Ponente) (lista desplegable, por defecto asistente).
+	    Campo para agregar una breve biografía (área de texto) en caso de ser ponente.
+	La segunda sección está dedicada a la información personal, con campos para:
+            Selección de eventos a los que asistirán (checkboxes).
+            Campo para seleccionar talleres opcionales (checkboxes).
+	    Elección del tipo de comida preferida (cualquiera / flexitariano / vegano) (radiobuttons)
+    
+	Presta especial atención a la aplicación de los estilos para el formulario.
+
+
+        

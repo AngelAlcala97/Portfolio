@@ -1,0 +1,95 @@
+html,body{
+    background: linear-gradient(#F5A7C2,#6F3BBB);
+    background-attachment: fixed;
+}
+.todo{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    justify-content: flex-start;
+    align-items: center;
+    height: 670px;
+    width: 100%;
+}
+.robot{
+position: absolute;
+width: 400px;
+height: 400px;
+background: radial-gradient(#fff,#6F3BBB);
+border: 2px inset #6F3BBB;
+box-shadow: 0px 0px 10px #000;
+transition: 5s linear;
+margin-top: 50px;
+
+
+}
+.controles{
+    display: flex;
+    width: 100px;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 500px;
+    color: white;
+    transition: 5s linear;
+
+}
+#start{
+    background: #6e3bbb2d;
+    border-radius: 500px;
+    border: 2px inset white;
+    box-shadow: 0px 0px 10px #000;
+}
+@keyframes opacity {
+    0%    { opacity: 0; }
+    50%   { opacity: 0.5; }
+    100%  { opacity: 1; }
+  }
+  @keyframes scale {
+    0%    { transform:scale(0);}
+    50%   { transform:scale(0.5);}
+    100%  { transform:scale(1);}
+  }
+.subcontroles{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 5s linear;
+}
+.subcontroles img{
+    width: 100px;
+    
+
+}
+.botones{
+    animation: opacity 1s linear, scale 1s linear;
+}
+.subcontroles img:hover{
+    width: 105px;
+    filter: saturate(10);
+    
+}
+#heroe{
+    transition: 5s linear;
+
+}
+h4{
+    background: #fff;
+
+     position: absolute;
+     top: 5px;
+     left: 80px;
+     padding: 2px;
+     border: 1px solid;
+     border-radius: 10px;
+     border-bottom-left-radius: 0px;
+     max-width: 70px;
+     min-width: 0px;
+     min-height: 0px;
+     max-height: 70px;
+
+}

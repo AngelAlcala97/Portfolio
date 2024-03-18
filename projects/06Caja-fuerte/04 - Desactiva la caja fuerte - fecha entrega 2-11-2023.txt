@@ -1,0 +1,41 @@
+Desactivando la Caja Fuerte
+
+Tu misi—n es abrir una caja fuerte que tiene una combinaci—n de tres d’gitos. La combinaci—n es un conjunto de nœmeros entre 0 y 9. La computadora proporcionar‡ pistas para ayudarte a adivinar los d’gitos correctos y podr‡s intentar abrir la caja fuerte en 5 intentos o menos.
+
+Instrucciones:
+
+    Genera tres nœmeros aleatorios entre 0 y 9 para configurar la combinaci—n de la caja fuerte.
+
+    Introduce los tres nœmeros en tres cajas de texto separadas y usa un bot—n para introducir la combinaci—n elegida.
+
+    Si la combinaci—n es correcta muestra un gr‡fico con un mensaje de felicitaci—n y un bot—n para volver a intentarlo. Si no lo es, escribe un mensaje que diga una de estas opciones para cada uno de los nœmeros err—neos:
+	
+	"El primer nœmero es menor" ó "El primer nœmero es mayor"
+	"El segundo nœmero es menor" ó "El segundo nœmero es mayor"
+	"El tercer nœmero es menor" ó "El tercer nœmero es mayor"
+
+    Lleva un registro de los intentos realizados y muestra cuantos intentos ha utilizado el jugador antes de abrir la caja fuerte.
+
+    Limita al jugador a 5 intentos. Si no puede abrir la caja fuerte en 5 intentos, muestra un mensaje de fracaso y un bot—n para volver a intentarlo.
+
+    No se recarga la p‡gina para volver a intentarlo. Se pone a cero el nœmero de intentos, se generan tres nœmeros aleatorios de nuevo y se le vuelve a pedir al usuario que empiece. Esto es proporcionar la opci—n de reiniciar el juego para que el jugador pueda intentarlo nuevamente.
+
+    Pista: Comienza el programa con un s—lo nœmero aleatorio y cuando te funcione ve a–adiendo los dos siguientes en dos pasos.
+
+Versión mejorada por 0,3 positivos:
+
+    Crea una interfaz gr‡fica con tres d’gitos representados como im‡genes. Cada d’gito tendr‡ encima un gr‡fico con una flecha hacia arriba y debajo otro con una flecha hacia abajo para permitir al jugador ajustar los nœmeros. Junto a los d’gitos, coloca un bot—n gr‡fico que ser‡ un control para intentar abrir la caja fuerte. Tanto las flechas como los nœmeros tendr‡n efecto de rollover.
+
+    Coloca la interfaz gr‡fica integrada dentro del gr‡fico de una caja fuerte, la interfaz con los nœmeros debe verse bien.
+
+    El jugador que har‡ clic en las flechas para ajustar los nœmeros en la combinaci—n. Cuando el jugador haga clic en el botón para intentar abrir la caja fuerte, comprueba si los d’gitos introducidos coinciden con los de la combinaci—n. Si todos coinciden, la caja fuerte se abrir‡.
+
+    Si no todos coinciden, proporciona pistas sobre cada d’gito cambiando el color de las flechas (la de arriba o la de abajo, segœn corresponda), para ello deber‡s usar im‡genes adicionales.
+
+Versión vitaminada (positivos según el trabajo realizado):
+
+    Crea una versi—n superior a la mejorada, por ejemplo a–adiendo transiciones en los nœmeros con css o incluyendo sonidos que indiquen si un nœmero es bueno o no (no siempre sino con una probabilidad de que el sonido que da la pista se produzca) al ir cambiando entre los nœmeros al pulsar las flechas, usar un mecanismo de giro de una rueda para abrir la caja o cualquier otra mejora que se te ocurra.
+
+Versión IA (0,1 positivos cada una)
+
+Crea una versión IA funcional que cumpla los requisitos pedidos para cada versión y obtendr‡s 0,1 positivos por cada una

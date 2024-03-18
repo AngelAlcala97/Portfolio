@@ -1,0 +1,18 @@
+Realizar una página web con un mapa de imagen sensible que cumpla los siguientes requisitos:
+
+1. Debe tener al menos 5 zonas sensibles
+2. Debe tener al menos 1 zona sensible de cada tipo, es decir, al menos 1 rectángulo, 1 círculo y 1 polígono.
+3. Cuando se pase el ratón sobre una zona sensible esta debe hacer un efecto de rollover.
+4. Al hacer click sobre la zona sensible se mostrará información relativa a la zona pulsada en un contenedor dedicado a ello en la misma página (Usar el enlace vacío #).
+5. Las informaciones mostradas deben tener (entre todas) al menos una tabla, una lista de cada tipo (no de las desplegables) de las 3 existentes y una imagen. 
+
+La temática del mapa de imagen es libre, a elegir por el alumno/a.
+
+Los textos de usados deben estar generados por IA
+Las imágenes del mapa sensible y las usadas en la descripción deben estar generadas por IA
+
+Versión IA:
+
+Se recompensa con 0,05 por entregar una versión adicional generada con IA tanto código como imágenes (Guardar los prompts para comparar)
+
+Versión propia

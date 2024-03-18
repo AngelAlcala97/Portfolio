@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa de Imagen Sensible</title>
+    <style>
+        .info-container {
+            display: none;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-top: 10px;
+        }
+
+        .info-container img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .info-container table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        .info-container th, .info-container td {
+            border: 1px solid #ccc;
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mapa de Imagen Sensible</h1>
+    
+    <div class="info-container" id="info-1">
+        <h2>Zona 1</h2>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Coq_orpington_fauve.JPG/440px-Coq_orpington_fauve.JPG" alt="Gallina 1">
+        <p>Información sobre la Zona 1.</p>
+        <h3>Lista</h3>
+        <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ul>
+        <h3>Tabla</h3>
+        <table>
+            <tr>
+                <th>Encabezado 1</th>
+                <th>Encabezado 2</th>
+            </tr>
+            <tr>
+                <td>Dato 1</td>
+                <td>Dato 2</td>
+            </tr>
+            <tr>
+                <td>Dato 3</td>
+                <td>Dato 4</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="info-container" id="info-2">
+        <h2>Zona 2</h2>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Rooster_portrait2.jpg/440px-Rooster_portrait2.jpg"alt="Gallina 2">
+        <p>Información sobre la Zona 2.</p>
+        <h3>Lista</h3>
+        <ul>
+            <li>Item A</li>
+            <li>Item B</li>
+            <li>Item C</li>
+        </ul>
+        <h3>Tabla</h3>
+        <table>
+            <tr>
+                <th>Encabezado A</th>
+                <th>Encabezado B</th>
+            </tr>
+            <tr>
+                <td>Dato A</td>
+                <td>Dato B</td>
+            </tr>
+            <tr>
+                <td>Dato C</td>
+                <td>Dato D</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Agrega más contenedores de información y zonas sensibles aquí -->
+
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Male_and_female_chicken_sitting_together.jpg/500px-Male_and_female_chicken_sitting_together.jpg" alt="Mapa" usemap="#mapa">
+
+    <map name="mapa">
+        <area shape="rect" coords="10,10,100,100" alt="Zona 1" onmouseover="mostrarInfo('info-1')">
+        <area shape="circle" coords="200,200,50" alt="Zona 2" onmouseover="mostrarInfo('info-2')">
+        <!-- Agrega más áreas aquí -->
+    </map>
+
+    <script>
+        function mostrarInfo(id) {
+            var containers = document.getElementsByClassName('info-container');
+            for (var i = 0; i < containers.length; i++) {
+                containers[i].style.display = 'none';
+            }
+            document.getElementById(id).style.display = 'block';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,376 @@
+@font-face {
+    font-family: 'Digimon';
+    src: url('fonts/pixel-digivolve-italic.otf') format('truetype');
+  }
+html,body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow-y: hidden;
+    background: #212121;
+    font-family: Digimon;
+
+}
+/*INICIO DEL JUEGO*/
+
+.start{
+    display: flex;
+    flex-wrap: wrap;
+    width: 1400px;
+    height: 650px;
+    justify-content: center;
+    align-items: center;
+    background:linear-gradient(0deg, rgba(245, 245, 245, 0.4),rgba(245, 245, 245, 0.6),rgba(0, 0, 0, 0.6)), url(img/fondoportada.jpg);
+    background-size: cover;
+    backdrop-filter: opacity(0);
+    position: relative;
+    animation: botonstart 15s ease;
+
+    
+}
+#audio {
+    display: none
+}
+.start img{
+    width: 700px;
+    height: auto;
+    position: absolute;
+    top: 0px;
+    left: 350px;
+}
+.start h1{
+    margin-top: 250px;
+    font-size: 80px;
+    cursor: url('img/cursor3.webp'), auto;    
+    text-shadow: 4px 4px 2px #fff;
+    color: goldenrod;
+    -webkit-text-stroke: 2px #212121;
+    animation: botonstart 0.5s ease alternate infinite;
+    
+    
+}
+@keyframes botonstart {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+/* DIV DONDE SE PINTARA EL MAPA */
+.tablero{
+    display: flex;
+    flex-wrap: wrap;
+    width: 1400px;
+    height: 650px;
+    border: 2px solid black;
+    background: url('img/fondo.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all 2s;
+    animation: botonstart 5s ease;
+    position: relative;
+
+}
+
+#audio2 {
+    display: none
+}
+#audio3 {
+    display: none
+}
+#audio4 {
+    display: none
+}
+#audio5 {
+    display: none
+}
+/* CASILLAS RECORRIBLES */
+.cuadro{ 
+    width: 2.5%;
+    height: 5%;
+    /* border: 1px solid white; */
+    box-sizing: border-box;
+    transition: all 2s;
+    position: relative;
+    
+    
+}
+.cuadro img{
+    /* width: 100%;
+    height: 100%; */
+    position: relative;
+    width: 150%;
+    height: 150%;
+    top: -8px;
+    left: -8px;
+    cursor: pointer;
+    filter: drop-shadow(1px 8px 3px #212121);
+    animation: aparicion1 0.5s ease alternate ,aparicion2 3s ease alternate ;
+    
+}
+@keyframes aparicion1 {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+@keyframes aparicion2 {
+    0% {filter: drop-shadow(1px 8px 1px yellow)}
+    0% {border-radius: 100%;background: linear-gradient(0deg,white, white 30%, rgba(150,0,0,0) 120%, rgba(150,5,5,0))};
+    100%{background: linear-gradient( transparent,transparent);border-radius: 0%}
+    100%{filter: drop-shadow(1px 8px 3px #212121);}
+}
+/* CASILLAS MURO */
+.cuadro1{
+    width: 2.5%;
+    height: 5%;
+    /* background: #21212199;
+    border: 1px solid white; */
+    box-sizing: border-box;
+    position: relative;
+    top:0;
+    left: 0;
+}
+.cuadro1 img{
+    width: 200%;
+    height: 200%;
+    position: absolute;
+    top: -10px;
+    left: -20px;
+    z-index: 0;
+    filter: drop-shadow(1px 8px 3px #212121);
+    cursor: url('img/cursor.png'), auto;    
+}
+
+.typing2 {
+    position: absolute;
+    /* width: 70px; */
+    max-width: 310px;
+    min-width: 0px;
+    padding: 5px;
+    /* top: 180px;
+    left: 150px; */
+    top: -30px;
+    left: 60px;
+    z-index: 2;
+    color: #212121;
+    background-color: white;
+    border: 2px solid #212121;
+    border-radius: 10px;
+    border-bottom-left-radius: 0px;
+    display: block;
+    font-size: 0.75em;
+    text-shadow: 0px 0px 1px goldenrod;
+    white-space: nowrap;
+    width: 50ch;
+    animation: typing 2s steps(50);
+    overflow: hidden;
+    justify-content: center;
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: yellow;
+    }
+
+
+}
+/* CASILLAS RECORRIBLES MODIFICADAS */
+.cuadro2{
+    width: 2.5%;
+    height: 5%;
+    /* border: 1px solid white; */
+    box-sizing: border-box;
+    transition: all 2s;
+    position: relative; 
+}
+.cuadro2 img{
+    position: relative;
+    width: 150%;
+    height: 150%;
+    top: -8px;
+    left: -8px;
+    cursor: pointer;
+    filter: drop-shadow(1px 8px 3px #212121);
+
+}
+/* Casillas del digivice */
+.cuadro3{
+    width: 2.5%;
+    height: 5%;
+    /* border: 1px solid white; */
+    box-sizing: border-box;
+    transition: all 2s;
+    position: relative;
+}
+.cuadro3 img{
+    position: relative;
+    width: 120%;
+    height: 120%;
+    top: -3px;
+    left: -3px;
+    cursor: pointer;
+    filter: drop-shadow(1px 8px 3px #212121);
+
+    
+}
+
+/* VIDEOS DE DIGIEVOLUCIÓN */
+
+.videodigi{
+    width: 1400px;
+    height: 650px;
+    display: flex;
+    position: absolute;
+    animation: digievolucion4 2s ease alternate,digievolucion5 8s linear;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+    background: #212121be;
+    backdrop-filter: blur(10px);
+}
+.infodigi{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.infodigi img{
+    animation: digievolucion3 5s  linear infinite;
+
+}
+.infodigi h1{
+    font-size: 30px;
+    text-shadow: 4px 4px 2px #fff;
+    color: goldenrod;
+    -webkit-text-stroke: 0.8px #212121;
+    
+}
+@keyframes digievolucion3 {
+    0% {transform: rotate3d(0);}
+    100% {transform: rotate3d(0, 1, 0, 360deg);}
+    /* 0% {transform: rotate(0);}
+    100% {transform: rotatey(360deg);} */
+}
+@keyframes digievolucion4 {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+@keyframes digievolucion5 {
+    80% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+/* DIGIEVOLUCION */
+
+.cuadro4{ 
+    width: 2.5%;
+    height: 5%;
+    /* border: 1px solid white; */
+    box-sizing: border-box;
+    transition: all 2s;
+    position: relative;
+
+    
+}
+.cuadro4 img{
+    /* width: 100%;
+    height: 100%; */
+    position: relative;
+    width: 150%;
+    height: 150%;
+    top: -8px;
+    left: -8px;
+    cursor: pointer;
+    filter: drop-shadow(1px 8px 3px #212121);
+    animation: digievolucion1 2s ease alternate ,digievolucion2 3s ease alternate  ;
+    
+}
+
+@keyframes digievolucion1 {
+    0% {opacity: 0.5;backface-visibility: hidden;backdrop-filter: blur(20px);}
+    /* 40% {opacity: 0.5;} */
+    100% {opacity: 1;backface-visibility: visible;backdrop-filter: blur(0px)}
+}
+@keyframes digievolucion2 {
+    0% {filter: drop-shadow(1px 8px 1px black)}
+    0% {border-radius: 100%;background: linear-gradient(0deg,white, cyan 30%, rgba(150,0,0,0) 120%, rgba(150,5,5,0))};
+    40% {filter: drop-shadow(1px 8px 1px black)}
+    40% {border-radius: 100%;background: linear-gradient(0deg,white, cyan 100%, rgba(150,0,0,0) 120%, rgba(150,5,5,0))};
+    80%{filter: drop-shadow(1px 8px 3px #212121);}
+    80%{border-radius: 0%;background: linear-gradient( transparent,transparent);}
+    100%{filter: drop-shadow(1px 8px 3px #212121);}
+    100%{border-radius: 0%;background: linear-gradient( transparent,transparent);}
+}
+
+
+/* CREDITOS */
+
+.end{
+    display: flex;
+    flex-direction: column;
+    width: 1400px;
+    height: 650px;
+    justify-content: flex-start;
+    align-items: center;
+    background:linear-gradient(0deg, rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.8)), url(img/fondoportada.jpg);
+    background-size: cover;
+    backdrop-filter: opacity(0);
+    position: relative;
+    animation: botonstart 5s ease;
+    text-align: center;
+
+    
+}
+
+.end h1{
+    margin-top: 120px;
+    font-size: 80px;
+    text-shadow: 4px 4px 2px #fff;
+    color: goldenrod;
+    -webkit-text-stroke: 2px #212121;
+    
+}
+
+.end h2{
+    font-size: 50px;
+    text-shadow: 4px 4px 2px goldenrod;
+    color: #fff;
+    -webkit-text-stroke: 2px #212121;
+    animation: creditos1 7s ease;
+    position: relative;
+}
+.end h3{
+    font-size: 40px;
+    text-shadow: 4px 4px 2px goldenrod;
+    color: #212121;
+    -webkit-text-stroke: 0.5px #fff;
+    animation: creditos1 7s ease;
+    position: relative;
+
+}
+.end img{
+    position: relative;
+    animation: creditos2 7s ease;
+    width: 300px;
+    height: auto;
+}
+@keyframes creditos1 {
+    0% {opacity: 0;top:0}
+    50% {opacity: 1;top:0}
+    100% {opacity: 0;top:650px}
+
+}
+@keyframes creditos2 {
+    0% {opacity: 0;top:0}
+    50% {opacity: 1;top:0}
+
+}
+
+
+
+

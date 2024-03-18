@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+    <script>
+    function myFunction() {
+        var x = document.getElementById("myDIV");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }
+    </script>
+</head>
+<body>
+    <button onclick="myFunction()">Clickeame</button>
+
+<div id="myDIV" style="border:1px solid black;display: none;">
+  Este elemento aparece y desaparece con el botón
+</div>
+
+</body>
+</html>

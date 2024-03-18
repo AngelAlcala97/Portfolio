@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tragaperras</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="img/logo.png">
+
+</head>
+<body>
+    <audio id="audio">
+        <source type="audio/mp3" src="audio/Cofre.mp3">
+    </audio>
+    <audio id="audio2">
+        <source type="audio/mp3" src="audio/Misterio.mp3">
+    </audio>
+    <audio id="audio3">
+        <source type="audio/mp3" src="audio/rupia.mp3">
+    </audio>
+    <div class="contenedor">
+        <div class="caja">
+            <h1>PREMIOS</h1>
+            <img style="filter: drop-shadow(4px 4px 1px #1d1d1d);" src="img/puntuaciones.png">  
+             <!-- entre esto -->
+             <button style="margin-top: 20px;border-radius: 10px;" id="botonpop"><h2>INSTRUCCIONES</h2></button>
+             <!-- The Modal -->
+             <div id="ventana" class="modal">
+             <!-- Modal content -->
+             <div class="modal-content">
+              <span class="cerrar">&times;</span>
+                 <h2>INSTRUCCIONES</h2>
+                 <ul>
+                    <li>Girar los slots con spin</li>
+                    <li>Si logras todas las figuras iguales toca premio €</li>
+                    <li>Puedes probar suerte con los avances, tendras uno disponible por premio acertado</li>
+                    <li>Al avanzar podras mover o bajar alguno de los slots para ver si coinciden</li>
+
+                 </ul>
+             </div>
+             </div>
+         <!-- y esto -->     
+        </div>
+
+
+        <div class="cajacentral">
+
+            <div class="arco">
+                <!-- <img src="img/casino.png"> -->
+                <h1>Casino</h1>
+            </div>
+            <div class="frontal3">
+                <img src="img/icono.png">
+
+            </div>
+            <div id="slots" class="frontal">
+
+                <div id="numero1" class="numeros">
+
+                </div>
+                <div  id="numero2" class="numeros">
+
+                </div>
+                <div id="numero3" class="numeros">
+
+                </div>
+
+            </div>
+        <div class="funci">
+            <div class="frontal2">
+                <div id="creditos" class="credits">
+                </div>
+                <div id="bet" class="bet">
+
+                </div>
+                <div id="ganancia" class="winner">
+
+                </div>
+            </div>
+
+            <div class="info">
+                <div class="avances">
+                    <div class="avanceshijo">             
+                          <button onclick="avance(100,1)" class="avancesselector"><img class="flechasarriba" src="img/arriba.png"></button>
+                          <button onclick="avance(-100,1)"  class="avancesselector"><img class="flechasabajo" src="img/abajo.png"></button>
+                    </div>
+                    <div class="avanceshijo">
+                        <button onclick="avance(100,2)" class="avancesselector"><img class="flechasarriba" src="img/arriba.png"></button>
+                        <button onclick="avance(-100,2)" class="avancesselector"><img class="flechasabajo" src="img/abajo.png"></button>
+                    </div>
+                    <div class="avanceshijo">
+                        <button onclick="avance(100,3)" class="avancesselector"><img class="flechasarriba" src="img/arriba.png"></button>
+                        <button onclick="avance(-100,3)" class="avancesselector"><img class="flechasabajo" src="img/abajo.png"></button>
+                    </div>
+
+             
+                </div>
+               <button onclick="mover()" class="botones">SPIN</button>
+
+
+            </div>
+        </div>
+       
+        </div>
+        
+        <div class="caja">
+            <h1>ULTIMAS TIRADAS</h1>
+            <div id="puntuaciones">
+            </div>
+        </div>
+       
+
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
+

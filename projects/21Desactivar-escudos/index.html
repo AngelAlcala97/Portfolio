@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosas</title>
+    <link rel="stylesheet" href="features.css">
+    <link rel="icon" type="image/x-icon" href="img/favicon.png"> 
+
+</head>
+<body onmousemove="controles.seguir()">
+    <!-- <input id="prueba" type="text">
+    <button onclick="masterPassword.guessPassword()">TRY</button> -->
+        <audio id="audio">
+            <source src="audio/space.mp3" type="audio/mp3">
+        </audio>
+        <audio id="audio2">
+            <source src="audio/hacking.mp3" type="audio/mp3">
+        </audio>
+    <!-- <div id="resultados"></div> -->
+    <div id="stats"><div id="life-bar"><div id="my-life"></div></div><div id="shield-bar"><div id="my-shield"></div></div></div>
+
+    <aside id="all-menu">
+        <div class="menu-border"></div>
+        <section id="open-menu" onclick="menu.closeMenu()">
+            <b>X</b>
+        </section>
+        <div id="stadistics">
+            <section onclick="menu.goBackMenu('stadistics')">X</section>
+            <div id="stadistics1">Caracteres correctos: 0</div>
+            <div id="stadistics2">Contraseñas correctas: 0</div>
+            <div id="stadistics3">Caracteres fallidos: 0</div>
+            <div id="stadistics4">Contraseñas fallidas: 0</div>
+        </div>
+
+        <div id="credit-info">
+            <section onclick="menu.goBackMenu('credit-info')">X</section>
+            <div id="your-credits">Creditos: 0</div>
+        </div>
+
+        <div id="shield-shop">
+            <section onclick="menu.goBackMenu('shield-shop')">X</section>
+            <button onclick="purchaseShield(this)">Regenerar escudo<div>100 creditos</div></button>
+        </div>
+
+        <div id="health-shop">
+            <section onclick="menu.goBackMenu('health-shop')">X</section>
+            <button onclick="purchaseHealth(this)">Regenerar vida<div>100 creditos</div></button>
+        </div>
+
+        <div id="advantage-options">
+            <section onclick="menu.goBackMenu('advantage-options')">X</section>
+                        <button onclick="unCaracter()">1 caracter aleatorio<div>200 creditos</div></button>
+                        <button onclick="tresCaracter()">3 caracteres aleatorios<div>500 creditos</div></button>
+                        <button onclick="primerCaracter()">1er caracter<div>300 creditos</div></button>
+                        <button onclick="ultimoCaracter()">Ultimo caracter<div>300 creditos</div></button>
+                        <button onclick="todosCaracter()">Contraseña completa<div>1000 creditos</div></button>
+        </div>
+        <div id="controls">
+            <section onclick="menu.goBackMenu('controls')">X</section>
+            <div>Menu: Escape</div>
+            <div>Disparar: Space</div>
+            <div>Moverse: Mouse</div>
+        </div>
+        <div id="menu">
+            <div onclick="menu.showSubMenu('stadistics')" title="Estadísticas" style="background: url(img/1.png);background-size: cover;background-repeat: no-repeat;background-position:0"></div>
+            <div onclick="menu.showSubMenu('credit-info')" title="Créditos" style="background: url(img/2.png);background-size: cover;background-repeat: no-repeat;background-position:0"></div>
+            <!-- <div onclick="menu.showSubMenu('upgrade-shop')" title="Tienda de mejoras" style="background: url(img/5.png);background-size: cover;background-repeat: no-repeat;background-position:0"></div> -->
+            <div onclick="menu.showSubMenu('shield-shop')" title="Escudo" style="background: url(img/4.png);background-size: cover;background-repeat: no-repeat;background-position:0"></div>
+            <div onclick="menu.showSubMenu('health-shop')" title="Salud" style="background: url(img/3.png);background-size: cover;background-repeat: no-repeat;background-position:0"></div>
+            <div onclick="menu.showSubMenu('advantage-options')" title="Ajustes" style="background: url(img/6.png);background-size: cover;background-repeat: no-repeat;background-position:0"></div>
+            <div onclick="menu.showSubMenu('controls')" title="Controles" style="background: url(img/7.png);background-size: cover;background-repeat: no-repeat;background-position:0">
+
+            </div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <div class="menu-border"></div>
+    </aside>
+
+    <div id="nave"><img src="img/naveDerecha.gif" alt=""></div>
+    <div id="FPS"></div>
+    <div class="enemigos" id="enemigos"></div>
+    <div class="vidaEnemigos" >
+        <div id="iconoEnemigo"></div>
+        <div id="vidaEnemigos"></div>
+    </div>
+
+    <div style="display: none;"  class="hackConsole" id="hackConsole">
+        <div class="hackeo">
+            <div id="resultados"></div>
+            <input id="prueba" type="text">
+            <button id="hacking" onclick="masterPassword.guessPassword()">HACK</button>
+        </div>
+        <div id="letrasIntentadas">
+            <div id="letraa" class="letra">A</div>
+            <div id="letrab" class="letra">B</div>
+            <div id="letrac" class="letra">C</div>
+            <div id="letrad" class="letra">D</div>
+            <div id="letrae" class="letra">E</div>
+            <div id="letraf" class="letra">F</div>
+            <div id="letrag" class="letra">G</div>
+            <div id="letrah" class="letra">H</div>
+            <div id="letrai" class="letra">I</div>
+            <div id="letraj" class="letra">J</div>
+            <div id="letrak" class="letra">K</div>
+            <div id="letral" class="letra">L</div>
+            <div id="letram" class="letra">M</div>
+            <div id="letran" class="letra">N</div>
+            <div id="letrañ" class="letra">Ñ</div>
+            <div id="letrao" class="letra">O</div>
+            <div id="letrap" class="letra">P</div>
+            <div id="letraq" class="letra">Q</div>
+            <div id="letrar" class="letra">R</div>
+            <div id="letras" class="letra">S</div>
+            <div id="letrat" class="letra">T</div>
+            <div id="letrau" class="letra">U</div>
+            <div id="letrav" class="letra">V</div>
+            <div id="letraw" class="letra">W</div>
+            <div id="letrax" class="letra">X</div>
+            <div id="letray" class="letra">Y</div>
+            <div id="letraz" class="letra">Z</div>
+        </div>
+    </div>
+
+
+    <div id="botinObtenido">
+
+    </div>
+</body>
+<script src="js/Password.js"></script>
+<script src="js/Life.js"></script>
+<script src="js/menu.js"></script>
+<script src="js/Enemigos.js"></script>
+<script src="js/Controles.js"></script>
+<script src="js/Disparos.js"></script>
+<script src="js/FPS.js"></script>
+<script src="js/inicio.js"></script>
+<script src="js/Tienda.js"></script>
+
+
+
+
+
+
+
+</html>

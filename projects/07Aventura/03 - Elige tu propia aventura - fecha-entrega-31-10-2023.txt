@@ -1,0 +1,9 @@
+Realizar una web con múltiples páginas con textos, enlaces e imágenes que recree una aventura al estilo de los libros "Elige tu propia aventura".
+
+Más información en: https://es.wikipedia.org/wiki/Elige_tu_propia_aventura
+
+Como trabajo adicional se valorará el diseño de la web y los elementos interactivos tipo botones, cajas de texto, rollovers, mapas de imágenes o cualquier otro elemento que enriquezca la "aventura" en forma de pruebas, acertijos, descripciones detalladas, etc...
+
+Versión IA:
+
+Se recompensa con 0,15 por entregar una versión adicional generada con IA para lo que es la historia y sobre ella que también genere el código y las imágenes (Guardar los prompts para comparar)

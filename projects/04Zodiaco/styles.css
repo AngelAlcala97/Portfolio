@@ -1,0 +1,294 @@
+html, body{
+background-size: cover;
+background-attachment: fixed;
+transition:opacity 10s 5s;
+overflow: hidden;
+
+}
+    
+#banner{
+width: 960px;
+height: 540px;
+border: 5px solid;
+border-color: white;
+}
+
+
+
+#texto{
+display: flex;
+place-content: center;
+
+}
+#headerlogo{
+place-content: center;
+display: grid;
+margin-top: 5px;
+text-align: center;
+font-family: fantasy;
+margin-bottom: 50px;
+
+}
+
+
+#icono{
+width: 75px;
+height: 75px;
+transition:all .5s ease-in;
+}
+#icono:hover{
+    -webkit-transform:scale(1.1);
+    transform:scale(1.2) ;
+    overflow:hidden;
+    transition:all .5s ease-in-out;
+}
+#audio{
+    display: none
+    }
+
+h1{
+    transition:all .5s ease-in;
+    background-image: url('img/fondoverde.png');
+    background-attachment: fixed;
+    background-size: cover;
+    text-shadow: 3px 2px 3px black;
+    color: #DAB451;
+
+
+}
+h1:hover{
+    background-image:none ;
+    transition:all .5s ease-in-out;
+    border-radius: 30px;
+    color: white;
+    text-shadow: 3px 2px 3px #DAB451;
+   
+
+}
+h2{
+color: white;
+font-weight: bolder;
+}
+
+
+
+
+#consulta{
+border-radius: 10px;
+border-color: whitesmoke;
+transition: all .1s ease-in;
+}
+#botonconsulta{
+background-color: #DAB451;
+border-radius: 30px;
+border-color: white;
+color: white;
+}
+#botonconsulta:hover{
+    background-color: #1C6593;
+    border-radius: 30px;
+    border-color: white;
+    }
+
+.container{
+display: flex;
+flex-wrap: wrap;
+place-content: center;
+}
+.item {
+flex-grow: 1;
+flex-basis: 200;
+    
+}
+
+.padre{
+    display: flex;
+    place-content: center;
+}
+#myDIV div{
+    width:100px;
+    height:100px;
+    position:relative;
+    background: rgb(255, 255, 255);
+    border-radius: 0% ;
+    box-shadow: 3px 2px 3px white;
+    transition: all .1s ease-in;
+    }
+ #myDIV div:hover{
+    background: rgb(0, 0, 0);
+    border: 2px solid;
+    border-color: white;
+    box-shadow: 2px 2px 1px white;
+    transition: all .1s ease-in-out;
+    }
+#myDIV2 div{
+        width:100px;
+        height:100px;
+        position:relative;
+        background: rgb(255, 255, 255);
+        border-radius: 0% ;
+        box-shadow: 3px 2px 3px white;
+        transition: all .1s ease-in;
+        }
+ #myDIV2 div:hover{
+        transform: scale(1.05);
+        background: rgb(0, 0, 0);
+        border: 2px solid;
+        border-color: white;
+        box-shadow: 2px 2px 1px white;
+        transition: all .1s ease-in-out;
+        }
+#consultaries div{
+    display:flex;
+    place-content: center;
+
+}
+@media (max-width: 750px) {
+    #background-video { display: none; }
+    
+}
+
+#aries{
+    animation: change-color 1.5s ;
+    animation-timing-function: ease-in-out;
+    }
+    
+    @keyframes change-color {
+    from { opacity:0 ; }  /* Primer fotograma */
+    to { opacity:1 ; }  /* Segundo y último fotograma */
+    
+    }
+
+#tauro{
+    animation: change-color 2.5s ;
+    animation-timing-function: ease-in-out;
+    }
+    
+    @keyframes change-color {
+    from { opacity:0 ; }  /* Primer fotograma */
+    to { opacity:1 ; }  /* Segundo y último fotograma */
+    
+    }
+#geminis{
+    animation: change-color 3.5s ;
+    animation-timing-function: ease-in-out;
+    }
+    
+    @keyframes change-color {
+    from { opacity:0 ; }  /* Primer fotograma */
+    to { opacity:1 ; }  /* Segundo y último fotograma */
+    
+    }
+
+#cancer{
+    animation: change-color 4.5s ;
+    animation-timing-function: ease-in-out;
+    }
+    
+    @keyframes change-color {
+    from { opacity:0 ; }  /* Primer fotograma */
+    to { opacity:1 ; }  /* Segundo y último fotograma */
+    
+    }
+
+#leo{
+    animation: change-color 5.5s ;
+    animation-timing-function: ease-in-out;
+    }
+        
+    @keyframes change-color {
+    from { opacity:0 ; }  /* Primer fotograma */
+    to { opacity:1 ; }  /* Segundo y último fotograma */
+        
+    }
+
+    #virgo{
+    animation: change-color 6.5s ;
+    animation-timing-function: ease-in-out;
+    }
+    
+    @keyframes change-color {
+    from { opacity:0 ; }  /* Primer fotograma */
+    to { opacity:1 ; }  /* Segundo y último fotograma */
+    
+    }
+
+    #libra{
+        animation: change-color 1.5s ;
+        animation-timing-function: ease-in-out;
+        }
+        
+        @keyframes change-color {
+        from { opacity:0 ; }  /* Primer fotograma */
+        to { opacity:1 ; }  /* Segundo y último fotograma */
+        
+        }
+    
+    #escorpio{
+        animation: change-color 2.5s ;
+        animation-timing-function: ease-in-out;
+        }
+        
+        @keyframes change-color {
+        from { opacity:0 ; }  /* Primer fotograma */
+        to { opacity:1 ; }  /* Segundo y último fotograma */
+        
+        }
+    #sagitario{
+        animation: change-color 3.5s ;
+        animation-timing-function: ease-in-out;
+        }
+        
+        @keyframes change-color {
+        from { opacity:0 ; }  /* Primer fotograma */
+        to { opacity:1 ; }  /* Segundo y último fotograma */
+        
+        }
+    
+    #capricornio{
+        animation: change-color 4.5s ;
+        animation-timing-function: ease-in-out;
+        }
+        
+        @keyframes change-color {
+        from { opacity:0 ; }  /* Primer fotograma */
+        to { opacity:1 ; }  /* Segundo y último fotograma */
+        
+        }
+    
+    #acuario{
+        animation: change-color 5.5s ;
+        animation-timing-function: ease-in-out;
+        }
+            
+        @keyframes change-color {
+        from { opacity:0 ; }  /* Primer fotograma */
+        to { opacity:1 ; }  /* Segundo y último fotograma */
+            
+        }
+    
+        #piscis{
+        animation: change-color 6.5s ;
+        animation-timing-function: ease-in-out;
+        }
+        
+        @keyframes change-color {
+        from { opacity:0 ; }  /* Primer fotograma */
+        to { opacity:1 ; }  /* Segundo y último fotograma */
+        
+        }
+
+    #catalogo{
+        animation: change-color 6.5s ;
+        animation-timing-function: ease-in-out;
+        }
+        
+        @keyframes change-color {
+        from { opacity:0 ; }  /* Primer fotograma */
+        to { opacity:1 ; }  /* Segundo y último fotograma */
+        
+        
+    }
+
+        
+

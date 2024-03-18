@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>HOROSCOPIA</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+	<link rel="icon" href="img/logo.png" type="image/x-icon">
+    <script src="script.js"></script>
+   
+<body alink="white" vlink="white">
+<div>
+    <video style="  height: 100vh;width: 100vw;object-fit: cover;position: fixed;left: 0;right: 0;top: 0;bottom: 0;z-index: -1;" id="background-video" autoplay loop muted>
+        <source src="img/zodiac.mp4" type="video/mp4">
+      </video>
+
+
+   
+        <div id="headerlogo" class="flex">
+            <a href="#" ><img onclick="volver()" id="icono" src="img/logo.png" alt="Logo"><br></a>
+            <audio id="audio" controls>
+            <source type="audio/mp3" src="song/8-Bit Fantasy & Adventure Music.mp3">
+            </audio>
+            <h1>¿Quieres consultar que te depara el futuro?</h1><br> 
+            <form> 
+               <label style="color: #fff;" for="consulta">Tu signo</label> <input id="consulta" type="text" onkeyup="javascript:this.value=this.value.toLowerCase();">
+                <input id="botonconsulta" type="button" value="VER" onclick="consultar()">
+            </form> 
+        </div>
+
+    <div id="padre" class="padre">
+
+        <div class="container">
+
+            <div id="myDIV" class="item"> 
+                <div style="top:-80px;left:-170px;z-index:1;" onmouseover="aries()" onmouseleave="vacio()"><img id="aries" style="width: 100px;" src="img/Aries.png"></div>
+                <div style="top:-140px;left:-140px;z-index:2;" onmouseover="tauro()" onmouseleave="vacio()"><img id="tauro" style="width: 100px;" src="img/Tauro.png"></div>
+                <div style="top:-200px;left:-110px;z-index:3;" onmouseover="geminis()" onmouseleave="vacio()"><img id="geminis" style="width: 100px;" src="img/Geminis.png"></div>
+                <div style="top:-260px;left:-80px;z-index:4;" onmouseover="cancer()" onmouseleave="vacio()"><img id="cancer" style="width: 100px;" src="img/Cancer.png"></div>
+                <div style="top:-320px;left:-50px;z-index:5;" onmouseover="leo()" onmouseleave="vacio()"><img id="leo" style="width: 100px;" src="img/Leo.png"></div>
+                <div style="top:-380px;left:-20px;z-index:6;" onmouseover="virgo()" onmouseleave="vacio()"><img id="virgo" style="width: 100px;" src="img/Virgo.png"></div>
+            </div>
+
+            <div>
+                <img style="width: 250px; height: 250px; border-radius: 50px;" id="catalogo" src="img/zodiaco.png">
+            </div>
+
+            <div id="myDIV2" class="item"> 
+                <div style="top:-80px;left:170px;z-index:1;" onmouseover="libra()" onmouseleave="vacio()"><img id="libra" style="width: 100px;" src="img/Libra.png"></div>
+                <div style="top:-140px;left:140px;z-index:2;" onmouseover="escorpio()" onmouseleave="vacio()"><img id="escorpio" style="width: 100px;" src="img/Escorpio.png"></div>
+                <div style="top:-200px;left:110px;z-index:3;" onmouseover="sagitario()" onmouseleave="vacio()"><img id="sagitario" style="width: 100px;" src="img/Sagitario.png"></div>
+                <div style="top:-260px;left:80px;z-index:4;" onmouseover="capricornio()" onmouseleave="vacio()"><img id="capricornio" style="width: 100px;" src="img/Capricornio.png"></div>
+                <div style="top:-320px;left:50px;z-index:5;" onmouseover="acuario()" onmouseleave="vacio()"><img id="acuario" style="width: 100px;" src="img/Acuario.png"></div>
+                <div style="top:-380px;left:20px;z-index:6;" onmouseover="piscis()" onmouseleave="vacio()"><img id="piscis" style="width: 100px;" src="img/Piscis.png"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="horoscopo" style="display: none;" id="consultaaries">
+        <div>
+           
+        <img style="width: 75px" src="img/34.png">
+        </div>
+        <h1>ARIES</h1>
+        <h3 style="color: white;text-align: justify center;padding: 20px; background-color: #DAB451 ;border: 2px solid;border-color: white;">Hoy existe cierto riesgo de complicaciones
+            en tu entorno por causas que se escapan a
+            en el desánimo, deja que todo fluya y las
+            cosas volverán a su lugar por simple inercia.
+            Estas situaciones te preocupan a diario pero no
+            permitas que te amarguen un día de fiesta.<br><br>
+            Si sientes que te ha bajado la energía remédialo alimentándote mejor.
+            No estás comiendo adecuadamente y esto te perjudica.
+            En el amor, si has tenido problemas con tu pareja no
+            necesitas alejarle de tu lado hasta que se resuelva.
+            Es más efectivo que mejoréis vuestra comunicación de diario.
+            La distancia no te ayudará para nada.<br>
+            Y si eres de las Aries que se encuentra sola,
+            empieza hoy a cerrar la puerta a los fantasmas del pasado
+            y disfruta de la vida y del amor.</h3>
+
+    </div>
+
+    <div class="horoscopo" style="display: none;" id="consultatauro">
+        <div>
+        <img style="width: 75px" src="img/35.png">
+        </div>
+        <h1>TAURO</h1>
+        <h3 style="color: white;text-align: justify center;padding: 20px; background-color: #DAB451 ;border: 2px solid;border-color: white;">
+            Ahora tienes la posibilidad de hacer grandes cambios en tu vida, Tauro, precisamente esos que estás deseando a diario desde hace tiempo.
+             Será algo muy positivo, afróntalos sin  recelos y procurando adaptarte cuanto antes a ellos.<br><br>
+            Aprovecha esta etapa de transformación porque podría pasar mucho tiempo antes de que se presente una nueva oportunidad.
+             Sin embargo, es momento de ir con tranquilidad, no quieras hacerlo todo de golpe y tampoco esperes que los cambios se produzcan en un abrir y cerrar de ojos.<br>
+            No quieras acelerar hoy el proceso natural de las cosas o se te irá de las manos.
+            En el amor, Tauro, eres muy afortunada pero recuerda que para mantener a diario la armonía y el bienestar en este punto, a veces hay que tomar decisiones importantes, adquirir mayor compromiso y dar pasos hacia adelante.</h3>
+
+    </div>
+
+    <div class="horoscopo" style="display: none;" id="consultageminis">
+        <div>
+        <img style="width: 75px" src="img/36.png">
+        </div>
+        <h1>GÉMINIS</h1>
+        <h3 style="color: white;text-align: justify center;padding: 20px; background-color: #DAB451 ;border: 2px solid;border-color: white;">
+            Si has conseguido ahorrar un dinerito, Géminis, hoy que tendrás tiempo es un día idóneo para pensar qué haces con él para que no pierda valor.
+            Tenerlo en un cajón no es plan y tampoco dejarlo en la cuenta corriente, porque la tentación es muy fuerte y empezarás a tirar de tus ahorros a diario para comprar cosas innecesarias.<br><br>
+            Déjate aconsejar por alguna persona experta e inviértelo en algún producto bancario o en una propiedad.
+            Es probable que estés en una etapa de tensión con tu pareja, Géminis, y que en gran parte sea debido a la intromisión de terceras personas que a diario comen el tarro a ambos.
+            Quizá lo hacen con buena intención pero están consiguiendo crear problemas donde no los había. Corta por lo sano o tu relación se podría ir al traste por culpa de todo esto.</h3>
+
+    </div>
+
+    <div class="horoscopo" style="display: none;" id="consultacancer">
+        <div>
+        <img style="width: 75px" src="img/37.png">
+        </div>
+        <h1>CÁNCER</h1>
+        <h3 style="color: white;text-align: justify center;padding: 20px; background-color: #DAB451 ;border: 2px solid;border-color: white;">
+        Reflexiona hoy sobre lo que sucede en tu entorno laboral a diario, Cáncer, porque hay algunas personas a quienes les gustaría tener amistad contigo a nivel personal.
+        Te convendría estrechar lazos con estas personas porque te aportarían mucho. Sería una relación muy fructífera para todos.
+        En cambio, en este mismo entorno, hay alguien que apenas te soporta, aunque intenta disimularlo.<br><br>
+        Se trata de una persona que está dándote consejos a diario y no precisamente acertados.
+        Por suerte no has seguido ninguno, pero corres riesgo de caer de cuatro patas en la trampa en el momento menos pensado porque lo sigue intentando día tras día, Cáncer.
+        Hoy tu pareja se merece una sorpresa y qué mejor que una cena íntima a la luz de las velas, aprovechando el puente. Pide su comida exótica favorita y si antes ya le tenías fascinado, ahora te adorará.</h3>
+
+    </div>
+
+    <div class="horoscopo" style="display: none;" id="consultaleo">
+        <div>
+        <img style="width: 75px" src="img/38.png">
+        </div>
+        <h1>LEO</h1>
+        <h3 style="color: white;text-align: justify center;padding: 20px; background-color: #DAB451 ;border: 2px solid;border-color: white;">
+        Tienes ahora una visión de futuro súper clara, Leo, aprovecha estos días de fiesta y prepárate para el lunes próximo porque tendrás ocasión de exponer un proyecto o una idea que será muy bien aceptada y que te puede proporcionar grandes beneficios.
+        Sin embargo, tienes que resolver otros temas que a diario están frenando tu progreso.
+        Piensas con demasiada frecuencia en algo negativo que te pasó recientemente.
+        Deberías pasar página y centrarte en lo que tienes ahora a tu alcance.
+        Puede ser algo relacionado con tu pareja, con tu familia o con el trabajo.<br><br>
+        Convéncete de que eso ya pasó y estás en una nueva etapa.
+        También tiendes ahora a ser demasiado rutinaria y esto impregna tu vida de monotonía, Leo.
+        Cambia esas rutinas e intenta improvisar a diario, que es muy sano. Hoy puede tener oportunidad de reconciliarte con alguien que te importa mucho. Aprovéchala.</h3>
+
+    </div>
+
+    <div class="horoscopo" style="display: none;" id="consultavirgo">
+        <div>
+        <img style="width: 75px" src="img/39.png">
+        </div>
+        <h1>VIRGO</h1>
+        <h3 style="color: white;text-align: justify center;padding: 20px; background-color: #DAB451 ;border: 2px solid;border-color: white;">
+            Hoy, Virgo, aún siendo festivo, podrías verte en la tesitura de tomar una decisión importante sobre tu ocupación actual.
+            Piénsalo a diario antes de inclinarte por cualquier cosa y ten en cuenta la opinión de tu gente más cercana, tu pareja y tu familia, en especial si lo que has de decidir les afecta de algún modo.
+            En el terreno sentimental, hoy tendrás ocasión de vivir un momento muy importante con la persona que está a tu lado.<br><br>
+            Es hora de dar un paso más en la relación y quizá de plantearos compromiso, convivencia o matrimonio.
+            Lo tenéis todo para ser felices y no tiene sentido esperar más, Virgo. En esto tu chico tiene razón aunque tú le vayas dando largas a diario.
+            En alguna ocasión, incluso, este tema ha sido motivo de roces entre vosotros. Deja el temor atrás y avanza junto a él.</h3>
+
+    </div>
+
+    <div class="horoscopo" style="display: none;" id="consultalibra">
+        <div>
+        <img style="width: 75px" src="img/40.png">
+        </div>
+        <h1>LIBRA</h1>
+        <h3 style="color: white;text-align: justify center;padding: 20px; background-color: #DAB451 ;border: 2px solid;border-color: white;">
+            Hoy, Virgo, aún siendo festivo, podrías verte en la tesitura de tomar una decisión importante sobre tu ocupación actual.
+            Piénsalo a diario antes de inclinarte por cualquier cosa y ten en cuenta la opinión de tu gente más cercana, tu pareja y tu familia, en especial si lo que has de decidir les afecta de algún modo. 
+            En el terreno sentimental, hoy tendrás ocasión de vivir un momento muy importante con la persona que está a tu lado.<br><br>
+            Es hora de dar un paso más en la relación y quizá de plantearos compromiso, convivencia o matrimonio. 
+            Lo tenéis todo para ser felices y no tiene sentido esperar más, Virgo. 
+            En esto tu chico tiene razón aunque tú le vayas dando largas a diario. En alguna ocasión, incluso, este tema ha sido motivo de roces entre vosotros. Deja el temor atrás y avanza junto a él.</h3>
+
+    </div>
+
+    <div class="horoscopo" style="display: none;" id="consultaescorpio">
+        <div>
+        <img style="width: 75px" src="img/41.png">
+        </div>
+        <h1>ESCORPIO</h1>
+        <h3 style="color: white;text-align: justify center;padding: 20px; background-color: #DAB451 ;border: 2px solid;border-color: white;">
+            No te desmoralices, Escorpio, si hoy te enteras de que un error que cometiste hace tiempo y que ya diste por solucionado, todavía colea. 
+            Tú lo habías olvidado pero alguien se está encargando de recordarlo a diario a todo tu entorno, así que presta atención a lo que se cuece a tus espaldas.<br><br>
+            Necesitas cambiar de actitud o de forma de pensar, ser muy positiva. Busca consejo entre tus personas de confianza o directamente acude a un profesional para que te ayude. 
+            Hoy es un buen día para el amor, no te dejes vencer por el pesimismo que te ocasionan a diario otros temas y si tienes pareja disfruta de la relación, 
+            Y si eres un corazón libre, Escorpio, quizá hoy alguien que ni te imaginas empiece a darte señales de que quiere contigo algo mas que una amistad.</h3>
+
+    </div>
+
+    <div class="horoscopo" style="display: none;" id="consultasagitario">
+        <div>
+        <img style="width: 75px" src="img/42.png">
+        </div>
+        <h1>SAGITARIO</h1>
+        <h3 style="color: white;text-align: justify center;padding: 20px; background-color: #DAB451 ;border: 2px solid;border-color: white;">
+            Si hoy  que es festivo recibes una propuesta para una cita, Sagitario, aunque no lo tengas por costumbre no te lo pienses dos veces. 
+            Te conviene mucho recuperar las ganas de divertirte porque llevas demasiado tiempo inmersa sólo en tus obligaciones y apenas tienes tiempo a diario para ti misma y tus necesidades más básicas, y mucho menos para actividades de ocio o para hacer ejercicio. 
+            Incorpora el deporte a tu vida. En el ámbito sentimental, pon un poco de chispa a tu relación hoy mismo.<br><br>
+            Sabes cómo hacerlo porque imaginación no te falta, Sagitario, pero te has dejado absorber a diario por la rutina y ahora puede que tengas la sensación de que en lugar de pareja tienes un amigo o un compañero de piso. 
+            Estás a tiempo de arreglarlo, pero date prisa o se t e pasará el arroz. </h3>
+
+    </div>
+
+    <div class="horoscopo" style="display: none;" id="consultacapricornio">
+        <div>
+        <img style="width: 75px" src="img/43.png">
+        </div>
+        <h1>CAPRICORNIO</h1>
+        <h3 style="color: white;text-align: justify center;padding: 20px; background-color: #DAB451 ;border: 2px solid;border-color: white;">
+            Podrías tener pronto la oportunidad de participar en un buen negocio, Capricornio, o de intervenir en un proyecto importante que a diario se está gestando cerca de ti. 
+            Es probable que hoy alguien te hable de ello. Presta atención porque quizá lo tomes como un comentario sin importancia cuando en realidad va mucho más allá, es una propuesta en toda regla. 
+            Pregunta, averigua y cuando tengas los datos necesarios, lánzate. No escatimes energías. Concéntrate en ello y lograrás tus propósitos.<br><br> 
+            A nivel sentimental, los problemas que tienes con tu pareja, Capricornio, se debe a que uno de los dos quiere correr demasiado. 
+            Si eres tú, echa el freno y no quieras quemar etapas. Si vas pasito a pasito a diario vuestra relación se consolidará. 
+            Y si se trata de tu chico, hazle ver hoy que hay que darle tiempo al tiempo.</h3>
+
+    </div>
+
+    <div class="horoscopo" style="display: none;" id="consultaacuario">
+        <div>
+        <img style="width: 75px" src="img/44.png">
+        </div>
+        <h1>ACUARIO</h1>
+        <h3 style="color: white;text-align: justify center;padding: 20px; background-color: #DAB451 ;border: 2px solid;border-color: white;">
+            Hoy tu inspiración estará a tope, Acuario, y esto te irá de maravilla de cara a la semana próxima, en especial si el tema al que te dedicas a diario requiere creatividad. 
+            Aprovecha este momento para gestar nuevas ideas, proyéctalas en tu mente y valóralas porque pueden ser geniales. No las dejes ahí aparcadas. 
+            También hoy es un buen día para visitar un museo o una exposición, ir al cine o participar de ciertos actos festivos.<br><br> 
+            Todo esto te ayudará en tu proceso creativo. Relájate y no tengas prisa para conseguir tus objetivos. 
+            Ahora te conviene ir paso a paso, observando y disfrutando a diario de lo que te rodea y de lo que vas consiguiendo. 
+            Sé paciente también en el amor, Acuario. Vive las  etapas de coqueteo y enamoramiento con intensidad e ilusión porque son momentos únicos y pasan volando. Disfrútalos a tope.</h3>
+
+    </div>
+
+    <div class="horoscopo" style="display: none;" id="consultapiscis">
+        <div>
+        <img style="width: 75px" src="img/45.png">
+        </div>
+        <h1>PISCIS</h1>
+        <h3 style="color: white;text-align: justify center;padding: 20px; background-color: #DAB451 ;border: 2px solid;border-color: white;">
+            Organízate desde hoy mismo, Piscis, antes de que los números de tu cuenta se pongan en rojo. 
+            Traza tus planes para no tener que pasar apuros en ningún momento del mes, como te pasa con  frecuencia. 
+            Estamos en una época de muchos gastos y deberías hacer una lista con lo que tienes previsto destinar a diario a cosas como el hogar, aprovechando las ofertas. 
+            Te funcionará si te atienes a tus necesidades y al dinero presupuestado.<br><br>
+            Tú misma te quedarás sorprendida de lo mucho que esto puede ayudarte a diario. 
+            Deja  también una parte para gastos imprevistos y te ahorrarás más de un susto. 
+            En el terreno sentimental, Piscis, si todavía sigues sola ya va siendo hora de dejar de estarlo. Atenta a las señales que percibirás hoy. Tienes cerca de una persona que te puede gustar mucho.</h3>
+
+    </div>
+
+    <div class="horoscopo" style="display: none;" id="consultadefault">
+        <div>
+        <img style="width: 75px" src="img/desconocido.png">
+        </div>
+        <h1>¡NO ME ENGAÑES!</h1>
+        <h3 style="color: white;text-align: justify center;padding: 20px; background-color: #DAB451 ;border: 2px solid;border-color: white;">
+            DIME TU SIGNO</h3>
+
+    </div>
+
+</div>  
+</body>
+</html>

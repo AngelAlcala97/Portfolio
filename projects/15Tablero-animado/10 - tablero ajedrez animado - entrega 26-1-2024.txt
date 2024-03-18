@@ -1,0 +1,29 @@
+Realizar un programa que pinte un tablero de ajedrez en la pantalla usando contenedores. 
+El tablero se pintará progresivamente: iran apareciendo cada uno de los cuadros del tablero de uno en uno con un pequeño retraso.
+ No se usaran transiciones o animaciones o cualquier forma de CSS para conseguir el retardo en la aparición de los cuadros del tablero.
+
+El tamaño del tablero será personalizable, pudiendo elegir 8x8 o cualquier número de filas y columnas a través de dos cajas de texto o similar.
+
+El tamaño de los contenedores también será personalizable por el usuario, así como el retraso en la aparición de los cuadros del ajedrez.
+
+La página dispondrá de un botón para pintar el tablero con el tamaño de contenedor (que será la suma de cada uno de los cuadritos del tablero) elegido en la caja de texto.
+
+Si se aplican estilos con transiciones o animaciones a los cuadritos se pueden hacer efectos interesantes.
+
+Tienda de mejoras:
+
+Por 0,005 positivos: Poder elegir los colores de las casillas introduciéndolos en dos cajas de texto.
+Por 0,01 positivos: Mostrar la fila y columna de cada una de las casillas.
+Por 0,03 positivos: Colocar las piezas de ajedrez en el tablero cuando sea de 8x8.
+
+Versión vitaminada:
+
+Crea tus propias mejoras sobre el juego, se valorarán según su dificultad.
+
+Versión IA por 0,01 positivos:
+
+Crea una versión IA funcional que cumpla los requisitos pedidos el ejercicio.
+
+Versión IA por 0,03 positivos (no acumulable a la anterior):
+
+Crea una versión IA funcional que cumpla los requisitos pedidos el ejercicio y todas las mejoras.

@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Puntuación Gamer</title>
+    <link rel="shortcut icon" href="img/playstation.svg" type="image/x-icon">
+    <link rel="icon" href="img/playstation.svg" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/6535675f35.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <div class="datos">
+        <a href="opcional.html"><i class="fa-brands fa-playstation fa-beat fa-2xl" style="color: #ffffff;"></i></a>
+
+        <label style="font-size: 20px;" for="nombrejuego">Nombre del juego: </label>
+        <select name="nombrejuego" id="nombrejuego" form="carform">
+        <option style="font-size: 20px;">GTA</option>
+        <option style="font-size: 20px;">MINECRAFT</option>
+        <option style="font-size: 20px;">ZELDA</option>
+        <option style="font-size: 20px;">LAYTON</option>
+        <option style="font-size: 20px;">LOL</option>
+        <option style="font-size: 20px;">MASSEFFECT</option>
+        <option style="font-size: 20px;">HEAVYRAIN</option>
+        <option style="font-size: 20px;">DRAGONQUEST</option>
+        <option style="font-size: 20px;">DEADISLAND</option>
+        <option style="font-size: 20px;">ITTAKESTWO</option>
+        <option style="font-size: 20px;">ELDENRING</option>
+        <option style="font-size: 20px;">BIOSHOCK</option>
+        <option style="font-size: 20px;">PORTAL</option>
+        <option style="font-size: 20px;">ASSASSIN</option>
+        <option style="font-size: 20px;">LASTOFUS</option>
+        <option style="font-size: 20px;">SPIDERMAN</option>
+
+
+            </select>
+        <label for="puntuacion">Puntuación: <input required style="font-size: 20px;" type="range" list="values" id="puntuacion"
+                name="puntuacion"></label>
+
+                <datalist id="values">
+                    <option value="0"></option>
+                    <option value="25"></option>
+                    <option value="50"></option>
+                    <option value="75"></option>
+                    <option value="100"></option>
+                </datalist>
+        <input
+            style="font-size: 16px; border-radius: 20px;border: 2px solid #fff;color: #fff;background-color: #640080; padding: 10px;"
+            type="button" id="boton" value="Registrar puntuación" onclick="añadirjuego()"><br>
+    </div>
+    <div class="instrucciones" style="display: flex; justify-content: center;align-items: center;color: #fff;">
+        <ol>
+            <h2>Instrucciones:</h2>
+            <li>Introduce un juego o selecciona de la lista (scroll horizontal)</li>
+            <li>Introduce tu puntuacion como jugador</li>
+            <li>¡Pincha en registrar puntuación!</li>
+        </ol>
+
+    </div>
+
+    <div class="catalogo">
+        <div onclick="gta()"><img src="img/gta.png">
+            <div class="caratula">
+                <h2>GTA</h2>
+            </div>
+        </div>
+        <div onclick="minecraft()"><img src="img/minecraft.png">
+            <div class="caratula">
+                <h2>MINECRAFT</h2>
+            </div>
+        </div>
+        <div onclick="zelda()"><img src="img/zelda.png">
+            <div class="caratula">
+                <h2>ZELDA</h2>
+            </div>
+        </div>
+        <div onclick="layton()"><img src="img/layton.png">
+            <div class="caratula">
+                <h2>LAYTON</h2>
+            </div>
+        </div>
+        <div onclick="lol()"><img src="img/lol.png">
+            <div class="caratula">
+                <h2>LOL</h2>
+            </div>
+        </div>
+        <div onclick="masseffect()"><img src="img/masseffect.png">
+            <div class="caratula">
+                <h2>MASSEFFECT</h2>
+            </div>
+        </div>
+        <div onclick="heavyrain()"><img src="img/heavyrain.png">
+            <div class="caratula">
+                <h2>HEAVYRAIN</h2>
+            </div>
+        </div>
+        <div onclick="dragonquest()"><img src="img/dragonquest.png">
+            <div class="caratula">
+                <h2>DRAGONQUEST</h2>
+            </div>
+        </div>
+        <div onclick="deadisland()"><img src="img/deadisland.png">
+            <div class="caratula">
+                <h2>DEADISLAND</h2>
+            </div>
+        </div>
+        <div onclick="ittakestwo()"><img src="img/ittakestwo.png">
+            <div class="caratula">
+                <h2>ITTAKESTWO</h2>
+            </div>
+        </div>
+        <div onclick="eldenring()"><img src="img/eldenring.png">
+            <div class="caratula">
+                <h2>ELDENRING</h2>
+            </div>
+        </div>
+        <div onclick="bioshock()"><img src="img/bioshock.png">
+            <div class="caratula">
+                <h2>BIOSHOCK</h2>
+            </div>
+        </div>
+        <div onclick="portal()"><img src="img/portal.png">
+            <div class="caratula">
+                <h2>PORTAL</h2>
+            </div>
+        </div>
+        <div onclick="assasin()"><img src="img/assassin.png">
+            <div class="caratula">
+                <h2>ASSASSIN</h2>
+            </div>
+        </div>
+        <div onclick="lastofus()"><img src="img/lasofus.png">
+            <div class="caratula">
+                <h2>LASTOFUS</h2>
+            </div>
+        </div>
+        <div onclick="spiderman()"><img src="img/spiderman.png">
+            <div class="caratula">
+                <h2>SPIDERMAN</h2>
+            </div>
+        </div>
+
+    </div>
+
+    <div style="flex-direction: column;display: flex;justify-content: center;align-items: center;" id="tabla">
+
+    </div>
+
+
+
+</body>
+<script>
+    var suma = 0;
+    var njuegos = 0;
+    var fila = '';
+    var juegosAgregados = [];
+
+
+
+    function añadirjuego() {
+
+        var div = document.getElementById('tabla').innerHTML;
+        var nombre1 = document.getElementById('nombrejuego').value;
+        var puntuacion1 = parseFloat(document.getElementById('puntuacion').value);
+
+         // Verificar si el juego ya ha sido agregado
+         if (juegosAgregados.includes(nombre1)) {
+                alert('Este juego ya ha sido agregado.');
+                return;
+            }
+
+        switch (nombre1) {
+
+            case 'GTA':
+                var imagen = 'img/gta.png';
+                suma += parseFloat(document.getElementById('puntuacion').value);
+                njuegos += 1;
+                juegosAgregados.push(nombre1);
+                break;
+
+            case 'MINECRAFT':
+                var imagen = 'img/minecraft.png';
+                suma += parseFloat(document.getElementById('puntuacion').value);
+                njuegos += 1;
+                juegosAgregados.push(nombre1);
+                break;
+
+            case 'ZELDA':
+                var imagen = 'img/zelda.png';
+                suma += parseFloat(document.getElementById('puntuacion').value);
+                njuegos += 1;
+                juegosAgregados.push(nombre1);
+                break;
+
+            case 'LAYTON':
+                var imagen = 'img/layton.png';
+                suma += parseFloat(document.getElementById('puntuacion').value);
+                njuegos += 1;
+                juegosAgregados.push(nombre1);
+                break;
+
+            case 'LOL':
+                var imagen = 'img/lol.png';
+                suma += parseFloat(document.getElementById('puntuacion').value);
+                njuegos += 1;
+                juegosAgregados.push(nombre1);
+                break;
+
+            case 'MASSEFFECT':
+                var imagen = 'img/masseffect.png';
+                suma += parseFloat(document.getElementById('puntuacion').value);
+                njuegos += 1;
+                juegosAgregados.push(nombre1);
+                break;
+
+            case 'HEAVYRAIN':
+                var imagen = 'img/heavyrain.png';
+                suma += parseFloat(document.getElementById('puntuacion').value);
+                njuegos += 1;
+                juegosAgregados.push(nombre1);
+                break;
+
+            case 'DRAGONQUEST':
+                var imagen = 'img/dragonquest.png';
+                suma += parseFloat(document.getElementById('puntuacion').value);
+                njuegos += 1;
+                juegosAgregados.push(nombre1);
+                break;
+
+            case 'DEADISLAND':
+                var imagen = 'img/deadisland.png';
+                suma += parseFloat(document.getElementById('puntuacion').value);
+                njuegos += 1;
+                juegosAgregados.push(nombre1);
+                break;
+
+            case 'ITTAKESTWO':
+                var imagen = 'img/ittakestwo.png';
+                suma += parseFloat(document.getElementById('puntuacion').value);
+                njuegos += 1;
+                juegosAgregados.push(nombre1);
+                break;
+
+            case 'ELDENRING':
+                var imagen = 'img/eldenring.png';
+                suma += parseFloat(document.getElementById('puntuacion').value);
+                njuegos += 1;
+                juegosAgregados.push(nombre1);
+                break;
+
+            case 'BIOSHOCK':
+                var imagen = 'img/bioshock.png';
+                suma += parseFloat(document.getElementById('puntuacion').value);
+                njuegos += 1;
+                juegosAgregados.push(nombre1);
+                break;
+
+            case 'PORTAL':
+                var imagen = 'img/portal.png';
+                suma += parseFloat(document.getElementById('puntuacion').value);
+                njuegos += 1;
+                juegosAgregados.push(nombre1);
+                break;
+
+            case 'ASSASSIN':
+                var imagen = 'img/assassin.png';
+                suma += parseFloat(document.getElementById('puntuacion').value);
+                njuegos += 1;
+                juegosAgregados.push(nombre1);
+                break;
+
+            case 'LASTOFUS':
+                var imagen = 'img/lasofus.png';
+                suma += parseFloat(document.getElementById('puntuacion').value);
+                njuegos += 1;
+                juegosAgregados.push(nombre1);
+                break;
+
+            case 'SPIDERMAN':
+                var imagen = 'img/spiderman.png';
+                suma += parseFloat(document.getElementById('puntuacion').value);
+                njuegos += 1;
+                juegosAgregados.push(nombre1);
+                break;
+
+            default:
+                var imagen = 'img/default.png';
+                suma += parseFloat(document.getElementById('puntuacion').value);
+                njuegos += 1;
+                juegosAgregados.push(nombre1);
+                break;
+
+        }
+        var media = (suma / njuegos).toFixed(2);
+        if (0 <= media && media <= 33) {
+            var mediaimagen = 'img/baja.png';
+            var textomedia = 'Tienes un buen comienzo, pero aún estás en una fase inicial en términos de habilidades como gamer.';
+        } else if (33 < media && media <= 66) {
+            var mediaimagen = 'img/media.png';
+            var textomedia = 'Te ves cómodo manejándote en diferentes escenarios virtuales. !Sigue así y llegarás lejos!';
+        } else if (66 < media && media <= 100) {
+            var mediaimagen = 'img/alta.png';
+            var textomedia = 'Tu destreza es reconocida en la comunidad. Obrsevar una partida tuya es una obra maestra.';
+        } 
+
+        var t0 = ' <table border="1" width="50%" id="tabla">';
+        fila += '<tr><td width="7%" align="center"><img src =' + imagen + '></td><td align="center">' + nombre1 + '</td><td align="center">' + puntuacion1 + '</td></tr><tr rowspan=3>';
+        var resumen = '<tr style="background-color:#640080"><td align="center"><img src ="' + mediaimagen + '"></td><td align="center">' + textomedia + '</td><td align="center">' + media + '</td></tr><tr rowspan=3>';;
+        var t3 = '</table>';
+
+        document.getElementById('tabla').innerHTML = (t0 + fila + resumen + t3);
+        document.getElementById('puntuacion').value = '';
+    }
+
+    function gta() {
+        document.getElementById('nombrejuego').value = 'GTA';
+        document.getElementById('puntuacion').value = '';
+    }
+    function minecraft() {
+        document.getElementById('nombrejuego').value = 'MINECRAFT';
+        document.getElementById('puntuacion').value = '';
+    }
+    function zelda() {
+        document.getElementById('nombrejuego').value = 'ZELDA';
+        document.getElementById('puntuacion').value = '';
+    }
+    function layton() {
+        document.getElementById('nombrejuego').value = 'LAYTON';
+        document.getElementById('puntuacion').value = '';
+    }
+    function lol() {
+        document.getElementById('nombrejuego').value = 'LOL';
+        document.getElementById('puntuacion').value = '';
+    }
+    function masseffect() {
+        document.getElementById('nombrejuego').value = 'MASSEFFECT';
+        document.getElementById('puntuacion').value = '';
+    }
+    function heavyrain() {
+        document.getElementById('nombrejuego').value = 'HEAVYRAIN';
+        document.getElementById('puntuacion').value = '';
+    }
+    function dragonquest() {
+        document.getElementById('nombrejuego').value = 'DRAGONQUEST';
+        document.getElementById('puntuacion').value = '';
+    }
+    function deadisland() {
+        document.getElementById('nombrejuego').value = 'DEADISLAND';
+        document.getElementById('puntuacion').value = '';
+    }
+    function ittakestwo() {
+        document.getElementById('nombrejuego').value = 'ITTAKESTWO';
+        document.getElementById('puntuacion').value = '';
+    }
+    function eldenring() {
+        document.getElementById('nombrejuego').value = 'ELDENRING';
+        document.getElementById('puntuacion').value = '';
+    }
+    function bioshock() {
+        document.getElementById('nombrejuego').value = 'BIOSHOCK';
+        document.getElementById('puntuacion').value = '';
+    }
+    function portal() {
+        document.getElementById('nombrejuego').value = 'PORTAL';
+        document.getElementById('puntuacion').value = '';
+    }
+    function assasin() {
+        document.getElementById('nombrejuego').value = 'ASSASSIN';
+        document.getElementById('puntuacion').value = '';
+    }
+    function lastofus() {
+        document.getElementById('nombrejuego').value = 'LASTOFUS';
+        document.getElementById('puntuacion').value = '';
+    }
+    function spiderman() {
+        document.getElementById('nombrejuego').value = 'SPIDERMAN';
+        document.getElementById('puntuacion').value = '';
+    }
+
+
+
+
+</script>
+
+</html>

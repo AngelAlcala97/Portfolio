@@ -1,0 +1,77 @@
+html,
+body {
+    background: url('img/fondo.png');
+    background-attachment: fixed;
+    background-size: cover;
+    color: white;
+    align-items: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+
+
+}
+
+table {
+    background-color: #1d05475f;
+    color: #fff;
+    border-color: #fff;
+    border: 5px solid #fff;
+    font-size: 24px;
+    text-shadow: 1px 2px 1px #640080;
+    -webkit-text-stroke: 1px #640080;
+    font-weight: bold;
+    margin-bottom: 50px;
+
+}
+
+table img {
+    width: 75px;
+}
+
+
+.catalogo {
+    display: flex;
+    gap: 30px;
+    text-align: center;
+    background-color: transparent;
+    color: #111111;
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    overflow-x: scroll;
+}
+
+.catalogo img {
+    border: 5px solid #fff;
+    width: 100px;
+
+}
+
+.datos {
+    display: flex;
+    padding: 30px;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    background-color: #1d0547;
+    border: 5px solid #fff;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+
+}
+
+.caratula h2 {
+    position: relative;
+    color: #fff;
+    background-color: #640080;
+    border-left: 5px solid #fff;
+    border-right: 5px solid #fff;
+    border-bottom: 5px solid #fff;
+    top: -50px;
+    padding: 10px;
+    font-size: 12px;
+
+}
+
+  

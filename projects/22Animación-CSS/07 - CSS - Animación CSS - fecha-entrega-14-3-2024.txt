@@ -1,0 +1,25 @@
+Realizar una página web que muestre una animación CSS interactiva como la del ejemplo explicado en clase.
+
+El ejemplo es el siguiente: La página muestra una tortuga en el centro de un jardín cuadrado, en las esquinas del jardín hay diferentes comidas para la tortuga. Al situar el retón sobre una comida el cursor cambia a pointer indicando que se puede pulsar sobre ella. Al hacerlo se inicia una animación con un retraso (por ser una tortuga) en el que la tortuga gira y se mueve hacia la comida. La tortuga llega hasta la comida y esta desaparece con una transición en la opacidad simulando que es comida por la tortuga durante un breve tiempo. Después la tortuga hace la animación inversa y vuelve a su lugar.
+
+Dispones de los gráficos del ejemplo en la carpeta 07 - imagenes CSS - Animación CSS por si quieres realizar este mismo ejemplo.
+
+Si quieres realizar otro de formato libre ten en cuenta que debe haber al menos 4 animaciones CSS, que el elemento que se mueve (sea una tortuga u otra cosa) debe "interactuar" con los elementos de la pantalla (es decir, la comida desaparece cuando la tortuga llega a comerla) y que el elemento que se mueve debe volver a su posición inicial.
+
+Otros ejemplos libres podrían ser un helicóptero de rescate rescatando naúfragos en diferentes islas, o un gancho de una máquina de recoger regalos, por ejemplo.
+
+Tienda de mejoras:
+
+Este ejercicio admite muchas mejoras, por ejemplo:
+
+Que los elementos con los que interactúa elemento que se mueve se generen de manera dinámica y las posiciones finales de la animación se calculen en base a las coordenas obtenidas al hacer click sobre esos elementos
+
+Que los elementos con los que interactúa elemento que se mueve aparezcan por un tiempo y si no se interactúa con ellos en un tiempo desaparezcan (por ejemplo un naufrago en el mar que se ahoga pasado un tiempo)
+
+Que se pueda pulsar en más de un elemento de forma seguida antes de establecer la animación y que esta recorra varios elementos pulsados haciendo una ruta
+
+Que aparezcan obstáculos que puedan entorpecer el movimiento o "destruir" el elemento que se mueve
+
+Incluir sonidos o música, o animar diferentes elementos de la pantalla
+
+Se valorarán estas u otras mejoras

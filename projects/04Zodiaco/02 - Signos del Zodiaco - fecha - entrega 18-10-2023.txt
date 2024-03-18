@@ -1,0 +1,16 @@
+Realizar un programa que pida en una caja de texto el signo del zodiaco. El signo se escribirá siempre en minúsculas.
+La página dispondrá de un botón que, al pulsarlo, mostrará una imagen del signo del zodiaco elegido y un texto descriptivo del mismo (sin cargar otra página, en la misma página).
+Si el texto introducido no se corresponde con ningún signo del zodiaco la página indicará que no se encuentra ese signo.
+
+Trabajo opcional: En clase no se ha explicado cómo hacer que la entrada de datos no sea sensible a mayúsculas y minúsculas. Si se consigue esto se obtendrán 0,01 puntos extra. Es tarea de investigación para el alumno.
+
+Los textos de los signos del zodiaco deben estar generados por IA
+Las imágenes de los signos del zodiaco deben estar generadas por IA
+
+Versión IA:
+
+Se recompensa con 0,05 por entregar una versión adicional generada con IA tanto código como imágenes (Guardar los prompts para comparar)
+
+Versión propia:
+
+Se recompensa con 0,1 por entregar una versión adicional que mejore de forma apreciable a la versión original

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caja Fuerte con Interfaz Gráfica</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            text-align: center;
+            margin-top: 50px;
+        }
+        .numero-container {
+            display: inline-block;
+            margin: 10px;
+        }
+        .numero {
+            width: 50px;
+            height: 50px;
+            font-size: 24px;
+            text-align: center;
+            border: none;
+            background-color: #fff;
+        }
+        .flecha {
+            width: 25px;
+            cursor: pointer;
+        }
+        button {
+            font-size: 20px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+        .pista-arriba, .pista-abajo {
+            width: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Desactivando la Caja Fuerte</h1>
+        <p>Intentos restantes: <span id="intentos">5</span></p>
+        
+        <div class="numero-container">
+            <img src="img/0.png" class="numero" id="numero1">
+            <div>
+                <img src="img/flecharriba.png" class="flecha" onclick="ajustarNumero(1, 'arriba')">
+                <img src="img/flechaabajo.png" class="flecha" onclick="ajustarNumero(1, 'abajo')">
+            </div>
+            <img src="img/flechaarriba.png" class="pista-arriba" id="pista1-arriba" style="display:none;">
+            <img src="img/flechabajo.png" class="pista-abajo" id="pista1-abajo" style="display:none;">
+        </div>
+
+        <div class="numero-container">
+            <img src="img/0.png" class="numero" id="numero2">
+            <div>
+                <img src="img/flecharriba.png" class="flecha" onclick="ajustarNumero(2, 'arriba')">
+                <img src="img/flechaabajo.png" class="flecha" onclick="ajustarNumero(2, 'abajo')">
+            </div>
+            <img src="img/flechaarriba.png" class="pista-arriba" id="pista2-arriba" style="display:none;">
+            <img src="img/flechabajo.png" class="pista-abajo" id="pista2-abajo" style="display:none;">
+        </div>
+
+        <div class="numero-container">
+            <img src="img/0.png" class="numero" id="numero3">
+            <div>
+                <img src="img/flecharriba.png" class="flecha" onclick="ajustarNumero(3, 'arriba')">
+                <img src="img/flechaabajo.png" class="flecha" onclick="ajustarNumero(3, 'abajo')">
+            </div>
+            <img src="img/flechaarriba.png" class="pista-arriba" id="pista3-arriba" style="display:none;">
+            <img src="img/flechabajo.png" class="pista-abajo" id="pista3-abajo" style="display:none;">
+        </div>
+
+        <br>
+
+        <button onclick="verificarCombinacion()">Introducir Combinación</button>
+        <div id="mensaje"></div>
+    </div>
+
+    <script>
+        let combinacion = generarCombinacion();
+        let intentosRestantes = 5;
+
+        function generarCombinacion() {
+            return [Math.floor(Math.random() * 10), Math.floor(Math.random() * 10), Math.floor(Math.random() * 10)];
+        }
+
+        function ajustarNumero(numero, direccion) {
+            let elementoNumero = document.getElementById(`numero${numero}`);
+            let valorActual = parseInt(elementoNumero.src.substr(-5,1));
+            if (direccion === 'arriba') {
+                valorActual = (valorActual + 1) % 10;
+            } else if (direccion === 'abajo') {
+                valorActual = (valorActual + 9) % 10;
+            }
+            elementoNumero.src = `img/${valorActual}.png`;
+        }
+
+        function mostrarPista(numero, tipo) {
+            document.getElementById(`pista${numero}-${tipo}`).style.display = "inline";
+        }
+
+        function verificarCombinacion() {
+            let numeros = [parseInt(document.getElementById("numero1").src.substr(-5,1)), parseInt(document.getElementById("numero2").src.substr(-5,1)), parseInt(document.getElementById("numero3").src.substr(-5,1))];
+
+            let mensaje = "";
+
+            for (let i = 0; i < 3; i++) {
+                if (numeros[i] < combinacion[i]) {
+                    mensaje += `El ${i+1}° número es mayor. `;
+                    mostrarPista(i+1, 'arriba');
+                } else if (numeros[i] > combinacion[i]) {
+                    mensaje += `El ${i+1}° número es menor. `;
+                    mostrarPista(i+1, 'abajo');
+                }
+            }
+
+            if (mensaje === "") {
+                document.getElementById("mensaje").innerHTML = "<img src='img/cajaabierta.png' alt='Éxito'><p>Felicidades, has abierto la caja fuerte.</p><button onclick='reiniciarJuego()'>Volver a Intentarlo</button>";
+            } else {
+                intentosRestantes--;
+                document.getElementById("intentos").innerHTML = intentosRestantes;
+                if (intentosRestantes === 0) {
+                    document.getElementById("mensaje").innerHTML = "<img src='img/arresto.png' alt='Éxito'><p>Has sido detenido.</p><button onclick='reiniciarJuego()'>Volver a Intentarlo</button>";
+                } else {
+                    document.getElementById("mensaje").innerHTML = mensaje;
+                }
+            }
+        }
+
+        function reiniciarJuego() {
+            combinacion = generarCombinacion();
+            intentosRestantes = 5;
+            document.getElementById("intentos").innerHTML = intentosRestantes;
+            document.getElementById("mensaje").innerHTML = "";
+
+            for (let i = 1; i <= 3; i++) {
+                document.getElementById(`numero${i}`).src = `img/0.png`;
+                document.getElementById(`pista${i}-arriba`).style.display = "none";
+                document.getElementById(`pista${i}-abajo`).style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

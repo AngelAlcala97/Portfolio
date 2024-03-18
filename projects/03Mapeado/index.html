@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+<head >
+    <meta charset="UTF-8" />
+    <title>Ruinas de Babel</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+	<link rel="icon" href="img/logo.png" type="image/x-icon">
+    <script src="script.js"></script>
+
+</head>
+<body alink="white" vlink="white">
+
+    <video style="  height: 100vh;width: 100vw;object-fit: cover;position: fixed;left: 0;right: 0;top: 0;bottom: 0;z-index: -1;" id="background-video" autoplay loop muted>
+        <source src="img/video3.mp4" type="video/mp4">
+      </video>
+
+
+    <div id="logo" class="flex">
+        <a style="text-decoration: none;" href="#" ><img onclick="volver()" id="icono" src="img/logo.png"><br>RUINAS DE BABEL</a>
+        <h4 style="color: white;  border-radius: 30px;padding: 5px;">Un lugar donde escuchar las historias de universos habidos o por haber</h4>
+        <audio id="audio" controls>
+        <source type="audio/mp3" src="song/8-Bit Fantasy & Adventure Music.mp3">
+        </audio>
+    </div>
+
+    <div class="flex" id="fondo">
+        <header id="banner">
+
+
+            <img id="imagen" src="img/1.png" usemap="#image-map">
+
+            <map name="image-map">
+                <area target="" alt="lava" title="lava" href="#" coords="620,441,622,378,801,384,809,444,774,462,675,454" shape="poly" onmouseover="lava()" onmouseout="fuera()" onclick="ciudadlava()">
+                <area target="" alt="bosque" title="bosque" href="#" coords="628,328,797,332,802,383,628,377" shape="poly" onmouseover="bosque()" onmouseout="fuera()" onclick="ciudadbosque()">
+                <area target="" alt="hielo" title="hielo" href="#" coords="632,328,636,274,791,278,797,333" shape="poly" onmouseover="hielo()" onmouseout="fuera()" onclick="ciudadhielo()">
+                <area target="" alt="iglesia" title="iglesia" href="#" coords="638,272,639,219,785,223,789,277" shape="poly" onmouseover="iglesia()" onmouseout="fuera()" onclick="ciudadiglesia()">
+                <area target="" alt="fondomarino" title="fondomarino" href="#" coords="641,219,644,161,784,166,781,222" shape="poly" onmouseover="fondomarino()" onmouseout="fuera()" onclick="ciudadfondomarino()" >
+                <area target="" alt="cibernetica" title="cibernetica" href="#" coords="650,160,780,166,776,104,646,107,662,97,646,130,648,106,670,96,650,98,647,100" shape="poly" onmouseover="cibernetica()" onmouseout="fuera()" onclick="ciudadcibernetica()">
+                <area target="" alt="espacio" title="espacio" href="#" coords="659,107,662,50,774,49,774,103" shape="poly" onmouseover="espacio()" onmouseout="fuera()" onclick="ciudadespacial()">
+                <area target="" alt="desierto" title="desierto" href="#" coords="664,50,770,0" shape="rect" onmouseover="desierto()" onmouseout="fuera()" onclick="ciudaddesierto()">
+                <area target="" alt="ciudad" title="ciudad" href="#" coords="344,270,256" shape="circle" onmouseover="ciudad()" onmouseout="fuera()" onclick="ciudadciudadciudad()" >
+            </map>
+        </header>
+    </div>
+
+
+
+    <div id="ciudadlava" class="padreuniversos">
+        <div class="universo">
+            <div class="face back">
+                <h3>MAGMIA</h3>
+                <table border="1">
+                    <tr>
+                        <td width="40%">                
+                            <ul align="left">
+                                <li>Erupciones volcánicas masivas</li>
+                                <li>Explosiones de supervolcanes</li>
+                                <li>Pérdida de biodiversidad</li>
+                                <li>Contaminación atmosférica</li>
+                                <li>Contaminación atmosférica</li>
+                            </ul> 
+                        </td>
+                        <td>
+                            <p style="font-weight: bold;font-size: 20px;padding: 10px;">En un mundo devastado por erupciones volcánicas, la humanidad se une para sobrevivir. Crean refugios subterráneos y ciudades flotantes, adaptándose a un entorno dominado por lava y ceniza. La tecnología y la magia se fusionan para forjar una nueva cultura, y la humanidad emerge resiliente, lista para construir un futuro en medio de las ruinas.</p>
+                        </td>
+                    </tr>
+                </table>
+                <img class="imagen" src="img/ciudadlava.png">
+            </div>
+        </div>
+    </div>
+
+
+
+    <div id="ciudadciudadciudad" class="padreuniversos">
+        <div class="universo">
+            <div class="face back">
+                <h3>PRIMORDIA</h3>
+                <table border="1">
+                    <tr>
+                        <td width="40%">                
+                            <ul align="left">
+                                <li>Estancamiento tecnológico</li>
+                                <li>Sistema de transporte limitado</li>
+                                <li>Avances médicos limitados</li>
+                                <li>Conflictos históricos persistirían</li>
+                                <li>Comunicaciones limitadas</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <p style="font-weight: bold;font-size: 20px;padding: 10px;">En un giro mágico, el mundo queda atrapado en una época pasada, donde la Revolución Industrial sigue su curso y las calles están llenas de elegancia victoriana. La comunicación se basa en telégrafos y cartas, mientras la música flota en el aire de salones opulentos. La agricultura se convierte en el motor económico, y las estructuras políticas antiguas persisten. Aunque la medicina y la tecnología están limitadas por la era, la humanidad abraza la oportunidad de descubrir un pasado reimaginado mientras mira hacia adelante con esperanza y nostalgia.</p>
+                        </td>
+                    </tr>
+                </table>
+                <img class="imagen" src="img/ciudadciudad.png">
+            </div>
+        </div>
+    </div>
+
+
+
+    <div id="ciudadhielo" class="padreuniversos">
+        <div class="universo">
+            <div class="face back">
+                <h3>CRYOTERRA</h3>
+                <table border="1">
+                    <tr>
+                        <td width="40%">                
+                            <ol align="left">
+                                <li>Estancamiento del Tiempo</li>
+                                <li>Cambios Atmosféricos</li>
+                                <li>Detención de Procesos Naturales</li>
+                            </ol>
+                        </td>
+                        <td>
+                            <p style="font-weight: bold;font-size: 20px;padding: 10px;">El mundo queda atrapado en una quietud eterna: el viento se detiene, las olas se congelan y la naturaleza queda suspendida en el tiempo. Las ciudades se convierten en reliquias silenciosas y la humanidad se adapta, encontrando una nueva serenidad en este reino detenido. Bajo una luna perpetua, la creatividad florece y la tecnología se convierte en un legado eterno. En este encantado silencio, cada momento se convierte en una danza en el tejido del tiempo, recordando la eternidad en cada suspiro fugaz.</p>
+                        </td>
+                    </tr>
+                </table>
+                <img class="imagen" src="img/ciudadhielo.png">
+            </div>
+        </div>
+    </div>
+
+
+
+    <div id="ciudadiglesia" class="padreuniversos">
+        <div class="universo">
+            <div class="face back">
+                <h3>CELESTIA DIVINA</h3>
+                <table border="1">
+                    <tr>
+                        <td width="40%">                
+                            <dl align="left">
+                                <dt>Imposición del Catolicismo</dt>
+                                <dd>El catolicismo se convierte en la religión predominante en todo el mundo, influenciando la cultura, la política y la sociedad.</dd><br>
+                                <dt>Transformación de Instituciones</dt>
+                                <dd>Las instituciones gubernamentales y organizaciones adoptan principios y valores católicos.</dd>
+                            </dl>
+                        </td>
+                        <td>
+                            <p style="font-weight: bold;font-size: 20px;padding: 10px;">En el amanecer de una nueva era, el mundo entero se sumerge en una espiritualidad profunda, unificando a la humanidad bajo el estandarte del catolicismo. Catedrales majestuosas se alzan como testigos de la fe, y monasterios se convierten en centros de contemplación y conocimiento. La música sacra inunda las calles, elevando las almas hacia lo divino. La educación se transforma en un camino hacia la iluminación espiritual, y las artes florecen con la representación de la devoción y la belleza divina. Aunque la sombra de la religión se proyecta sobre cada aspecto de la vida...</p>
+                        </td>
+                    </tr>
+                </table>
+                <img class="imagen" src="img/ciudadiglesia.png">
+            </div>
+        </div>
+    </div>
+
+
+
+    <div id="ciudadfondomarino" class="padreuniversos">
+        <div class="universo">
+            <div class="face back">
+                <h3>AQUATERRA</h3>
+                <table border="1">
+                    <tr>
+                        <td width="40%">                
+                            <ul align="left">
+                                <li>Sumersión Global</li>
+                                <li>Adaptación Acuática</li>
+                                <li>Nuevas Civilizaciones Submarinas</li>
+                                <li>Exploración de las Profundidades</li>
+                                <li>Desafíos Ambientales</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <p style="font-weight: bold;font-size: 20px;padding: 10px;">El mundo se hunde en el océano, forzando a la humanidad a adaptarse y construir ciudades submarinas. La vida evoluciona para sobrevivir en este nuevo entorno. La exploración de las profundidades marinas y la superación de desafíos acuáticos se convierten en la norma.</p>
+                        </td>
+                    </tr>
+                </table>
+                <img class="imagen" src="img/ciudadfondomarino.png">
+            </div>
+        </div>
+    </div>
+
+
+
+    <div id="ciudadfondomarino" class="padreuniversos">
+        <div class="universo">
+            <div class="face back">
+                <h3>AQUATERRA</h3>
+                <table border="1">
+                    <tr>
+                        <td width="40%">                
+                            <ul align="left">
+                                <li>Sumersión Global</li>
+                                <li>Adaptación Acuática</li>
+                                <li>Nuevas Civilizaciones Submarinas</li>
+                                <li>Exploración de las Profundidades</li>
+                                <li>Desafíos Ambientales</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <p style="font-weight: bold;font-size: 20px;padding: 10px;">El mundo se hunde en el océano, forzando a la humanidad a adaptarse y construir ciudades submarinas. La vida evoluciona para sobrevivir en este nuevo entorno. La exploración de las profundidades marinas y la superación de desafíos acuáticos se convierten en la norma.</p>
+                        </td>
+                    </tr>
+                </table>
+                <img class="imagen" src="img/ciudadfondomarino.png">
+            </div>
+        </div>
+    </div>
+
+
+
+    <div id="ciudadcibernetica" class="padreuniversos">
+        <div class="universo">
+            <div class="face back">
+                <h3>CYBERLYN</h3>
+                <table border="1">
+                    <tr>
+                        <td width="40%">                
+                            <ul align="left">
+                                <li>Explosión Tecnológica</li>
+                                <li>Integración Hombre-Máquina</li>
+                                <li>Realidad Virtual y Simulaciones</li>
+                                <li>Autómatas y Androides</li>
+                                <li>Conexión Global e Instantánea</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <p style="font-weight: bold;font-size: 20px;padding: 10px;">En un mundo hipertecnológico, la fusión entre humanos y máquinas es común, permitiendo mejoras físicas y mentales. Se desarrollan mundos virtuales hiperrealistas y androides realizan tareas cotidianas. La comunicación es instantánea y la información fluye a través de una red global de alta velocidad.</p>
+                        </td>
+                    </tr>
+                </table>
+                <img class="imagen" src="img/ciudadcibernetica.png">
+            </div>
+        </div>
+    </div>
+
+
+
+    <div id="ciudadespacial" class="padreuniversos">
+        <div class="universo">
+            <div class="face back">
+                <h3>STELLARIUM</h3>
+                <table border="1">
+                    <tr>
+                        <td width="40%">                
+                            <ul align="left">
+                                <li>Evolución Espacial Avanzada</li>
+                                <li>Adaptación a la Gravedad Cero</li>
+                                <li>Recursos Extraterrestres</li>
+                                <li>Sociedad Interplanetaria</li>
+                                <li>Exploración del Universo</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <p style="font-weight: bold;font-size: 20px;padding: 10px;">En un audaz exilio celestial, la humanidad abandona la Tierra para poblar impresionantes colonias espaciales. Allí, bajo la mirada cercana de las estrellas, la vida florece en un ambiente de gravedad cero. Pasillos iluminados por luz estelar conectan vastas esferas gravitacionales, donde la cotidianidad se teje en una danza elegante entre humanos y la inmensidad del cosmos. La Tierra, ahora solo un recuerdo distante, se convierte en un mito compartido por las generaciones nacidas en el espacio. Mientras las naves espaciales exploran el vasto éter en busca de nuevos mundos, la extracción de recursos de asteroides y planetoides se convierte en la columna vertebral de estas ciudades flotantes.</p>
+                        </td>
+                    </tr>
+                </table>
+                <img class="imagen" src="img/ciudadespacial.png">
+            </div>
+        </div>
+    </div>
+
+
+
+    <div id="ciudaddesierto" class="padreuniversos">
+        <div class="universo">
+            <div class="face back">
+                <h3>ARENARIA</h3>
+                <table border="1">
+                    <tr>
+                        <td width="40%">                
+                            <ul align="left">
+                                <li>Desolación Global</li>
+                                <li>Clima Árido y Extremo</li>
+                                <li>Sociedades Nómadas</li>
+                                <li>Ruína de Antiguas Civilizaciones</li>
+                                <li>Busqueda de Esperanza</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <p style="font-weight: bold;font-size: 20px;padding: 10px;">Tras el cataclismo, el mundo se convirtió en un vasto y desolado desierto, donde la vida se aferra a la escasez. Tribus nómadas recorren el paisaje, siguiendo las escasas corrientes de agua y buscando refugio de las tormentas de arena. Las ciudades antiguas, ahora ruinas silenciosas, son testigos mudos de una era que alguna vez prosperó. Entre las arenas abrasadoras, las leyendas de oasis ocultos y tecnologías olvidadas despiertan una chispa de esperanza. La humanidad persiste en la búsqueda de una nueva oportunidad, donde la resiliencia y la determinación son la fuerza motriz en este escenario desafiante de supervivencia en el desierto infinito.</p>
+                        </td>
+                    </tr>
+                </table>
+                <img class="imagen" src="img/ciudaddesierto.png">
+            </div>
+        </div>
+    </div>
+
+
+
+    <div id="ciudadbosque" class="padreuniversos">
+        <div class="universo">
+            <div class="face back">
+                <h3>SYLVANDIA</h3>
+                <table border="1">
+                    <tr>
+                        <td width="40%">                
+                            <ul align="left">
+                                <li>Transformación Boscosa</li>
+                                <li>Vida Salvaje Proliferante</li>
+                                <li>Adaptación Humana</li>
+                                <li>Comunidades Arborícolas</li>
+                                <li>Rastros del Pasado</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <p style="font-weight: bold;font-size: 20px;padding: 10px;">Después de una misteriosa devastación, el mundo floreció en un gigantesco bosque, donde los árboles alcanzaban alturas inimaginables. En este exuberante reino, la vida salvaje prosperaba en su máxima expresión, llenando cada rincón con una biodiversidad asombrosa. La humanidad, adaptándose a esta nueva realidad, se convirtió en maestra de la selva, construyendo comunidades en las alturas de los árboles. Ruinas de antiguas ciudades yacen como reliquias de un pasado distante, ahora integradas en este bosque gigante. Bajo el manto verde y frondoso, la naturaleza y la humanidad se fundieron en una danza de vida sin precedentes, en la cual el mundo había encontrado una nueva forma de prosperar.</p>
+                        </td>
+                    </tr>
+                </table>
+                <img class="imagen" src="img/ciudadbosque.png">
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,6 @@
+1º PROMPT
+Diseña una pagina html sobre Mitologia griega, que disponga de un index.html, en la cual aparezca una descripcion de la pagina y enlaces a 4 sub-paginas, los cuales tienen 3 secciones cada una, con foto, titulo, y descripcion, quiero poder viajar entre las paginas desde todas ellas
+
+2º PROMPT
+
+Dale estilos e imagenes para que se vea bonita

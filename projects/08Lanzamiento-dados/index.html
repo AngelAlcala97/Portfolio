@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Dados</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css">
+    <link rel="icon" type="image/x-icon" href="img/muestra.png">
+
+</head>
+<body id="body">
+    <audio id="audio" controls>
+        <source type="audio/mp3" src="audio/dados.mp3">
+    </audio>
+    <div class="botonfondo">
+        <label class="switch-button" for="switch">
+            <div class="ventanadado"><i class="ri-sun-line"></i></div>
+            <div class="switch-outer">
+              <input onclick="cambiarfondo()" id="switch" type="checkbox" value="on">
+              <div class="button">
+                <span class="button-toggle"></span>
+                <span class="button-indicator"></span>
+              </div>
+            </div>
+            <div class="ventanadado"><i class="ri-moon-line #fff"></i></div>
+          </label>
+    </div>
+    <div class="dados">
+        <div class="ventanadado">
+            <h1>10 CARAS</h1>
+            <div id="dados10">
+                <img class="imagendado" src="img/muestra10.png">
+            </div>
+            <button onclick="lanzardado10()" class="boton-dado-6">
+                <span class="back"></span>
+                <span class="front"><img src="img/boton10.png" width="30px"> </span>
+            </button>
+        </div>
+
+        <div class="ventanadado">
+            <h1>6 CARAS</h1>
+            <div id="dados6">
+            <img class="imagendado" src="img/muestra.png">
+            </div>
+            <button onclick="lanzardado6()" class="boton-dado-6">
+                <span class="back"></span>
+                <span class="front"><img src="img/boton6.png" width="30px"> </span>
+            </button>
+            
+
+        </div>
+        
+        <div class="ventanadado">
+            <h1>20 CARAS</h1>
+            <div id="dados20">
+            <img class="imagendado" src="img/muestra20.png">
+            </div>
+            <button onclick="lanzardado20()" class="boton-dado-6">
+                <span class="back"></span>
+                <span class="front"><img src="img/boton20.png" width="30px"> </span>
+            </button>
+        </div>
+    </div>
+<hr style="color: #062d1c;height: 5px;background-color: #062d1c;">
+    <div class="dados">
+        <div class="estadistica"> 
+            <h1>Estadística</h1>
+            <div id="estadistica"></div>
+        </div>
+
+        <div class="estadistica">
+            <h1>Ultimas tiradas</h1>
+            <div id="tiradas" class="tiradas"></div>
+        </div>
+    
+        <div class="estadistica">
+            <h1>Gráfico de barras</h1>
+            <!-- <h6>Numero 1</h6><br> -->
+            <div class="graficos">
+                <div id="grafico1" class="grafico"></div>
+                <!-- <h6>Numero 2</h6> -->
+                <div id="grafico2" class="grafico"></div>
+                <!-- <h6>Numero 3</h6> -->
+                <div id="grafico3" class="grafico"></div>
+                <!-- <h6>Numero 4</h6> -->
+                <div id="grafico4" class="grafico"></div>
+                <!-- <h6>Numero 5</h6> -->
+                <div id="grafico5" class="grafico"></div>
+                <!-- <h6>Numero 6</h6> -->
+                <div id="grafico6" class="grafico"></div>
+                </div>
+        </div>
+    </div>
+   
+</body>
+<script src="script.js"></script>
+</html>

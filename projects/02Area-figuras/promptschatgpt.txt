@@ -1,0 +1,23 @@
+1º PROMPT
+Realizar una (única) página que calcule las áreas de las siguientes figuras:
+
+Rectángulo
+Triángulo
+Rombo
+Cuadrado
+Paralelogramo
+Trapecio
+Romboide
+Polígono regular
+Círculo
+
+Para las fórmulas se puede tomar la siguiente página web como referencia:
+
+https://www.monografias.com/trabajos88/deduccion-formulas-calcular-area-figuras-planas/deduccion-formulas-calcular-area-figuras-planas.shtml
+
+La página tendrá una sección (hecha con anclas) para cada figura, con cajas de texto para introducir los datos y un botón para realizar el cálculo. Cuando se obtenga el resultado se mostrará en un contenedor en esa sección. Se añadirá también una imagen de cada figura que puede tomarse de la página propuesta para su resolución.
+
+La página deberá incluir un índice con secciones para ir al apartado de cada figura. Asimismo en cada apartado deberá aparecer un enlace para volver al índice.
+
+
+

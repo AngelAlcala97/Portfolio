@@ -1,0 +1,134 @@
+html,body{
+    background: linear-gradient(#5d5d5d,#4f4f4f,#454545,#3d3d3d,#1d1d1d);
+    background-attachment: fixed;
+    transition:  5s;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+
+}
+
+
+button{
+    font-size: 24px;
+    text-transform: uppercase;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background:#fff;
+    color:1d1d1d;
+    border-radius: 10px;
+    border: 2px inset black;
+    filter: drop-shadow(1px 1px 2px whitesmoke) ;
+    transition:  0.3s ease-in-out;
+
+
+}
+button:hover{
+    background:#1d1d1d;
+    color: whitesmoke;
+    box-shadow: 0px 0px 8px whitesmoke;
+    transform: scale(0.95);
+
+
+}
+
+
+.colores{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin: 10px;
+    margin-bottom: 30px;
+
+}
+  .color{
+    width: 150px;
+    height: 150px;
+    border: 5px outset black;
+    border-radius: 30px;
+    filter: drop-shadow(1px 1px 2px whitesmoke);
+    animation:scale-up-top 0.4s, sombra2 5s linear infinite; 
+    transition-duration:  0.1s;
+    transition-timing-function: ease;
+  
+} 
+@keyframes scale-up-top{
+  0%{transform:scale(.5);transform-origin:center top}
+  100%{transform:scale(1);transform-origin:center top}}
+
+ .color:hover{
+  filter: drop-shadow(1px 1px 2px #1d1d1d) ;
+
+ }
+h1{
+    color: white;
+  }
+
+input[type="button"]{
+    border-radius: 30px;
+    padding: 10px;
+    border: 2px inset white;
+    box-shadow: 2px 2px 2px whitesmoke;
+    transition-duration:  0.5s;
+    transition-timing-function: ease;
+  
+
+}
+input[type="button"]:hover{
+    transform: scale(0.9);
+    box-shadow: 4px 4px 4px black;
+    border: 2px inset black;
+    mix-blend-mode:overlay;
+
+
+}
+#logo{
+  filter: drop-shadow(0px 0px 10px whitesmoke);
+  animation:giro 4s linear infinite, sombra 10s linear infinite; 
+  transition-duration:  1s;
+  transition-timing-function: ease;
+
+} 
+
+@keyframes giro{
+0%{transform:rotateZ(0deg);}
+100%{transform:rotateZ(360deg);}}
+
+@keyframes sombra{
+  0%{filter: drop-shadow(0px 0px 10px #000);}
+  15%{filter: drop-shadow(0px 0px 10px red);}
+  30%{filter: drop-shadow(0px 0px 10px rgb(0,255,0));}
+  45%{filter: drop-shadow(0px 0px 10px yellow);}
+  60%{filter: drop-shadow(0px 0px 10px blue);}
+  75%{filter: drop-shadow(0px 0px 10px pink);}
+  90%{filter: drop-shadow(0px 0px 10px whitesmoke);}
+  100%{filter: drop-shadow(0px 0px 10px #000);}
+
+
+}
+@keyframes sombra2{
+  0%{filter: drop-shadow(0px 0px 2px #000);}
+  15%{filter: drop-shadow(0px 0px 2px red);}
+  30%{filter: drop-shadow(0px 0px 2px rgb(0,255,0));}
+  45%{filter: drop-shadow(0px 0px 2px yellow);}
+  60%{filter: drop-shadow(0px 0px 2px blue);}
+  75%{filter: drop-shadow(0px 0px 2px pink);}
+  90%{filter: drop-shadow(0px 0px 2px whitesmoke);}
+  100%{filter: drop-shadow(0px 0px 2px #000);}
+
+
+}
+.puntuacion{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin: 10px;
+  margin-bottom: 30px;
+
+}
+table{
+  background: linear-gradient(#ffffff,#efefef,#dcdcdc,#bdbdbd,#989898);
+  color: #1d1d1d;
+  border: 2px outset #000;
+}
+
