@@ -839,7 +839,7 @@ main{
         right: 0;
         gap: 1.5rem; 
         background-color: #212121;
-        height: 8rem;
+        height: 250px;
         padding: 0px 1rem;
         border-bottom: 1px solid var(--github-dark-border);
         align-items: center;
