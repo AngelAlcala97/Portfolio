@@ -375,6 +375,7 @@ main{
     width: 100%;
     margin-top: 0.2rem;
 }
+
 .projects div{
     width: 80%;
     display: flex;
@@ -826,5 +827,38 @@ main{
     color: #212121;
 }
 
+
+
+
+
+
+
+
+.resume{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 0.2rem;
+}
+.resume h1{
+    color: #D3FFB2;
+    letter-spacing: 0.2vw;
+    font-size: 8vw;
+    white-space: nowrap;
+    border-right: .15em solid #D3FFB2; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto;
+    overflow: hidden;
+    &::before{
+        content: '{"';
+        position: relative;
+        top: 0;
+    }
+    &::after{
+        content: '"}';
+        position: relative;
+        top: 0;
+    }
+}
 
 
